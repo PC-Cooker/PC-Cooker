@@ -1,0 +1,432 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+	background-color: #F5F8FB;
+}
+*{
+	padding: 0;
+	margin: 0;
+    font-family: 'Noto Sans TC', Arial, sans-serif;
+    list-style: none;
+}
+
+.container{
+	width: 100%;
+}
+
+a, a:hover{
+	text-decoration: none;
+	/*color: #84A9CD;*/
+}
+
+
+
+/* start of navbar*/
+.navbar{
+	background-color: #84A9CD;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.nav-item .nav-link{
+	color: #fff;
+}
+.nav-item a{
+	font-size:16px;
+}
+button{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.cart, .login{
+	padding: 0 8px;
+}
+
+	/* 改變預設字體粗度 */
+.navbar-expand-lg .navbar-nav .nav-link{
+    font-weight: 300;
+}
+
+	/* navbar 字體 hover */
+.navbar-expand-lg .navbar-nav li.nav-item{
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav a.nav-link:hover:after {
+    width: 80%;
+}
+
+.navbar-expand-lg .navbar-nav a.nav-link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(137deg, #B8E0E3, #97C5D8);
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+
+	/* toggle switch start */
+.toggle-switch{
+    margin-top: auto;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 3px;
+  right: 0;
+  bottom: 0;
+  background-color: #283E4E;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #84A9CD;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* toggle switch end */
+
+
+/* here's the end of navbar*/
+
+
+
+
+/* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
+.fixed-top-space{
+	height: 90px;
+	background-color: #84A9CD;
+}
+
+.blue{
+	background-color: #84A9CD;
+}
+
+
+
+
+/* 用戶評論 */
+
+  /* 用戶評論的 hero section */
+.h-section{
+	background-color: #84A9CD;
+	/*padding-bottom: 35px;*/
+	color: #fff;
+}
+
+.h-section h1{
+	font-size: 40px;
+	font-weight: 500;
+	padding-left:40px;
+}
+
+.h-section p{
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.8;
+	padding-left:40px;
+}
+
+
+
+
+
+/* 熱門配單 */
+.promo{
+	padding: 40px 0;
+} 
+  
+  /*卡片組件*/
+.hot-items{
+	padding-top: 20px;
+}
+.card-item{
+	box-shadow: 0px 0px 6px #eee;
+	border-radius: 5px;
+	padding: 25px;
+	background-color: #fff;
+	transition: all .3s;
+}
+
+.card-item:hover{
+	box-shadow: 0px 0px 10px #aaa;
+}
+
+.card-item img{
+	width: 100%;
+	padding-bottom: 20px;
+}
+S
+.card_text{
+	font-size: 16px;
+	color: #0B2229;
+	padding-left: 0;
+	margin-right: 0;
+}
+
+.card_text p{
+	margin-bottom: 0;
+}
+
+.card-content table.table th, .card-content table.table td{
+	border-top: 0;
+	padding: .1rem;
+}
+
+  /* 加入購物車按鈕 */
+button.add-to-cart, button.loginNow{
+	margin: 0 auto;
+	padding: 8px 30px;
+	background-color: #FC9F66;
+	color: #fff;
+	font-size: 18px;
+	position: relative;
+	margin-top: 15px;
+}
+
+button.add-to-cart:hover, button.loginNow:hover{
+	top: -6px;
+	box-shadow: 0px 6px 0px #F17529;
+	transition: top .4s;
+}
+
+
+
+
+/* load-more */
+button.load-more{
+	position: relative;
+	padding: 8px 30px;
+	background-color: #84A9CD;
+	color: #fff;
+}
+
+button.load-more:hover, button.p_submit:hover{
+	top: -6px;
+	box-shadow: 0px 6px 0px #4B77A1;
+	transition: top .4s;
+}
+
+
+
+
+
+/* 熱門評論 */
+.c-space{
+	border-radius: 5px;
+	box-shadow: 0px 0px 6px #eee;
+	background-color: #fff;
+}
+
+  /* 用戶貼文內容 */
+.post{
+	margin-top: 20px;
+}
+  /* 用戶頭像 */
+.profile img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: #ccc;
+}
+
+.username{
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+.p-text{
+   margin-left: 70px;
+}
+
+.p-text a{
+	display: flex;
+	flex-direction: row-reverse;
+	color: #84A9CD;
+	text-decoration: none;
+}
+
+.p-img img{
+	width: 100%;
+}
+
+
+  /* 購買清單 */
+.list{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.list h4{
+	margin: 20px 0;
+}
+
+.cta-button button{
+	background-color: #FC9F66;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 10px;
+	position: relative;
+}
+
+.cta-button button:hover{
+	top: -6px;
+	box-shadow: 0px 6px 0px #F17529;
+	transition: top .4s;
+}
+
+.pd-item{
+	font-size: 16px;
+}
+
+
+/* 投稿欄位 */
+
+/* 已登入並購買 */
+
+
+.userDraft .container{
+	background-color: #E6F3F9;
+}
+.u_list{
+	background-color: #E6F3F9;
+}
+
+.u_list h3, .u_list p{
+	text-align: center;
+}
+
+.u_list p{
+	font-size: 20px;
+}
+
+.u_draft{
+	background-color: #fff;
+}
+.editBar{
+	border-bottom: 1px solid #ddd;
+}
+.editBar span{
+	padding-right: 30px;
+	font-size: 24px;
+	color: #84A9CD;
+}
+
+
+.text-area textarea{
+	font-size: 20px;
+	border: none;
+	/* 右下角三角形不要出現 */
+	resize: none;
+}
+
+.text-area .form-control:focus{
+	border: none;
+	box-shadow: none;
+}
+
+ /*投稿按鈕*/
+button.p_submit{
+	position: relative;
+	padding: 8px 30px;
+	background-color: #84A9CD;
+	color: #fff;
+	font-size: 20px;
+}
+
+
+
+
+/* footer */
+.black{
+	background-color: #0B2229;
+}
+
+footer{
+   padding: 30px 0;
+   color: #fff;
+}
+
+.f-logo{
+	margin-top: 9px;
+}
+footer .nav-link{
+	font-size: 12px;
+	padding-right: 5rem;
+	font-weight: 300;
+}
+
+a.f-title{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+footer > p{
+	text-align: center;
+	color: #ccc;
+	font-weight: 200;
+	font-size: 12px;
+	font-family: Arial;
+	margin-top:30px;
+}
+
+footer > p::before,
+footer > p::after{
+	width: 400px;
+	content:"";
+	height: 1px;
+	background-color: #fff;
+	display: inline-block;
+	margin: 0 30px;
+	vertical-align: center;
+}
