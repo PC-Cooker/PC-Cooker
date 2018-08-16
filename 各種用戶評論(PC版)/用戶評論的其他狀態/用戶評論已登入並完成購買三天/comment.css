@@ -24,6 +24,7 @@ a, a:hover{
 .navbar{
 	background-color: #84A9CD;
 	width: 100%;
+	height: 80px;
 	padding: 10px 0;
 	font-size: 18px;
 }
@@ -43,6 +44,7 @@ button{
 
 .cart, .login{
 	padding: 0 8px;
+	transform: scale(0.85);
 }
 
 	/* 改變預設字體粗度 */
@@ -56,18 +58,18 @@ button{
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 80%;
+    width: 69%;
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 6px;
+    bottom: -2px;
     width: 0;
-    height: 4px;
-    border-radius: 10px;
-    background: linear-gradient(137deg, #B8E0E3, #97C5D8);
+    height: 2px;
+    border-radius: 5px;
+    background:  #eee;
     transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -76,6 +78,7 @@ button{
 	/* toggle switch start */
 .toggle-switch{
     margin-top: auto;
+    transform: scale(0.85);
 }
 .switch {
   position: relative;
@@ -258,8 +261,11 @@ button.load-more:hover, button.p_submit:hover{
 
 
 
-
 /* 熱門評論 */
+.comment{
+	margin-top: 30px;
+	color: #666;
+}
 .c-space{
 	border-radius: 5px;
 	box-shadow: 0px 0px 6px #eee;
@@ -389,7 +395,7 @@ button.p_submit{
 
 /* footer */
 .black{
-	background-color: #0B2229;
+	background-color: #708090;
 }
 
 footer{
