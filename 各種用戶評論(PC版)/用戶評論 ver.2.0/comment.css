@@ -53,18 +53,18 @@ button{
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 80%;
+    width: 70%;
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:after {
-    content: '';
+   content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 4px;
+    bottom: 1px;
     width: 0;
-    height: 4px;
-    border-radius: 10px;
-    background: linear-gradient(137deg, #B8E0E3, #97C5D8);
+    height: 1.5px;
+    border-radius: 5px;
+    background: #eee;
     transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
