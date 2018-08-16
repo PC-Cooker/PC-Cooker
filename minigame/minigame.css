@@ -11,8 +11,9 @@
 }
 
 .minigame {
-    margin-top: 65px;
-    padding-bottom: 240px;
+    margin-top: 80px;
+    max-height: 700px;
+    height: 700px;
 }
 
 .cursorgrab {
@@ -114,7 +115,7 @@
     top: 0;
 }
 
-.CASE_HDD, .case_POWER ,.modelkit_CPU,.modelkit_CPUFAN,.modelkit_Graphic_Card,.modelkit_RAM1,.modelkit_RAM2 {
+.CASE_HDD, .case_POWER, .modelkit_CPU, .modelkit_CPUFAN, .modelkit_Graphic_Card, .modelkit_RAM1, .modelkit_RAM2 {
     transform: translateY(-100%);
     transition: all .5s;
 }
@@ -132,7 +133,6 @@
     bottom: 0;
     width: 400px;
     height: 250px;
-    z-index: 10000;
     font-size: 0;
     transition: all .3s ease-in-out;
     clip-path: polygon(-10% -10%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
@@ -143,6 +143,7 @@
     height: auto;
     margin: auto;
     padding: 7px;
+    bottom: 0;
     text-align: left;
     border: 1px solid rgba(151, 197, 216, .4);
     border-radius: 12px;
@@ -166,6 +167,7 @@
     width: 200px;
     text-align: center;
     right: 10%;
+    bottom: 0;
     border: 1px solid rgba(151, 197, 216, .4);
     border-radius: 12px;
     background-color: rgba(151, 197, 216, .4);

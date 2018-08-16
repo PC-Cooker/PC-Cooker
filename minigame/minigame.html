@@ -12,25 +12,25 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item pr-4">
                     <a class="nav-link" href="#">最新活動</a>
                 </li>
                 <li class="nav-item pr-4">
-                    <a class="nav-link" href="#">客製組裝</a>
+                    <a class="nav-link" href="#">我要組電腦</a>
                 </li>
                 <li class="nav-item pr-4">
-                    <a class="nav-link" href="#">零件單購</a>
+                    <a class="nav-link" href="#">我要買零件</a>
                 </li>
                 <li class="nav-item pr-4">
-                    <a class="nav-link" href="#">用戶評論</a>
+                    <a class="nav-link" href="#">用戶評論區</a>
                 </li>
                 <li class="nav-item pr-4">
-                    <a class="nav-link" href="#">科普知識</a>
+                    <a class="nav-link" href="#">科普小遊戲</a>
                 </li>
             </ul>
-            <button type="login" class="login"><img src="img/login.svg"></button>
-            <button type="cart" class="cart"><img src="img/shoppingcart.svg"></button>
+            <button type="login" class="login"><img src="img/member.svg"></button>
+            <button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
             <!-- toggle-switch start -->
             <div class="toggle-switch d-flex ml-3">
                 <label class="switch">
@@ -42,9 +42,8 @@
         </div>
     </nav>
 </div>
-
 <div class="container position-relative minigame">
-    <img class="img-fluid notselect t0l0 mb" src="images/modelkit_motherboard.png" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.png" alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.png" alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.png" alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.png" alt="">
@@ -108,8 +107,8 @@
                                 <ul>
                                     <li><a class="nav-link" href="#">關於酷客</a></li>
                                     <li><a class="nav-link" href="#">最新活動</a></li>
-                                    <li><a class="nav-link" href="#">客製組裝</a></li>
-                                    <li><a class="nav-link" href="#">零件單購</a></li>
+                                    <li><a class="nav-link" href="#">我要組電腦</a></li>
+                                    <li><a class="nav-link" href="#">我要買零件</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -123,63 +122,56 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
+    var cpuPlaced = false;
+    var cpuFanPlaced = false;
+    var ram1Placed = false;
+    var ram2Placed = false;
+    var gpuPlaced = false;
     var stepCount = 0;
     $('.nextStep').click(function () {
-        stepCount = stepCount + 1;
-        if (stepCount == 1) {
-            $(".modelkit_CPU").css("height", "auto").css('transform', 'translateY(0)');
-            $("#drag_CPU").css("height", 0);
-            $("#drop_CPUFAN").css("height", "20vw");
-            $('.nextStep').text('下一步');
-        } else if (stepCount == 2) {
-            $(".modelkit_CPUFAN").css("height", "auto").css('transform', 'translateY(0)');
-            $("#drag_CPUFAN").css("height", 0);
-            $('.nextStep').text('下一步');
-            if (count == 6) {
-                $('.part1').css("height", 0);
-                $('.mb').css('opacity', 0);
-                $('.case_bg').css('opacity', 1);
-                stepCount = 5;
-            }
-        } else if (stepCount == 3) {
-            $(".modelkit_RAM1").css("height", "auto").css('transform', 'translateY(0)');
-            $("#drag_RAM1").css("height", 0);
-            $('.nextStep').text('下一步');
-            if (count == 6) {
-                $('.part1').css("height", 0);
-                $('.mb').css('opacity', 0);
-                $('.case_bg').css('opacity', 1);
-                stepCount = 5;
-            }
-        } else if (stepCount == 4) {
-            $(".modelkit_RAM2").css("height", "auto").css('transform', 'translateY(0)');
-            $("#drag_RAM2").css("height", 0);
-            $('.nextStep').text('下一步');
-            if (count == 6) {
-                $('.part1').css("height", 0);
-                $('.mb').css('opacity', 0);
-                $('.case_bg').css('opacity', 1);
-                stepCount = 5;
-            }
-        } else if (stepCount == 5) {
-            $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
-            $("#drag_Graphic_Card").css("height", 0);
-            $('.nextStep').text('下一步');
-            if (count == 6) {
-                $('.part1').css("height", 0);
-                $('.mb').css('opacity', 0);
-                $('.case_bg').css('opacity', 1);
-                stepCount = 5;
-            }
-        } else if (stepCount == 6) {
+        if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 0) {
             $(".CASE_HDD").css('opacity', 1).css('transform', 'translateY(0)');
             $('.part1').css("height", 0);
             $('.mb').css('opacity', 0);
             $('.case_bg').css('opacity', 1);
-        } else if (stepCount == 7) {
+            stepCount = stepCount + 1;
+        } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 1) {
             $(".case_POWER").css('opacity', 1).css('transform', 'translateY(0)');
             $('.nextStep').text('完成');
+        } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
+            $('.part1').css("height", 0);
+            $('.mb').css('opacity', 0);
+            $('.case_bg').css('opacity', 1);
+            stepCount = stepCount + 1;
+        } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true) {
+            $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_Graphic_Card").css("height", 0);
+            $('.nextStep').text('下一步');
+            gpuPlaced = true;
+        } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true) {
+            $(".modelkit_RAM2").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_RAM2").css("height", 0);
+            $('.nextStep').text('下一步');
+            ram2Placed = true;
+        } else if (cpuPlaced == true && cpuFanPlaced == true) {
+            $(".modelkit_RAM1").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_RAM1").css("height", 0);
+            $('.nextStep').text('下一步');
+            ram1Placed = true;
+        } else if (cpuPlaced == true) {
+            $(".modelkit_CPUFAN").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_CPUFAN").css("height", 0);
+            $('.nextStep').text('下一步');
+            cpuFanPlaced = true;
+        } else if (cpuPlaced == false) {
+            $(".modelkit_CPU").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_CPU").css("height", 0);
+            $("#drop_CPUFAN").css("height", "20vw");
+            $('.nextStep').text('下一步');
+            cpuPlaced = true;
         }
+        console.log(cpuPlaced, cpuFanPlaced, ram1Placed, ram2Placed, gpuPlaced)
+
     });
     $(function () {
         $("#drag_CPU").draggable({
@@ -212,6 +204,7 @@
                 $("#drag_CPU").css("height", 0);
                 $("#drop_CPUFAN").css("height", "20vw");
                 $('.nextStep').text('下一步');
+                cpuPlaced = true;
             }
         })
         $("#drop_CPUFAN").droppable({
@@ -220,11 +213,11 @@
                 $(".modelkit_CPUFAN").css("height", "auto").css('transform', 'translateY(0)');
                 $("#drag_CPUFAN").css("height", 0);
                 $('.nextStep').text('下一步');
-                if (count == 5) {
+                cpuFanPlaced = true;
+                if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
                     $('.part1').css("height", 0);
                     $('.mb').css('opacity', 0);
                     $('.case_bg').css('opacity', 1);
-                    stepCount = 5;
                 }
             }
         })
@@ -234,11 +227,11 @@
                 $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
                 $("#drag_Graphic_Card").css("height", 0);
                 $('.nextStep').text('下一步');
-                if (count == 5) {
+                gpuPlaced = true;
+                if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
                     $('.part1').css("height", 0);
                     $('.mb').css('opacity', 0);
                     $('.case_bg').css('opacity', 1);
-                    stepCount = 5;
                 }
             }
         })
@@ -248,11 +241,11 @@
                 $(".modelkit_RAM1").css("height", "auto").css('transform', 'translateY(0)');
                 $("#drag_RAM1").css("height", 0);
                 $('.nextStep').text('下一步');
-                if (count == 5) {
+                ram1Placed = true;
+                if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
                     $('.part1').css("height", 0);
                     $('.mb').css('opacity', 0);
                     $('.case_bg').css('opacity', 1);
-                    stepCount = 5;
                 }
             }
         })
@@ -262,11 +255,11 @@
                 $(".modelkit_RAM2").css("height", "auto").css('transform', 'translateY(0)');
                 $("#drag_RAM2").css("height", 0);
                 $('.nextStep').text('下一步');
-                if (count == 5) {
+                ram2Placed = true;
+                if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
                     $('.part1').css("height", 0);
                     $('.mb').css('opacity', 0);
                     $('.case_bg').css('opacity', 1);
-                    stepCount = 5;
                 }
             }
         })
