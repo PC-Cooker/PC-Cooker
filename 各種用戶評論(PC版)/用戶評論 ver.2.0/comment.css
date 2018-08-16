@@ -53,16 +53,16 @@ button{
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 70%;
+    width: 69%;
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:after {
    content: '';
     position: absolute;
-    left: 4px;
-    bottom: 1px;
+    left: 7px;
+    bottom: -2px;
     width: 0;
-    height: 1.5px;
+    height: 2px;
     border-radius: 5px;
     background: #eee;
     transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
