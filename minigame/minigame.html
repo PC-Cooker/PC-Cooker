@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="comment.css">
+    <link rel="stylesheet" href="minigame.css">
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item pr-4">
+                    <a class="nav-link" href="#">最新活動</a>
+                </li>
+                <li class="nav-item pr-4">
+                    <a class="nav-link" href="#">客製組裝</a>
+                </li>
+                <li class="nav-item pr-4">
+                    <a class="nav-link" href="#">零件單購</a>
+                </li>
+                <li class="nav-item pr-4">
+                    <a class="nav-link" href="#">用戶評論</a>
+                </li>
+                <li class="nav-item pr-4">
+                    <a class="nav-link" href="#">科普知識</a>
+                </li>
+            </ul>
+            <button type="login" class="login"><img src="img/login.svg"></button>
+            <button type="cart" class="cart"><img src="img/shoppingcart.svg"></button>
+            <!-- toggle-switch start -->
+            <div class="toggle-switch d-flex ml-3">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <!-- toggle-switch end -->
+        </div>
+    </nav>
+</div>
+
+<div class="container position-relative minigame">
+    <img class="img-fluid notselect t0l0 mb" src="images/modelkit_motherboard.png" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.png" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.png" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.png" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.png"
+         alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
+         src="images/modelkit_Graphic_Card.png" alt="">
+    <div class="container">
+        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_background.svg" alt="">
+        <img class="img-fluid notselect position-absolute case CASE_HDD" src="images/CASE_HDD.svg" alt="">
+        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_clip.svg" alt="">
+        <img class="img-fluid notselect position-absolute case case_POWER" src="images/CASE_power.svg" alt="">
+        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
+    </div>
+    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.png"
+         alt="">
+    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.png" alt="">
+    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.png" alt="">
+    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.png" alt="">
+    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.png" alt="">
+    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.png"
+         alt="">
+    <div id="drop_CPU" class="position-absolute"></div>
+    <div id="drop_CPUFAN" class="position-absolute"></div>
+    <div id="drop_RAM1" class="position-absolute"></div>
+    <div id="drop_RAM2" class="position-absolute"></div>
+    <div id="drop_Graphic_Card" class="position-absolute"></div>
+    <canvas id="live2d" class="position-absolute live2d" width="400" height="450"></canvas>
+    <div class="nextStep position-absolute case_bg">開始</div>
+    <div id="landlord" class="position-absolute">
+        <div class="message" style="opacity:0"></div>
+    </div>
+</div>
+<div class="container-fluid black">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <img src="img/logo_big.svg" class="f-logo">
+                </div>
+                <div class="col-12 col-sm-8">
+                    <nav class="nav">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
+                                <ul>
+                                    <li><a class="nav-link" href="#">配件/軟體加購</a></li>
+                                    <li><a class="nav-link" href="#">保固方式</a></li>
+                                    <li><a class="nav-link" href="#">送貨資訊</a></li>
+                                    <li><a class="nav-link" href="#">退換貨方式</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
+                                <ul>
+                                    <li><a class="nav-link" href="#">網站導覽</a></li>
+                                    <li><a class="nav-link" href="#">聯絡我們</a></li>
+                                    <li><a class="nav-link" href="#">線上客服</a></li>
+                                    <li><a class="nav-link" href="#">隱私權條款</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
+                                <ul>
+                                    <li><a class="nav-link" href="#">關於酷客</a></li>
+                                    <li><a class="nav-link" href="#">最新活動</a></li>
+                                    <li><a class="nav-link" href="#">客製組裝</a></li>
+                                    <li><a class="nav-link" href="#">零件單購</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    var stepCount = 0;
+    $('.nextStep').click(function () {
+        stepCount = stepCount + 1;
+        if (stepCount == 1) {
+            $(".modelkit_CPU").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_CPU").css("height", 0);
+            $("#drop_CPUFAN").css("height", "20vw");
+            $('.nextStep').text('下一步');
+        } else if (stepCount == 2) {
+            $(".modelkit_CPUFAN").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_CPUFAN").css("height", 0);
+            $('.nextStep').text('下一步');
+            if (count == 6) {
+                $('.part1').css("height", 0);
+                $('.mb').css('opacity', 0);
+                $('.case_bg').css('opacity', 1);
+                stepCount = 5;
+            }
+        } else if (stepCount == 3) {
+            $(".modelkit_RAM1").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_RAM1").css("height", 0);
+            $('.nextStep').text('下一步');
+            if (count == 6) {
+                $('.part1').css("height", 0);
+                $('.mb').css('opacity', 0);
+                $('.case_bg').css('opacity', 1);
+                stepCount = 5;
+            }
+        } else if (stepCount == 4) {
+            $(".modelkit_RAM2").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_RAM2").css("height", 0);
+            $('.nextStep').text('下一步');
+            if (count == 6) {
+                $('.part1').css("height", 0);
+                $('.mb').css('opacity', 0);
+                $('.case_bg').css('opacity', 1);
+                stepCount = 5;
+            }
+        } else if (stepCount == 5) {
+            $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
+            $("#drag_Graphic_Card").css("height", 0);
+            $('.nextStep').text('下一步');
+            if (count == 6) {
+                $('.part1').css("height", 0);
+                $('.mb').css('opacity', 0);
+                $('.case_bg').css('opacity', 1);
+                stepCount = 5;
+            }
+        } else if (stepCount == 6) {
+            $(".CASE_HDD").css('opacity', 1).css('transform', 'translateY(0)');
+            $('.part1').css("height", 0);
+            $('.mb').css('opacity', 0);
+            $('.case_bg').css('opacity', 1);
+        } else if (stepCount == 7) {
+            $(".case_POWER").css('opacity', 1).css('transform', 'translateY(0)');
+            $('.nextStep').text('完成');
+        }
+    });
+    $(function () {
+        $("#drag_CPU").draggable({
+            scope: "CPU",
+            revert: "invalid"
+        })
+        $("#drag_CPUFAN").draggable({
+            scope: "CPUFAN",
+            revert: "invalid"
+        })
+        $("#drag_Graphic_Card").draggable({
+            scope: "Graphic_Card",
+            revert: "invalid"
+        })
+        $("#drag_RAM1").draggable({
+            scope: "RAM1",
+            revert: "invalid"
+        })
+        $("#drag_RAM2").draggable({
+            scope: "RAM2",
+            revert: "invalid"
+        })
+        $("#drag_case_fan").draggable({
+            revert: "invalid"
+        })
+        $("#drop_CPU").droppable({
+            scope: "CPU",
+            drop: function (event, ui) {
+                $(".modelkit_CPU").css("height", "auto").css('transform', 'translateY(0)');
+                $("#drag_CPU").css("height", 0);
+                $("#drop_CPUFAN").css("height", "20vw");
+                $('.nextStep').text('下一步');
+            }
+        })
+        $("#drop_CPUFAN").droppable({
+            scope: "CPUFAN",
+            drop: function (event, ui) {
+                $(".modelkit_CPUFAN").css("height", "auto").css('transform', 'translateY(0)');
+                $("#drag_CPUFAN").css("height", 0);
+                $('.nextStep').text('下一步');
+                if (count == 5) {
+                    $('.part1').css("height", 0);
+                    $('.mb').css('opacity', 0);
+                    $('.case_bg').css('opacity', 1);
+                    stepCount = 5;
+                }
+            }
+        })
+        $("#drop_Graphic_Card").droppable({
+            scope: "Graphic_Card",
+            drop: function (event, ui) {
+                $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
+                $("#drag_Graphic_Card").css("height", 0);
+                $('.nextStep').text('下一步');
+                if (count == 5) {
+                    $('.part1').css("height", 0);
+                    $('.mb').css('opacity', 0);
+                    $('.case_bg').css('opacity', 1);
+                    stepCount = 5;
+                }
+            }
+        })
+        $("#drop_RAM1").droppable({
+            scope: "RAM1",
+            drop: function (event, ui) {
+                $(".modelkit_RAM1").css("height", "auto").css('transform', 'translateY(0)');
+                $("#drag_RAM1").css("height", 0);
+                $('.nextStep').text('下一步');
+                if (count == 5) {
+                    $('.part1').css("height", 0);
+                    $('.mb').css('opacity', 0);
+                    $('.case_bg').css('opacity', 1);
+                    stepCount = 5;
+                }
+            }
+        })
+        $("#drop_RAM2").droppable({
+            scope: "RAM2",
+            drop: function (event, ui) {
+                $(".modelkit_RAM2").css("height", "auto").css('transform', 'translateY(0)');
+                $("#drag_RAM2").css("height", 0);
+                $('.nextStep').text('下一步');
+                if (count == 5) {
+                    $('.part1').css("height", 0);
+                    $('.mb').css('opacity', 0);
+                    $('.case_bg').css('opacity', 1);
+                    stepCount = 5;
+                }
+            }
+        })
+    });
+
+</script>
+<script type="text/javascript">
+    var message_Path = 'live2d/'
+</script>
+<script type="text/javascript" src="live2d/js/live2d.js"></script>
+<script type="text/javascript" src="live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "live2d/model/tia/model.json");
+</script>
+</body>
+</html>
