@@ -3,7 +3,7 @@
 
 ## 如何看到自己的網頁
 <br>
-[https://pc-cooker.github.io/PC-Cooker/資料夾路徑/檔名](javascript:)
+https://pc-cooker.github.io/PC-Cooker/資料夾路徑/檔名
 <br>
 如：用戶評論預覽網頁
 <br>
