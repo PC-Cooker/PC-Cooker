@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+	background-color: #F5F8FB;
+}
+*{
+	padding: 0;
+	margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    list-style: none;
+}
+
+.container{
+	width: 100%;
+}
+
+
+
+/* start of navbar*/
+.navbar{
+	background-color: #84A9CD;
+	width: 100%;
+	height: 80px;
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.nav-item .nav-link{
+	color: #fff;
+}
+.nav-item a{
+	font-size:16px;
+}
+button{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.cart, .login{
+	padding: 0 10px;
+	transform: scale(0.85);
+}
+
+	/* 改變預設字體粗度 */
+.navbar-expand-lg .navbar-nav .nav-link{
+    font-weight: 300;
+}
+
+	/* navbar 字體 hover */
+.navbar-expand-lg .navbar-nav li.nav-item{
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav a.nav-link:hover:after {
+    width: 69%;
+}
+
+.navbar-expand-lg .navbar-nav a.nav-link:after {
+   content: '';
+    position: absolute;
+    left: 8px;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    background: #eee;
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+
+	/* toggle switch start */
+.toggle-switch{
+    margin-top: auto;
+    transform: scale(0.85);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 3px;
+  right: 0;
+  bottom: 0;
+  background-color: #283E4E;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #84A9CD;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* toggle switch end */
+
+
+/* here's the end of navbar*/
+
+
+
+
+/* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
+.fixed-top-space{
+	height: 90px;
+	background-color: #84A9CD;
+}
+
+.blue{
+	background-color: #84A9CD;
+}
+
+/* -----------------------------login------------------- */
+.island{
+  background: 95%  100%   no-repeat  url(img/island.svg) #84A9CD;
+  height: 100vh;
+}
+.col-md-3 {
+  max-width: 100%;
+  margin-top: 150px;
+}
+.btn_register{
+  border-radius:  20px 0 0 20px;
+  color: #fff;
+  font-size: 13px;
+  width: 70px;
+}
+.btn_login{
+  border-radius: 0 20px  20px 0;
+  color: #fff;
+  font-size: 13px;
+  width: 70px;
+}
+.btn_register:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.btn_login:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.btn_darkblue{
+  background-color: #84A9CD;
+}
+.btn_lightblue{
+  background-color: #B8E0E3;
+}
+.btn_darkblue:hover{
+  background-color: rgb(103, 141, 179);
+  transition: all .4s;
+}
+.btn_lightblue:hover{
+  background-color: rgb(149, 197, 201);
+  transition: all .4s;
+}
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0,123,255,.25);
+}
+.btn-orange{
+  background-color: #FC9F66;
+  border-radius: 5px;
+  color: #fff;
+  width: 130px;
+  height: 30px;
+  line-height: 15px;
+}
+.btn-orange:hover{
+  background-color: #F17529;
+  transition: all .4s;
+}
+.card-body {
+  padding:50px 50px;
+}
+.form-control{
+  border:none;
+  border-bottom:.5px solid #ccc;
+  border-radius: 0;
+}
+.form-group {
+  margin-bottom: 2rem;
+}
+.member_already{
+  color: #84A9CD;
+  padding-left: 30px;
+}
+.member_already:hover{
+  color: #84A9CD;
+  transition: all .4s;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #495057;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0,123,255,.25);
+}
+.form-check-label> a{
+  color: #84A9CD;
+}
