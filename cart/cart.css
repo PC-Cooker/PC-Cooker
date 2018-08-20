@@ -395,3 +395,14 @@ footer > p::after{
 	margin: 0 30px;
 	vertical-align: center;
 }
+
+.plus{
+	width: 75px;
+	transform: scale(0.5);
+	background-image: url(img/plus.svg);
+}
+.minus{
+	width: 75px;
+	transform: scale(0.5);
+	background-image: url(img/minus.svg);
+}
