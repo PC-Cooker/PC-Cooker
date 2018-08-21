@@ -189,6 +189,7 @@
     font-size: 20px;
     cursor: default;
     font-weight: 300;
+    z-index: 99999999;
 }
 
 .resetgame {
@@ -421,13 +422,34 @@
     .black {
         display: none;
     }
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        overflow: hidden;
+    }
+
+    .portrait-nav {
+        left: -89%;
+        top: 50%;
+        width: 667px;
+        transform: rotate(-90deg);
+    }
 
     .minigame {
-        height: 530px;
+        transform: rotate(-90deg);
+        height: 275px;
+        width: 617px;
+        top: 0%;
+        margin-left: -150px;
     }
 
-    canvas {
-        display: none;
+    .live2d {
+        transform: translateX(-54%) scale(0.7) translateY(47%);
     }
 
+    .nextStep {
+        right: 5%;
+        bottom: -25%;
+    }
 }

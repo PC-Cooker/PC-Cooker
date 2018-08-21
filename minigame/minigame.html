@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="minigame.css">
 </head>
 <body>
-<div class="container-fluid position-absolute">
+
+<div class="container-fluid position-absolute portrait-nav">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
@@ -51,8 +52,10 @@
 <div class="container position-relative minigame">
     <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.svg" alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.svg" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg"
+         alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg"
+         alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.svg"
          alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
@@ -65,7 +68,8 @@
         <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
     </div>
     <!--drag-->
-    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.svg"
+    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab"
+         src="images/Drag_Graphic_Card.svg"
          alt="">
     <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.svg" alt="">
     <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.svg" alt="">
@@ -277,6 +281,13 @@
             }
         })
     });
+    screen.orientation.addEventListener('change', function () {
+        console.log(screen.orientation.type); // e.g. portrait
+    });
+    // OR
+    screen.orientation.onchange = function () {
+        console.log(screen.orientation.type);
+    };
 </script>
 <script type="text/javascript">
     var message_Path = 'live2d/'
