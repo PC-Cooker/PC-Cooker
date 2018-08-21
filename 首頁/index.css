@@ -8,7 +8,9 @@ body{
     font-family: 'Noto Sans TC', Arial, sans-serif;
     list-style: none;
 }
-
+::selection{
+    background: transparent;
+}
 .container{
 	width: 100%;
 }
