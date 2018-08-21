@@ -84,7 +84,7 @@
 
 #drop_RAM1 {;
     z-index: 99;
-    width: 30%;
+    width: 40%;
     height: 20vw;
     top: 0%;
     left: 60%;
@@ -92,7 +92,7 @@
 
 #drop_RAM2 {;
     z-index: 99;
-    width: 30%;
+    width: 40%;
     height: 20vw;
     top: 0%;
     left: 60%;
@@ -416,11 +416,18 @@
         transform: translate(0, 0) rotate(0);
     }
 }
+
 @media only screen and (max-width: 600px) {
     .black {
-        display:none;
+        display: none;
     }
-    .minigame{
+
+    .minigame {
         height: 530px;
     }
+
+    canvas {
+        display: none;
+    }
+
 }
