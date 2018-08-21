@@ -9,7 +9,7 @@ body{
     list-style: none;
 }
 ::selection{
-    background: transparent;
+    background: #283E4E;
 }
 .container{
 	width: 100%;
