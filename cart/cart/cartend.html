@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="cart.css">
+
+	<title>PC酷客｜結帳</title>
+</head>
+<body>
+	<!-- navbar -->
+	<div class="container-fluid">		
+		<nav class="navbar navbar-expand-lg fixed-top">	
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item pr-4">
+						<a class="nav-link" href="#">最新活動</a>
+					</li>
+					<li class="nav-item pr-4">
+						<a class="nav-link" href="#">我要組電腦</a>
+					</li>
+					<li class="nav-item pr-4">
+						<a class="nav-link" href="#">我要買零件</a>
+					</li>
+					<li class="nav-item pr-4">
+						<a class="nav-link" href="#">用戶評論區</a>
+					</li>
+					<li class="nav-item pr-4">
+						<a class="nav-link" href="#">科普小遊戲</a>
+					</li>
+				</ul>
+				<button type="login" class="login"><img src="img/member.svg"></button>
+				<button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
+				<!-- toggle-switch start -->
+				<div class="toggle-switch d-flex ml-3">
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+					</label>
+				</div>
+				<!-- toggle-switch end -->
+			</div>
+		</nav>		
+	</div>
+	<!-- end of navbar -->	
+
+
+	<!-- bs4 的 雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 -->
+	<div class="container-fluid blue">
+		<div class="fixed-top-space"></div>
+    </div>
+    
+    <!-- cart -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadtitle d-flex justify-content-center">
+                    <a href="#" class="active">確認購物袋</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#">運送資訊</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#">付款方式</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#" class="focus">結帳</a>
+                </div>
+                <div>
+                    <div>
+                        <div class="d-flex justify-content-center check_cart">
+                            <div class="btn_title">您本次購買清單</div>
+                        </div>
+                        <div class="bgwhite mb-5" style="display:block;">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+										<th scope="col">商品</th>
+										<th scope="col">數量</th>
+										<th scope="col">售價</th>
+										<th scope="col">總價</th>
+										<th scope="col">訂單編號</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+										<th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+												ATX 電競主機板</th>
+										<td>2</td>
+										<td>NT5,000元</td>
+										<td>NT15,000元</i></td>
+										<td>123456789</td>
+									</tr>
+									<tr>
+										<th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+												ATX 電競主機板</th>
+										<td>2</td>
+										<td>NT5,000元</td>
+										<td>NT15,000元</i></td>
+										<td></td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <div class="finish">購物完成</div>
+                            <button class="btn btn-ok">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- footer -->
+	<div class="container-fluid black">
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						<img src="img/logo_big.svg" class="f-logo">
+					</div>
+					<div class="col-12 col-sm-8">		   	<nav class="nav">
+						<ul class="nav justify-content-center">
+							<li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
+								<ul>
+									<li><a class="nav-link" href="#">配件/軟體加購</a></li>
+									<li><a class="nav-link" href="#">保固方式</a></li>
+									<li><a class="nav-link" href="#">送貨資訊</a></li>
+									<li><a class="nav-link" href="#">退換貨方式</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
+								<ul>
+									<li><a class="nav-link" href="#">網站導覽</a></li>
+									<li><a class="nav-link" href="#">聯絡我們</a></li>
+									<li><a class="nav-link" href="#">線上客服</a></li>
+									<li><a class="nav-link" href="#">隱私權條款</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
+								<ul>
+									<li><a class="nav-link" href="#">關於酷客</a></li>
+									<li><a class="nav-link" href="#">最新活動</a></li>
+									<li><a class="nav-link" href="#">我要組電腦</a></li>
+									<li><a class="nav-link" href="#">我要買零件</a></li>
+								</ul>
+							</li>
+						</ul>	
+					</nav>	
+				</div>
+			</div>
+		</div>
+		<p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>	
+	</footer>
+</div>
+
+<!-- 選擇性的 JavaScript -->
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

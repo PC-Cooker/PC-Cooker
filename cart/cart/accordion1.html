@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+    <style>
+       
+        .accordion-container{
+        position: relative;
+        max-width: 500px;
+        height: auto;
+        margin: 10px auto;
+        }
+        .set{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #f5f5f5;
+        }
+        .set > a{
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #555;
+        font-weight: 600;
+        border-bottom: 1px solid #ddd;
+        transition:all 0.2s linear;
+        }
+        .set > a i{
+        float: right;
+        margin-top: 2px;
+        }
+        .set > a.active{
+        background-color:#3399cc;
+        color: #fff;
+        }
+        .content{
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        display:none;
+        }
+        .content p{
+        padding: 10px 15px;
+        margin: 0;
+        color: #333;
+        }
+        /* ---------------------- */
+        .breadtitle{
+            width: 100%;
+            color: #708090;
+            margin: 60px auto;
+        }
+        .breadtitle>a{
+            color: #708090;
+            font-size: 25px;
+            margin: -10px 30px;
+        }
+        .breadtitle>a:hover{
+            text-decoration: none;
+            color: #fc9f66;
+            transition: all .4s;
+        }
+        a.focus{
+            color: #fc9f66;
+        }
+        .scaleicon{
+            transform: scale(1.5);
+        }
+        .check_cart{
+            border-top: 1px solid #dee2e6;
+            height: 75px;
+            line-height: 70px;
+        }
+        .check_cart>btn{
+            color: #708090;
+            font-size: 25px;
+        }
+        .fa-minus-circle{
+            color: #708090;
+            transform: scale(2) translateX(-5px) translateY(14px);
+        }
+        .fa-plus-circle{
+            color: #708090;
+            transform: scale(2) translateX(-5px) translateY(14px);
+        }
+        .bgwhite{
+            background: #eee;
+            display:none;
+        }
+        .table .thead-dark th{
+            background: #84A9CD;
+            border: #84A9CD;
+            text-align: left;
+            font-weight: 400;
+            font-size: 18px;
+            padding: .75rem 2rem;
+        }
+        .table td, .table th{
+            text-align: left;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 1rem 2rem;
+            color: #708090;
+            border-bottom: 1px solid #dee2e6;
+            border-top: none;
+        }
+        select{
+            width: 80px;
+        }
+        .total_qty{
+            color: #708090;
+            font-size: 20px;
+            text-align: end;
+            margin-bottom: 40px;
+            margin-right: 40px;
+        }
+        .buy_more{
+            color: #708090;
+            font-size: 25px;
+            margin: 20px 509px;
+            width: 100px;
+        }
+        .ml-10{
+            transform: translateX(43px);
+        }
+        .col-md-4>img{
+            border: 1px solid #dee2e6;
+        }
+        .col-md-4>p{
+            color: #708090;
+            font-size: 15px;
+            text-align: center;
+            transform: translateX(-40px);
+            margin: 10px;
+        }
+        .btn-orange{
+            background: #FC9F66;
+            color: #fff;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 75%;
+            margin: 5px auto;
+        }
+        .btn-orange:hover{
+            background: #F17529;
+            transition: all .4s;
+            color: #fff;
+        }
+        .btn-more{
+            color: #708090;
+            font-size: 18px;
+            margin: 15px 457px;
+        }
+        .btn-blue-outline{
+            border: 1px solid #84A9CD;
+            width: 100px;
+            color: #84A9CD;
+            font-weight: 300;
+        }
+        .btn-blue-outline:hover{
+            background: #84A9CD;
+            color: #fff;
+            transition: all .4s;
+        }
+        .btn-confirm{
+            border: 1px solid #f08080;
+            width: 100px;
+            color: #f08080;
+            font-weight: 300;
+        }
+        .btn-confirm:hover{
+            background: #f08080;
+            color: #fff;
+            transition: all .4s;
+        }
+        .btns{
+            text-align: end;
+            margin: 15px 39px 0px 39px;
+            padding-bottom: 20px;
+        }
+        .deliver{
+            padding: 30px 40px 10px;
+            margin-bottom: 20px;
+        }
+        .btn-next{
+            text-align: end;
+            margin: 40px 1px -10px 39px;
+            padding-bottom: 20px;
+        }
+        .atm{
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-danger{
+            width: 100%;
+            background: #f08080;
+            border: 1px solid #f08080;
+            margin-bottom: 20px;
+        }
+        .btn-danger:hover{
+            background: #d87070;
+            border: 1px solid #d87070;
+            transition: all .4s;
+        }
+        .color-gray{
+            color: #708090;
+        }
+        .btn:focus{
+            box-shadow: 0 0 0 0 rgba(0,123,255,.25);
+        }
+        .form-control{
+            color: #708090;
+        }
+        .finish{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            color: #708090;
+        }
+        .btn-ok{
+            width: 80px;
+            background: #84A9CD;
+            color: #fff;
+            margin: 0 518px 20px;
+        }
+        .btn-ok:hover{
+            background: rgb(97, 132, 167);
+        }
+        .color-blue{
+            color: #84A9CD;
+        }
+        .color-orange{
+            color: #fc9f66;
+        }
+        .right{
+            margin-right: 0;
+        }
+        .display-none{
+            display: none;
+        }
+        .h_auto{
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+        <div class="accordion-container">
+            <div class="set">
+                <a href="#">
+                    Vestibulum<i class="fa fa-plus-circle"></i>
+                </a>
+                <div class="bgwhite">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                <th scope="col">商品</th>
+                                <th scope="col">售價</th>
+                                <th scope="col">數量</th>
+                                <th scope="col">移除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+                                        ATX 電競主機板</th>
+                                <td>NT5,000元</td>
+                                <td>
+                                    <select class="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+                                        ATX 電競主機板</th>
+                                <td>NT5,000元</td>
+                                <td>
+                                    <select class="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td><i class="fas fa-trash"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="total_qty">小計 NT15,000元</div>
+                        <div>
+                            <h4 class="buy_more">加購優惠</h4>
+                            <div>
+                                <div class="row ml-10">
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-more">看更多優惠加購商品&emsp;<i class="fas fa-angle-double-down"></i></button>
+                            </div>
+                            <div class="btns">
+                                <button class="btn btn-blue-outline">繼續購物</button>
+                                <button class="btn btn-confirm">繼續結帳</button>
+                            </div>
+                        </div>         
+                    </div>
+            </div>
+            <div class="set">
+                <a href="#">
+                    Vestibulum<i class="fa fa-plus-circle"></i>
+                </a>
+                <div class="bgwhite">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                <th scope="col">商品</th>
+                                <th scope="col">售價</th>
+                                <th scope="col">數量</th>
+                                <th scope="col">移除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+                                        ATX 電競主機板</th>
+                                <td>NT5,000元</td>
+                                <td>
+                                    <select class="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
+                                        ATX 電競主機板</th>
+                                <td>NT5,000元</td>
+                                <td>
+                                    <select class="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                                <td><i class="fas fa-trash"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="total_qty">小計 NT15,000元</div>
+                        <div>
+                            <h4 class="buy_more">加購優惠</h4>
+                            <div>
+                                <div class="row ml-10">
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/i5.jpg" alt="" width="75%">
+                                        <p>鍵盤<br>
+                                            NT$3,090
+                                        </p>
+                                        <button class="btn btn-orange">加入購物車</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-more">看更多優惠加購商品&emsp;<i class="fas fa-angle-double-down"></i></button>
+                            </div>
+                            <div class="btns">
+                                <button class="btn btn-blue-outline">繼續購物</button>
+                                <button class="btn btn-confirm">繼續結帳</button>
+                            </div>
+                        </div>         
+                </div>
+            </div>
+            <div class="set">
+                <a href="#">
+                    Vestibulum<i class="fa fa-plus-circle"></i>
+                </a>
+                <div class="bgwhite">
+                        <div class="deliver">
+                            <div class="form-check atm">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label color-gray" for="exampleRadios1">
+                                    線上刷卡
+                                </label>
+                            </div>
+                                <div class="form-check atm">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label color-gray" for="exampleRadios2">
+                                    ATM轉帳
+                                </label>
+                            </div>
+                            <div class="form-row color-gray display-none">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">信用卡卡號</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder="請輸入16碼信用卡號">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">卡片安全碼</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder="請輸入安全碼">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">持卡人姓名</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder="必須與卡片上一致">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputState">月份</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>一月</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputState">年份</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>2018</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="color-blue">
+                                <p>ATM*轉帳本訂單將保留48小時，逾期本訂單將自動取消。<br>
+                                匯款帳號：銀行代碼<span class="color-orange mx-2">007 / 0029501500140724</span>( 此帳號只能在本次交易中使用 )
+                                </p>
+                            </div>
+                            <div class="total_qty right">結帳金額 NT15,000元</div>
+                            <p class="color-gray">
+                                PC酷客購物網購物約定條款<br>
+                                PC酷客股份有限公司係依據PC酷客購物網會員服務條款及PC酷客購物網購物約定條款（以下稱本條款）
+                                提供您PC酷客購物網各項數位內容暨電子商務之所有相關服務，包括但不限於現有或未來新增之各項服務。
+                                歡迎您在PC酷客購物網消費並成為PC酷客購物網使用者（以下簡稱使用者）。為保障您的權益，請您先閱讀以下的約定條款，
+                                當您點選「我同意」的核取方塊或在PC酷客購物網站進行訂購、兌換、付款、消費或進行相關行為（以下簡稱本服務），
+                                即視為您事先已經知悉並同意遵守本約定條款的所有約定，本約定條款得隨時修訂並公告於PC酷客購物網上，
+                                修訂內容自公告時起生效。
+                            </p>
+                            <div class="form-group form-check atm">
+                                    <input type="checkbox" class="form-check-input mt-2" id="exampleCheck1">
+                                    <label class="form-check-label color-gray" for="exampleCheck1">我同意，以上購物須知</label>
+                                </div>
+                            <button class="btn btn-danger">確認結帳</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".set > a").on("click", function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).siblings(".bgwhite").slideUp(200);
+                $(".set > a i").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+            } else {
+                $(".set > a i").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+                $(this).find("i").removeClass("fa-plus-circle").addClass("fa-minus-circle");
+                $(".set > a").removeClass("active");
+                $(this).addClass("active");
+                $(".bgwhite").slideUp(200);
+                $(this).siblings(".bgwhite").slideDown(200);
+            }
+        });
+    });
+</script>
+</body>
+</html>
