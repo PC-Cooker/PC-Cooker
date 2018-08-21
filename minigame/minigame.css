@@ -11,9 +11,9 @@
 }
 
 .minigame {
-    margin-top: 80px;
-    max-height: 700px;
-    height: 700px;
+    margin-top: 150px;
+    max-height: calc(100% - 80px);
+    height: 800px;
 }
 
 .cursorgrab {
@@ -84,7 +84,7 @@
 
 #drop_RAM1 {;
     z-index: 99;
-    width: 30%;
+    width: 40%;
     height: 20vw;
     top: 0%;
     left: 60%;
@@ -92,7 +92,7 @@
 
 #drop_RAM2 {;
     z-index: 99;
-    width: 30%;
+    width: 40%;
     height: 20vw;
     top: 0%;
     left: 60%;
@@ -126,16 +126,29 @@
     bottom: 0;
 }
 
-#landlord {
-    user-select: none;
-    position: fixed;
-    left: 10%;
-    bottom: 0;
-    width: 400px;
-    height: 250px;
-    font-size: 0;
-    transition: all .3s ease-in-out;
-    clip-path: polygon(-10% -10%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+.victory {
+    position: absolute;
+    width: 100vw;
+    height: 870px;
+    transform: scale(0);
+    overflow: hidden;
+    transition: all .5s cubic-bezier(.84, 1.93, .62, .98);
+    top: 80px;
+}
+
+.victory_bg {
+    transform: translateY(-25%) scale(2) rotate(0deg);
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+.present {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(1) translateX(-50%);
 }
 
 .message {
@@ -143,14 +156,13 @@
     height: auto;
     margin: auto;
     padding: 7px;
-    bottom: 0;
-    text-align: left;
-    border: 1px solid rgba(151, 197, 216, .4);
+    left: 10%;
+    bottom: 10%;
+    text-align: center;
     border-radius: 12px;
-    background-color: rgba(151, 197, 216, .4);
-    box-shadow: 0 3px 15px 2px rgba(151, 197, 216, .4);
+    background-color: #97C5D8;
+    color: #ffffff;
     font-size: 20px;
-    font-weight: 400;
     text-overflow: ellipsis;
     text-transform: uppercase;
     overflow: hidden;
@@ -160,27 +172,46 @@
     animation-iteration-count: infinite;
     animation-name: shake;
     animation-timing-function: ease-in-out;
+    cursor: default;
+    font-weight: 300;
 }
 
 .nextStep {
+    padding: 7px;
     height: auto;
     width: 200px;
     text-align: center;
     right: 10%;
-    bottom: 0;
-    border: 1px solid rgba(151, 197, 216, .4);
+    bottom: 10%;
     border-radius: 12px;
-    background-color: rgba(151, 197, 216, .4);
-    box-shadow: 0 3px 15px 2px rgba(151, 197, 216, .4);
+    background-color: #97C5D8;
+    color: #ffffff;
     font-size: 20px;
-    font-weight: 400;
-    z-index: 9999999;
     cursor: default;
+    font-weight: 300;
 }
 
-@media (max-width: 860px) {
-    #landlord {
-        display: none;
+.resetgame {
+    right: 30%;
+    padding: 7px;
+    height: auto;
+    width: 200px;
+    text-align: center;
+    bottom: 10%;
+    border-radius: 12px;
+    background-color: #97C5D8;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: default;
+    font-weight: 300;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateY(-25%) scale(2) rotate(0deg);
+    }
+    to {
+        transform: translateY(-25%) scale(2) rotate(30deg);
     }
 }
 
@@ -384,4 +415,19 @@
     0%, 100% {
         transform: translate(0, 0) rotate(0);
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .black {
+        display: none;
+    }
+
+    .minigame {
+        height: 530px;
+    }
+
+    canvas {
+        display: none;
+    }
+
 }

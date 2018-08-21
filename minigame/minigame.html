@@ -2,13 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="comment.css">
     <link rel="stylesheet" href="minigame.css">
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid position-absolute">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
@@ -42,15 +44,19 @@
         </div>
     </nav>
 </div>
+<div class="container-fluid victory">
+    <img class="victory_bg" src="images/victory_bg.svg" alt="">
+    <img class="present" src="images/present.jpg" alt="">
+</div>
 <div class="container position-relative minigame">
-    <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.png"
+    <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.svg"
          alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
-         src="images/modelkit_Graphic_Card.png" alt="">
+         src="images/modelkit_Graphic_Card.svg" alt="">
     <div class="container">
         <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_background.svg" alt="">
         <img class="img-fluid notselect position-absolute case CASE_HDD" src="images/CASE_HDD.svg" alt="">
@@ -58,14 +64,16 @@
         <img class="img-fluid notselect position-absolute case case_POWER" src="images/CASE_power.svg" alt="">
         <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
     </div>
-    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.png"
+    <!--drag-->
+    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.svg"
          alt="">
-    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.png" alt="">
-    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.png" alt="">
-    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.png" alt="">
-    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.png" alt="">
-    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.png"
+    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.svg" alt="">
+    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.svg" alt="">
+    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.svg" alt="">
+    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.svg" alt="">
+    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.svg"
          alt="">
+    <!--drop-->
     <div id="drop_CPU" class="position-absolute"></div>
     <div id="drop_CPUFAN" class="position-absolute"></div>
     <div id="drop_RAM1" class="position-absolute"></div>
@@ -73,9 +81,7 @@
     <div id="drop_Graphic_Card" class="position-absolute"></div>
     <canvas id="live2d" class="position-absolute live2d" width="400" height="450"></canvas>
     <div class="nextStep position-absolute case_bg">開始</div>
-    <div id="landlord" class="position-absolute">
-        <div class="message" style="opacity:0"></div>
-    </div>
+    <div class="message" style="opacity:0"></div>
 </div>
 <div class="container-fluid black">
     <footer>
@@ -138,11 +144,20 @@
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 1) {
             $(".case_POWER").css('opacity', 1).css('transform', 'translateY(0)');
             $('.nextStep').text('完成');
+            stepCount = stepCount + 1;
+        } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 2) {
+            $('.victory').css('transform', 'scale(1)');
+            $('.case').css('opacity', 0);
+            $('.message').text('恭喜獲得 : 魔物獵人 世界 遊戲序號抽獎卷一張').css('opacity', 1);
+            $('.nextStep').text('領取序號&前往選購');
+            $('.minigame').append('<div class="position-absolute case_bg resetgame">重玩</div>');
+            $('.resetgame').click(function () {
+                location.href = location.href
+            });
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true) {
             $('.part1').css("height", 0);
             $('.mb').css('opacity', 0);
             $('.case_bg').css('opacity', 1);
-            stepCount = stepCount + 1;
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true) {
             $(".modelkit_Graphic_Card").css("height", "auto").css('transform', 'translateY(0)');
             $("#drag_Graphic_Card").css("height", 0);
@@ -170,8 +185,6 @@
             $('.nextStep').text('下一步');
             cpuPlaced = true;
         }
-        console.log(cpuPlaced, cpuFanPlaced, ram1Placed, ram2Placed, gpuPlaced)
-
     });
     $(function () {
         $("#drag_CPU").draggable({
@@ -264,7 +277,6 @@
             }
         })
     });
-
 </script>
 <script type="text/javascript">
     var message_Path = 'live2d/'
@@ -272,7 +284,7 @@
 <script type="text/javascript" src="live2d/js/live2d.js"></script>
 <script type="text/javascript" src="live2d/js/message.js"></script>
 <script type="text/javascript">
-    loadlive2d("live2d", "live2d/model/tia/model.json");
+    loadlive2d("live2d", "live2d/model/model.json");
 </script>
 </body>
 </html>
