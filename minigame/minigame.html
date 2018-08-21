@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="minigame.css">
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid position-absolute">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
@@ -49,14 +49,14 @@
     <img class="present" src="images/present.jpg" alt="">
 </div>
 <div class="container position-relative minigame">
-    <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.png" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.png"
+    <img class="img-fluid notselect position-absolute t0l0 mb" src="images/modelkit_motherboard.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg" alt="">
+    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.svg"
          alt="">
     <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
-         src="images/modelkit_Graphic_Card.png" alt="">
+         src="images/modelkit_Graphic_Card.svg" alt="">
     <div class="container">
         <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_background.svg" alt="">
         <img class="img-fluid notselect position-absolute case CASE_HDD" src="images/CASE_HDD.svg" alt="">
@@ -64,14 +64,16 @@
         <img class="img-fluid notselect position-absolute case case_POWER" src="images/CASE_power.svg" alt="">
         <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
     </div>
-    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.png"
+    <!--drag-->
+    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab" src="images/Drag_Graphic_Card.svg"
          alt="">
-    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.png" alt="">
-    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.png" alt="">
-    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.png" alt="">
-    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.png" alt="">
-    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.png"
+    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.svg" alt="">
+    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.svg" alt="">
+    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.svg" alt="">
+    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.svg" alt="">
+    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.svg"
          alt="">
+    <!--drop-->
     <div id="drop_CPU" class="position-absolute"></div>
     <div id="drop_CPUFAN" class="position-absolute"></div>
     <div id="drop_RAM1" class="position-absolute"></div>
