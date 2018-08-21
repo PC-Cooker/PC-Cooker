@@ -460,6 +460,7 @@ footer > p{
 
 footer > p::before,
 footer > p::after{
+	transform: translateY(-3px);
 	width: 400px;
 	content:"";
 	height: 1px;
