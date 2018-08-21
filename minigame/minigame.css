@@ -189,6 +189,7 @@
     font-size: 20px;
     cursor: default;
     font-weight: 300;
+    z-index: 99999999;
 }
 
 .resetgame {
