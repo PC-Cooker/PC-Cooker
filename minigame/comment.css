@@ -5,8 +5,8 @@ body{
 *{
 	padding: 0;
 	margin: 0;
-    font-family: 'Noto Sans TC', Arial, sans-serif;
-    list-style: none;
+	font-family: 'Noto Sans TC', Arial, sans-serif;
+	list-style: none;
 }
 
 .container{
@@ -42,93 +42,154 @@ button{
 	transform: scale(0.85);
 }
 
-	/* 改變預設字體粗度 */
+/* 改變預設字體粗度 */
 .navbar-expand-lg .navbar-nav .nav-link{
-    font-weight: 300;
+	font-weight: 300;
 }
 
-	/* navbar 字體 hover */
+/* navbar 字體 hover */
 .navbar-expand-lg .navbar-nav li.nav-item{
-    position: relative;
+	position: relative;
 }
 
 .navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 69%;
+	width: 69%;
 }
+
+a.element:not([href]):not([tabindex]):hover{
+	color: #fff;
+}
+
+
+/* 下拉選單 */
+.list-group{
+	min-width: 160px;
+	top: 43px; /* 位置要設近一點，滑鼠比較容易摸到 */
+	right: -10px;
+	height: auto;
+	color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	display: none;
+	z-index: 10;
+	transition: top 0.3s;
+	font-size: 14px;
+	line-height: 20px;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+	border-radius: 0.25rem;
+}
+
+li.nav-item .list-group-item{
+	padding: 5px 5px 3px 10px;
+	border: transparent;
+	border-left: 5px solid transparent;
+	color: #666;
+}
+
+li.nav-item .list-group-item.active, li.nav-item .list-group-item-action:hover{
+	background-color: #e5e5e5;
+	border-left: 5px solid #fac375;
+}
+
+.list-group a{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+
+li.nav-item{
+	position: relative;
+	color: #fff;
+}
+
+li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .list-group-item:hover{
+	display: block;
+	cursor: pointer;
+}
+
+.list-group span{
+	font-size: 10px;
+	color: #9b9b9b;
+}
+
+/* 下拉選單end */
+
+
 
 .navbar-expand-lg .navbar-nav a.nav-link:after {
-   content: '';
-    position: absolute;
-    left: 7px;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    border-radius: 5px;
-    background: #eee;
-    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+	content: '';
+	position: absolute;
+	left: 7px;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	border-radius: 5px;
+	background: #eee;
+	transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 
 
-	/* toggle switch start */
+
+
+/* toggle switch start */
 .toggle-switch{
-    margin-top: auto;
-    transform: scale(0.85);
+	margin-top: auto;
+	transform: scale(0.85);
 }
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 28px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 28px;
 }
 
 .switch input {display:none;}
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 3px;
-  right: 0;
-  bottom: 0;
-  background-color: #283E4E;
-  -webkit-transition: .4s;
-  transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 3px;
+	right: 0;
+	bottom: 0;
+	background-color: #283E4E;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+	position: absolute;
+	content: "";
+	height: 22px;
+	width: 22px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #84A9CD;
+	background-color: #84A9CD;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 /* toggle switch end */
 
@@ -153,7 +214,7 @@ input:checked + .slider:before {
 
 /* 用戶評論 */
 
-  /* 用戶評論的 hero section */
+/* 用戶評論的 hero section */
 .h-section{
 	background-color: #84A9CD;
 	/*padding-bottom: 35px;*/
@@ -178,12 +239,12 @@ input:checked + .slider:before {
 
 
 /* 熱門配單 */
-.promo{
+/*.promo{
 	padding: 40px 0;
-} 
-  
-  /*卡片組件*/
-.hot-items{
+} */
+
+/*卡片組件*/
+/*.hot-items{
 	padding-top: 20px;
 }
 .card-item{
@@ -193,11 +254,9 @@ input:checked + .slider:before {
 	background-color: #fff;
 	transition: all .3s;
 }
-
 .card-item:hover{
 	box-shadow: 0px 0px 10px #aaa;
 }
-
 .card-item img{
 	width: 100%;
 	padding-bottom: 20px;
@@ -209,17 +268,15 @@ S
 	padding-left: 0;
 	margin-right: 0;
 }
-
 .card_text p{
 	margin-bottom: 0;
 }
-
 .card-content table.table th, .card-content table.table td{
 	border-top: 0;
 	padding: .1rem;
-}
+}*/
 
-  /* 加入購物車按鈕 */
+/* 加入購物車按鈕 */
 button.add-to-cart, button.loginNow{
 	margin: 0 auto;
 	padding: 8px 30px;
@@ -268,11 +325,11 @@ button.load-more:hover{
 	background-color: #fff;
 }
 
-  /* 用戶貼文內容 */
+/* 用戶貼文內容 */
 .post{
 	margin-top: 20px;
 }
-  /* 用戶頭像 */
+/* 用戶頭像 */
 .profile img{
 	width: 60px;
 	height: 60px;
@@ -282,12 +339,12 @@ button.load-more:hover{
 }
 
 .username{
-    font-size: 14px;
-    color: #9c9c9c;
+	font-size: 14px;
+	color: #9c9c9c;
 }
 
 .p-text{
-   margin-left: 70px;
+	margin-left: 70px;
 }
 
 .p-text a{
@@ -302,7 +359,7 @@ button.load-more:hover{
 }
 
 
-  /* 購買清單 */
+/* 購買清單 */
 .list{
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -329,6 +386,15 @@ button.load-more:hover{
 
 .pd-item{
 	font-size: 16px;
+}
+
+.pd-item img{
+	transform: scale(0.6);
+}
+
+.pd-item a{
+	color: #666;
+	text-decoration: none;
 }
 
 
@@ -361,8 +427,8 @@ button.loginNow{
 }
 
 footer{
-   padding: 30px 0;
-   color: #fff;
+	padding: 30px 0;
+	color: #fff;
 }
 
 .f-logo{
@@ -390,11 +456,152 @@ footer > p{
 
 footer > p::before,
 footer > p::after{
+	transform: translateY(-3px);
 	width: 400px;
 	content:"";
 	height: 1px;
 	background-color: #fff;
 	display: inline-block;
 	margin: 0 30px;
-	vertical-align: center;
+	vertical-align: middle;
+}
+
+
+
+
+/* 手機版 */
+
+/* navbar */
+
+@media screen and (max-width: 576px)  {
+	*{
+		overflow-x: hidden;
+	}
+	.h-section h1, .h-section p{
+		padding-left: 0;
+	}
+	.list{
+		margin-top: 0;
+	}
+	.p-text{
+		margin-left: 0;
+		margin-top: 15px;
+	}
+	.pd-list, .pd-item, .pd-item > .cta-button button{
+		display: none;
+		visibility: hidden;
+	}
+
+	.pd{
+		margin: 0 auto;
+	}
+	.pd.table{
+		margin-top: -10px;
+		transform: translateX(33px);
+	}
+
+	.pd > .cta-button button{
+		margin-top: 10px;
+		padding: 10px 20px;
+	}
+
+	.pd.load-more{
+		margin-top: 20px;
+	}
+	.caption p{
+		font-size: 22px;
+	}
+	footer > p::before,
+	footer > p::after{
+		transform: translateY(0px);
+		width: 400px;
+		content:"";
+		height: 1px;
+		background-color: #fff;
+		display: inline-block;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	/* 響應式 footer 手風琴 */
+	.tab {
+		position: relative;
+		margin-bottom: 1px;
+		width: 100%;
+		color: #fff;
+		overflow: hidden;
+	}
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+	label {
+		position: relative;
+		display: block;
+		padding: 0 0 0 1em;
+		background: #708090;
+		line-height: 3;
+		cursor: pointer;
+		border-bottom: 1px solid #fff;
+	}
+	.tab-content {
+		max-height: 0;
+		overflow: hidden;
+		background: #708090;
+		-webkit-transition: max-height .35s;
+		-o-transition: max-height .35s;
+		transition: max-height .35s;
+	}
+
+	.tab-content ul {
+		margin: 0.5em 1em;
+	}
+	.tab-content li{
+		line-height: 2;
+		font-weight: 300;
+	}
+	.tab-content ul li a{
+		color: #fff;
+	}
+	.tab-content ul li a:hover{
+		color: #eee;
+		text-decoration: none;
+	}
+	/* :checked */
+	input:checked ~ .tab-content {
+		max-height: 10em;
+	}
+	/* Icon */
+	label::after {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: 3em;
+		height: 3em;
+		line-height: 3;
+		text-align: center;
+		-webkit-transition: all .35s;
+		-o-transition: all .35s;
+		transition: all .35s;
+	}
+	input[type=checkbox] + label::after {
+		content: "+";
+	}
+	input[type=radio] + label::after {
+		content: "\25BC";
+	}
+	input[type=checkbox]:checked + label::after {
+		transform: rotate(315deg);
+	}
+	input[type=radio]:checked + label::after {
+		transform: rotateX(180deg);
+	}
+	/* 響應式手風琴 end */
+	footer > p::before,
+	footer > p::after{
+		display: none;
+	}
+
 }

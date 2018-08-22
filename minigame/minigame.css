@@ -12,8 +12,7 @@
 
 .minigame {
     margin-top: 150px;
-    max-height: calc(100% - 80px);
-    height: 800px;
+    height: 42vw;
 }
 
 .cursorgrab {
@@ -126,31 +125,6 @@
     bottom: 0;
 }
 
-.victory {
-    position: absolute;
-    width: 100vw;
-    height: 870px;
-    transform: scale(0);
-    overflow: hidden;
-    transition: all .5s cubic-bezier(.84, 1.93, .62, .98);
-    top: 80px;
-}
-
-.victory_bg {
-    transform: translateY(-25%) scale(2) rotate(0deg);
-    animation-name: rotate;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear
-}
-
-.present {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) scale(1) translateX(-50%);
-}
-
 .message {
     opacity: 0;
     height: auto;
@@ -205,15 +179,6 @@
     font-size: 20px;
     cursor: default;
     font-weight: 300;
-}
-
-@keyframes rotate {
-    from {
-        transform: translateY(-25%) scale(2) rotate(0deg);
-    }
-    to {
-        transform: translateY(-25%) scale(2) rotate(30deg);
-    }
 }
 
 @keyframes shake {
@@ -418,38 +383,68 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .black {
-        display: none;
+@media screen and (max-width: 1920px) {
+    .minigame {
+        height: 42vw;
+        margin-top: 50px;
     }
 }
 
-@media screen and (orientation: portrait) {
-    body {
-        overflow: hidden;
-    }
-
-    .portrait-nav {
-        left: -89%;
-        top: 50%;
-        width: 667px;
-        transform: rotate(-90deg);
-    }
-
+@media screen and (max-width: 1680px) {
     .minigame {
-        transform: rotate(-90deg);
-        height: 275px;
-        width: 617px;
-        top: 0%;
-        margin-left: -150px;
+        height: 42vw;
     }
+}
 
-    .live2d {
-        transform: translateX(-54%) scale(0.7) translateY(47%);
+@media screen and (max-width: 1600px) {
+    .minigame {
+        height: 39vw;
+        width: 60%;
     }
+}
 
-    .nextStep {
-        right: 5%;
-        bottom: -25%;
+@media screen and (max-width: 1440px) {
+    .minigame {
+        margin-top: 90px;
+        height: 47vw;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .minigame {
+        margin-top: 30px;
+        height: 57vw;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .minigame {
+        margin-top: 0px;
+        height: 40vw;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .minigame {
+        margin-top: 100px;
+        height: 40vw;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .minigame {
+        margin-top: 10px;
+        height: 55vw;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .minigame {
+        margin-top: 30px;
+        height: 50vw;
+        width: 80%;
     }
 }
