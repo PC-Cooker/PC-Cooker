@@ -365,10 +365,8 @@
     });
     // window.screen.orientation.lock('landscape-primary');
     screen.orientation.lock('landscape').then(function success() {
-        $('.hide').css('display','none');
         console.log("Successfully locked the orientation");
     }, function error(errMsg) {
-        $('.hide').css('display','none');
         console.log("Error locking the orientation :: " + errMsg);
     });
 </script>
