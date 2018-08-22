@@ -300,6 +300,7 @@ input:checked + .slider:before {
 	margin: 5px auto 60px auto;
 	display: flex;
 	flex-wrap: wrap;
+	align-content: center;
 	justify-content: space-between;
 	padding:0 50px;
 }
@@ -526,6 +527,10 @@ footer > p::after{
 	}
 	#btn_orange{
 		margin-left: 220px;
+	}
+	.hotitems{
+		align-content: center;
+		justify-content: center;
 	}
 	/* 響應式 footer 手風琴 */
 	.tab {
