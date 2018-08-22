@@ -397,6 +397,7 @@ input:checked + .slider:before {
 	color: #282828;
 	font-size:30px;
 	transition: all .5s;
+	font-weight: bold;
 }
 .section_01 h3{
 	color:#282828;
@@ -423,7 +424,7 @@ input:checked + .slider:before {
 }
 /* footer */
 .black{
-	background-color: #333;
+	background-color: #708090;
 }
 
 footer{
