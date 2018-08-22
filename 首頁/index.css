@@ -495,9 +495,11 @@ footer > p::after{
 	}
 	.section_img01{
 		width: 100%;
+		opacity: 0.3;
 	}
 	.section_img02{
 		width:100%;
+		opacity: 0.3;
 	}
 	.footer_web{
 		display: none;
