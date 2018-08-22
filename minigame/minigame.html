@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- navbar -->
-<div class="container-fluid hide">
+<div class="container-fluid mobileHide">
     <nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
@@ -89,49 +89,51 @@
 </div>
 <!-- end of navbar -->
 <!-- bs4 的 雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 -->
-<div class="container-fluid blue hide">
+<div class="container-fluid blue mobileHide">
     <div class="fixed-top-space"></div>
 </div>
 <div class="container position-relative minigame">
-    <img class="img-fluid notselect position-absolute t0l0 part1" src="images/modelkit_motherboard.svg" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.svg" alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg"
-         alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg"
-         alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.svg"
-         alt="">
-    <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
-         src="images/modelkit_Graphic_Card.svg" alt="">
-    <div class="container">
-        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_background.svg" alt="">
-        <img class="img-fluid notselect position-absolute case CASE_HDD" src="images/CASE_HDD.svg" alt="">
-        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_clip.svg" alt="">
-        <img class="img-fluid notselect position-absolute case case_POWER" src="images/CASE_power.svg" alt="">
-        <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
+    <div class="row">
+        <img class="img-fluid notselect position-absolute t0l0 part1" src="images/modelkit_motherboard.svg" alt="">
+        <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPU" src="images/modelkit_CPU.svg" alt="">
+        <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM2" src="images/modelkit_RAM2.svg"
+             alt="">
+        <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_RAM1" src="images/modelkit_RAM1.svg"
+             alt="">
+        <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_CPUFAN" src="images/modelkit_CPUFAN.svg"
+             alt="">
+        <img class="img-fluid notselect position-absolute t0l0 part1 modelkit_Graphic_Card"
+             src="images/modelkit_Graphic_Card.svg" alt="">
+        <div class="container">
+            <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_background.svg" alt="">
+            <img class="img-fluid notselect position-absolute case CASE_HDD" src="images/CASE_HDD.svg" alt="">
+            <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_clip.svg" alt="">
+            <img class="img-fluid notselect position-absolute case case_POWER" src="images/CASE_power.svg" alt="">
+            <img class="img-fluid notselect position-absolute case case_bg" src="images/CASE_front.svg" alt="">
+        </div>
+        <!--drag-->
+        <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab"
+             src="images/Drag_Graphic_Card.svg"
+             alt="">
+        <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.svg" alt="">
+        <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.svg" alt="">
+        <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.svg" alt="">
+        <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.svg" alt="">
+        <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.svg"
+             alt="">
+        <!--drop-->
+        <div id="drop_CPU" class="position-absolute"></div>
+        <div id="drop_CPUFAN" class="position-absolute"></div>
+        <div id="drop_RAM1" class="position-absolute"></div>
+        <div id="drop_RAM2" class="position-absolute"></div>
+        <div id="drop_Graphic_Card" class="position-absolute"></div>
+        <canvas id="live2d" class="position-absolute live2d" width="400" height="450"></canvas>
+        <div class="nextStep position-absolute case_bg">開始</div>
+        <div class="message" style="opacity:0"></div>
     </div>
-    <!--drag-->
-    <img id="drag_Graphic_Card" class="img-fluid position-absolute t0l0 cursorgrab"
-         src="images/Drag_Graphic_Card.svg"
-         alt="">
-    <img id="drag_CPU" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPU.svg" alt="">
-    <img id="drag_RAM1" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM1.svg" alt="">
-    <img id="drag_RAM2" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_RAM2.svg" alt="">
-    <img id="drag_CPUFAN" class="img-fluid position-absolute t0l0 cursorgrab" src="images/drag_CPUFAN.svg" alt="">
-    <img id="drag_case_fan" class="img-fluid position-absolute t0l0 cursorgrab part1" src="images/drag_case_fan.svg"
-         alt="">
-    <!--drop-->
-    <div id="drop_CPU" class="position-absolute"></div>
-    <div id="drop_CPUFAN" class="position-absolute"></div>
-    <div id="drop_RAM1" class="position-absolute"></div>
-    <div id="drop_RAM2" class="position-absolute"></div>
-    <div id="drop_Graphic_Card" class="position-absolute"></div>
-    <canvas id="live2d" class="position-absolute live2d" width="400" height="450"></canvas>
-    <div class="nextStep position-absolute case_bg">開始</div>
-    <div class="message" style="opacity:0"></div>
 </div>
 <!-- footer -->
-<div class="container-fluid black hide">
+<div class="container-fluid black mobileHide">
     <footer>
         <div class="container">
             <div class="row">
@@ -171,7 +173,7 @@
             </div>
         </div>
         <!-- 手機 footer 手風琴 -->
-        <div class="container d-md-none hide">
+        <div class="container d-md-none mobileHide">
             <div class="tab">
                 <input id="tab-one" type="checkbox" name="tabs">
                 <label for="tab-one">顧客服務</label>
@@ -363,12 +365,7 @@
             }
         })
     });
-    // window.screen.orientation.lock('landscape-primary');
-    screen.orientation.lock('landscape').then(function success() {
-        console.log("Successfully locked the orientation");
-    }, function error(errMsg) {
-        console.log("Error locking the orientation :: " + errMsg);
-    });
+    screen.orientation.lock('landscape');
 </script>
 <script type="text/javascript">
     var message_Path = 'live2d/'

@@ -383,6 +383,12 @@
     }
 }
 
+@media screen and (orientation: portrait) {
+    .hide {
+        /*display: none;*/
+    }
+}
+
 @media screen and (max-width: 1920px) {
     .minigame {
         height: 42vw;
@@ -446,5 +452,11 @@
         margin-top: 30px;
         height: 50vw;
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .mobileHide {
+        display: none;
     }
 }
