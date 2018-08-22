@@ -273,14 +273,15 @@ input:checked + .slider:before {
 	position: relative;
 }
 .purple_container{
-	width: 600px;
+	max-width: 600px;
 	margin: 0 auto;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	position: relative;
 	top:50%;
 	transform: translateY(-50%);
-	padding:0 15px;
+	
 }
 .purple_container p {
 	color: #fff;
@@ -295,6 +296,7 @@ input:checked + .slider:before {
 	max-width: 1200px;
 	margin: 5px auto 60px auto;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding:0 50px;
 }
@@ -491,7 +493,12 @@ footer > p::after{
 	footer p::before,footer p::after{
 		display: none;
 	}
-
+	.purple_100vw{
+		height: 700px;
+	}
+	.purple_container{
+		text-align: center;
+	}
 	/* 響應式 footer 手風琴 */
 	.tab {
 		position: relative;
