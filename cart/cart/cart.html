@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="comment.css">
     <link rel="stylesheet" type="text/css" href="cart.css">
 
 	<title>PC酷客｜結帳</title>
@@ -70,67 +71,61 @@
                             <div class="btn_title">確認購物袋</div><i class="minus"></i>
                         </div>
                         <div class="bgwhite" id="part1">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">商品</th>
-                                        <th scope="col">售價</th>
-                                        <th scope="col">數量</th>
-                                        <th scope="col">移除</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
-                                                ATX 電競主機板</th>
-                                        <td>NT5,000元</td>
-                                        <td>
-                                            <select class="qty">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </td>
-                                        <td><i class="fas fa-trash"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Xeon E3-1200 v5 處理器專用的全能 
-                                                ATX 電競主機板</th>
-                                        <td>NT5,000元</td>
-                                        <td>
-                                            <select class="qty">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </td>
-                                        <td><i class="fas fa-trash"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="total_qty">小計 NT15,000元</div>
+                            <div class="col-md-12">
+                                <div class="thead-blue">
+                                    <div class="product_title">商品</div>
+                                    <div class="product_other">售價</div>
+                                    <div class="product_other">數量</div>
+                                    <div class="product_other">移除</div>
+                                </div>
+                                <div class="product_list">
+                                    <div class="product_title">Xeon E3-1200 v5 處理器專用的全能 ATX 電競主機板</div>
+                                    <div class="product_other">NT5,000元</div>
+                                    <div class="product_other">
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="product_other"><i class="fas fa-trash"></i></div>
+                                </div>
+                                <div class="product_list">
+                                    <div class="product_title">Xeon E3-1200 v5 處理器專用的全能 ATX 電競主機板</div>
+                                    <div class="product_other">NT5,000元</div>
+                                    <div class="product_other">
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="product_other"><i class="fas fa-trash"></i></div>
+                                </div>
+                            </div>
+                            <div class="total_qty mt-3">小計 NT15,000元</div>
                             <div>
                                 <h4 class="buy_more">加購優惠</h4>
                                 <div class="row ml-10">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-12">
                                         <img src="img/260.jpg" alt="" width="75%">
                                         <p>Razer Ornata 雨林狼蛛 機械軸薄膜式鍵盤<br>
                                             NT$2,990
                                         </p>
                                         <button class="btn btn-orange">加入購物車</button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-12">
                                         <img src="img/278.jpg" alt="" width="75%">
                                         <p>AOC E2270SWHN<br>
                                             NT$2,580
                                         </p>
                                         <button class="btn btn-orange">加入購物車</button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-12">
                                         <img src="img/270.jpg" alt="" width="75%">
                                         <p>Razer Taipan 太攀皇蛇 4G雷射電競滑鼠<br>
                                             NT$1,890
@@ -162,7 +157,7 @@
                                     <label class="form-check-label" for="exampleCheck2">電腦須免費組裝</label>
                                 </div>
                             </div>
-                            <form class="deliver">
+                            <div class="deliver">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="inputEmail4">姓名</label>
@@ -196,7 +191,7 @@
                                 <div class="btn-next">
                                     <button class="btn btn-confirm" id="next2">繼續結帳</button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <div class="set"> 
@@ -204,7 +199,7 @@
                             <div class="btn_title">付款方式</div><i class="plus"></i>
                         </div>
                         <div class="bgwhite" id="part3">
-                            <div class="deliver">
+                            <div class="deliver mb-5">
                                 <div class="form-check atm">
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                     <label class="form-check-label color-gray" for="exampleRadios1">
@@ -272,47 +267,87 @@
     </div>
 
 	<!-- footer -->
-	<div class="container-fluid black mt-5">
+	<div class="container-fluid black">
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-sm-4">
+					<div class="col-12 col-sm-4 d-none d-sm-block">
 						<img src="img/logo_big.svg" class="f-logo">
 					</div>
-					<div class="col-12 col-sm-8">		   	<nav class="nav">
-						<ul class="nav justify-content-center">
-							<li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
-								<ul>
-									<li><a class="nav-link" href="#">配件/軟體加購</a></li>
-									<li><a class="nav-link" href="#">保固方式</a></li>
-									<li><a class="nav-link" href="#">送貨資訊</a></li>
-									<li><a class="nav-link" href="#">退換貨方式</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
-								<ul>
-									<li><a class="nav-link" href="#">網站導覽</a></li>
-									<li><a class="nav-link" href="#">聯絡我們</a></li>
-									<li><a class="nav-link" href="#">線上客服</a></li>
-									<li><a class="nav-link" href="#">隱私權條款</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
-								<ul>
-									<li><a class="nav-link" href="#">關於酷客</a></li>
-									<li><a class="nav-link" href="#">最新活動</a></li>
-									<li><a class="nav-link" href="#">我要組電腦</a></li>
-									<li><a class="nav-link" href="#">我要買零件</a></li>
-								</ul>
-							</li>
-						</ul>	
-					</nav>	
+					<div class="col-12 col-sm-8 d-none d-sm-block">
+						<nav class="nav">
+							<ul class="nav justify-content-center">
+								<li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
+									<ul>
+										<li><a class="nav-link" href="#">配件/軟體加購</a></li>
+										<li><a class="nav-link" href="#">保固方式</a></li>
+										<li><a class="nav-link" href="#">送貨資訊</a></li>
+										<li><a class="nav-link" href="#">退換貨方式</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
+									<ul>
+										<li><a class="nav-link" href="#">網站導覽</a></li>
+										<li><a class="nav-link" href="#">聯絡我們</a></li>
+										<li><a class="nav-link" href="#">線上客服</a></li>
+										<li><a class="nav-link" href="#">隱私權條款</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
+									<ul>
+										<li><a class="nav-link" href="#">關於酷客</a></li>
+										<li><a class="nav-link" href="#">最新活動</a></li>
+										<li><a class="nav-link" href="#">我要組電腦</a></li>
+										<li><a class="nav-link" href="#">我要買零件</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</nav>	
+					</div>
 				</div>
 			</div>
-		</div>
-		<p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>	
-	</footer>
-</div>
+			<!-- 手機 footer 手風琴 -->
+            <div class="container d-md-none">
+                <div class="tab">
+                       <input id="tab-one" type="checkbox" name="tabs" class="f-tab">
+                    <label for="tab-one" class="f-tab">顧客服務</label>
+                    <div class="tab-content">
+                        <ul>
+                   <li><a class="" href="#">配件/軟體加購</a></li>
+                   <li><a class="" href="#">保固方式</a></li>
+                   <li><a class="" href="#">送貨資訊</a></li>
+                   <li><a class="" href="#">退換貨方式</a></li>
+                  </ul>
+                        </div>
+                   </div>
+                   <div class="tab">
+                     <input id="tab-two" type="checkbox" name="tabs" class="f-tab">
+                     <label for="tab-two" class="f-tab">支援服務</label>
+                     <div class="tab-content">
+                        <ul>
+                  <li><a class="" href="#">網站導覽</a></li>
+                  <li><a class="" href="#">聯絡我們</a></li>
+                  <li><a class="" href="#">線上客服</a></li>
+                  <li><a class="" href="#">隱私權條款</a></li>
+                  </ul>
+                     </div>
+                   </div>
+                   <div class="tab">
+                     <input id="tab-three" type="checkbox" name="tabs" class="f-tab">
+                     <label for="tab-three" class="f-tab">關於我們</label>
+                     <div class="tab-content">
+                        <ul>
+                  <li><a class="" href="#">關於酷客</a></li>
+                  <li><a class="" href="#">最新活動</a></li>
+                  <li><a class="" href="#">我要組電腦</a></li>
+                  <li><a class="" href="#">我要買零件</a></li>
+                  </ul>
+                     </div>
+                   </div>
+               </div>
+			<p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>	
+		</footer>
+	</div>
 
 <!-- 選擇性的 JavaScript -->
 <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
@@ -369,10 +404,10 @@
     $("#next2").click(function(){
         // console.log(123);
         
-        // $("#part3").slideDown(200);
-        // $(".part3 > i").removeClass("plus").addClass("minus");
-        // $("#part2").slideUp(200);
-        // $(".part2 > i").removeClass("minus").addClass("plus");
+        $("#part3").slideDown(200);
+        $(".part3 > i").removeClass("plus").addClass("minus");
+        $("#part2").slideUp(200);
+        $(".part2 > i").removeClass("minus").addClass("plus");
     });
 
 //信用卡 atm切換 

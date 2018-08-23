@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="comment.css">
     <link rel="stylesheet" type="text/css" href="cart.css">
 
 	<title>PC酷客｜結帳</title>
@@ -67,39 +68,17 @@
                 <div>
                     <div>
                         <div class="d-flex justify-content-center check_cart">
-                            <div class="btn_title">您本次購買清單</div>
+                            <div class="btn_title">購物完成</div>
                         </div>
-                        <div class="bgwhite mb-5" style="display:block;">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-										<th scope="col">商品</th>
-										<th scope="col">數量</th>
-										<th scope="col">售價</th>
-										<th scope="col">總價</th>
-										<th scope="col">訂單編號</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-										<th scope="row">Xeon E3-1200 v5 處理器專用的全能 
-												ATX 電競主機板</th>
-										<td>2</td>
-										<td>NT5,000元</td>
-										<td>NT15,000元</i></td>
-										<td>123456789</td>
-									</tr>
-									<tr>
-										<th scope="row">Xeon E3-1200 v5 處理器專用的全能 
-												ATX 電競主機板</th>
-										<td>2</td>
-										<td>NT5,000元</td>
-										<td>NT15,000元</i></td>
-										<td></td>
-									</tr>
-                                </tbody>
-                            </table>
-                            <div class="finish">購物完成</div>
+						<div class="bgwhite mb-5" style="display:block;">
+							<div class="col-md-12">
+								<div class="">
+									<div class="color-blue">訂單編號:<span class="color-orange">20180912034478</span></div>
+									<div class="color-blue">日期:<span class="color-orange">2018-09-12</span></div>
+									<div class="color-blue">總價:<span class="color-orange">NT$10,000</span></div>
+									<div class="color-blue">訂單狀態:<span class="color-orange">待付款</span></div>
+								</div>
+							</div>
                             <button class="btn btn-ok">OK</button>
                         </div>
                     </div>
@@ -110,46 +89,86 @@
 
 	<!-- footer -->
 	<div class="container-fluid black">
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-sm-4">
-						<img src="img/logo_big.svg" class="f-logo">
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-4 d-none d-sm-block">
+							<img src="img/logo_big.svg" class="f-logo">
+						</div>
+						<div class="col-12 col-sm-8 d-none d-sm-block">
+							<nav class="nav">
+								<ul class="nav justify-content-center">
+									<li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
+										<ul>
+											<li><a class="nav-link" href="#">配件/軟體加購</a></li>
+											<li><a class="nav-link" href="#">保固方式</a></li>
+											<li><a class="nav-link" href="#">送貨資訊</a></li>
+											<li><a class="nav-link" href="#">退換貨方式</a></li>
+										</ul>
+									</li>
+									<li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
+										<ul>
+											<li><a class="nav-link" href="#">網站導覽</a></li>
+											<li><a class="nav-link" href="#">聯絡我們</a></li>
+											<li><a class="nav-link" href="#">線上客服</a></li>
+											<li><a class="nav-link" href="#">隱私權條款</a></li>
+										</ul>
+									</li>
+									<li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
+										<ul>
+											<li><a class="nav-link" href="#">關於酷客</a></li>
+											<li><a class="nav-link" href="#">最新活動</a></li>
+											<li><a class="nav-link" href="#">我要組電腦</a></li>
+											<li><a class="nav-link" href="#">我要買零件</a></li>
+										</ul>
+									</li>
+								</ul>	
+							</nav>	
+						</div>
 					</div>
-					<div class="col-12 col-sm-8">		   	<nav class="nav">
-						<ul class="nav justify-content-center">
-							<li class="nav-item"><a class="nav-link f-title" href="#">顧客服務</a>
-								<ul>
-									<li><a class="nav-link" href="#">配件/軟體加購</a></li>
-									<li><a class="nav-link" href="#">保固方式</a></li>
-									<li><a class="nav-link" href="#">送貨資訊</a></li>
-									<li><a class="nav-link" href="#">退換貨方式</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link f-title" href="#">支援服務</a>
-								<ul>
-									<li><a class="nav-link" href="#">網站導覽</a></li>
-									<li><a class="nav-link" href="#">聯絡我們</a></li>
-									<li><a class="nav-link" href="#">線上客服</a></li>
-									<li><a class="nav-link" href="#">隱私權條款</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link f-title" href="#">關於我們</a>
-								<ul>
-									<li><a class="nav-link" href="#">關於酷客</a></li>
-									<li><a class="nav-link" href="#">最新活動</a></li>
-									<li><a class="nav-link" href="#">我要組電腦</a></li>
-									<li><a class="nav-link" href="#">我要買零件</a></li>
-								</ul>
-							</li>
-						</ul>	
-					</nav>	
 				</div>
-			</div>
+				<!-- 手機 footer 手風琴 -->
+				<div class="container d-md-none">
+					<div class="tab">
+						   <input id="tab-one" type="checkbox" name="tabs" class="f-tab">
+						<label for="tab-one" class="f-tab">顧客服務</label>
+						<div class="tab-content">
+							<ul>
+					   <li><a class="" href="#">配件/軟體加購</a></li>
+					   <li><a class="" href="#">保固方式</a></li>
+					   <li><a class="" href="#">送貨資訊</a></li>
+					   <li><a class="" href="#">退換貨方式</a></li>
+					  </ul>
+							</div>
+					   </div>
+					   <div class="tab">
+						 <input id="tab-two" type="checkbox" name="tabs" class="f-tab">
+						 <label for="tab-two" class="f-tab">支援服務</label>
+						 <div class="tab-content">
+							<ul>
+					  <li><a class="" href="#">網站導覽</a></li>
+					  <li><a class="" href="#">聯絡我們</a></li>
+					  <li><a class="" href="#">線上客服</a></li>
+					  <li><a class="" href="#">隱私權條款</a></li>
+					  </ul>
+						 </div>
+					   </div>
+					   <div class="tab">
+						 <input id="tab-three" type="checkbox" name="tabs" class="f-tab">
+						 <label for="tab-three" class="f-tab">關於我們</label>
+						 <div class="tab-content">
+							<ul>
+					  <li><a class="" href="#">關於酷客</a></li>
+					  <li><a class="" href="#">最新活動</a></li>
+					  <li><a class="" href="#">我要組電腦</a></li>
+					  <li><a class="" href="#">我要買零件</a></li>
+					  </ul>
+						 </div>
+					   </div>
+				   </div>
+				<p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>	
+			</footer>
 		</div>
-		<p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>	
-	</footer>
-</div>
 
 <!-- 選擇性的 JavaScript -->
 <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
