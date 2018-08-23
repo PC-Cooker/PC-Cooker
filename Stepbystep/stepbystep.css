@@ -16,6 +16,7 @@ body{
 }
 
 a:hover{
+	color:#666;
 	text-decoration: none;
 }
 
@@ -271,7 +272,6 @@ input:checked + .slider:before {
 /* 挑選軟體區塊 */
 .stepbystep_software_container{
 	width: 1200px;
-	height: 500px;
 	background: #F5F8FB;
 	margin: 0 auto;
 }
@@ -293,6 +293,94 @@ input:checked + .slider:before {
 	margin:0 15px 7px 15px;
 	
 }
+.software_01{
+	display: flex;
+	justify-content: space-between;
+}
+.software_01 img{
+	padding:60px 0 30px 0;
+}
+.software_01 h2,
+.software_game h2{
+	font-size:24px;
+	letter-spacing: 1px;
+	margin-bottom:0px;
+}
+.software_01 h3,
+.software_game h3{
+	font-size:14px;
+	color:#aaa;
+	font-weight: normal;
+	padding-bottom:30px;
+	padding-top:0px;
+}
+.three_software{
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	border: 2px solid #e7e7e7;
+	text-align: center;
+}
+.three_software:hover{
+	border:2px solid #ccc;
+}
+
+.learnmore_btn{
+	font-size: 12px;
+	background: #a3a7ab;
+	color: #eee;
+	padding:5px 30px;
+	border-radius: 5px;
+}
+.learnmore_btn:hover{
+	color: #fff;
+
+}
+.software_img{
+	width: 300px;
+	height: 170px;
+}
+.software_game{
+	margin: 0 auto;
+	text-align: center;
+}
+.software_game img{
+	padding-bottom: 30px;
+}
+.software_02{
+	display: flex;
+	flex-wrap: wrap;
+}
+.game{
+	width: 120px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 1px 50px;
+}
+.game img{
+	padding:10px;
+	width: 100px;
+	height: 100px;
+}
+.game p {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
