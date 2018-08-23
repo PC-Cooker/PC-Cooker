@@ -438,7 +438,8 @@
         right: 0%;
         bottom: 1%;
     }
-    .message{
+
+    .message {
         font-size: 16px;
     }
 }
@@ -459,7 +460,8 @@
         right: 0%;
         bottom: 1%;
     }
-    .message{
+
+    .message {
         font-size: 16px;
     }
 }
@@ -480,7 +482,8 @@
         right: 0%;
         bottom: 1%;
     }
-    .message{
+
+    .message {
         font-size: 16px;
     }
 }
@@ -499,7 +502,7 @@
     }
 
     .live2d {
-        transform: translate(-37%, 40%) scale(.7);
+        transform: translate(-38%, 40%) scale(.7);
         left: 0;
         bottom: 0;
     }
@@ -508,7 +511,8 @@
         bottom: 20%;
         right: 1%;
     }
-    .message{
+
+    .message {
         font-size: 16px;
     }
 }
@@ -528,7 +532,7 @@
     }
 
     .live2d {
-        transform: translate(-37%, 40%) scale(.7);
+        transform: translate(-38%, 40%) scale(.7);
         left: 0;
         bottom: 0;
     }
@@ -537,7 +541,28 @@
         bottom: 20%;
         right: 1%;
     }
-    .message{
+
+    .message {
         font-size: 16px;
+    }
+
+    .container {
+        padding: 0;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .minigame {
+        background-color: #97C5D8;
+        background-image: url(images/orientation.gif);
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 0px;
+    }
+
+    img, canvas, .nextStep {
+        opacity: 0;
     }
 }
