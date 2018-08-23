@@ -135,6 +135,7 @@
                                 </div>
                                 <button class="btn btn-more">看更多優惠加購商品&emsp;<i class="fas fa-angle-double-down"></i></button>
                                 <div class="btns">
+                                    <hr>
                                     <button class="btn btn-blue-outline">繼續購物</button>
                                     <button class="btn btn-confirm" id="next1">繼續結帳</button>
                                 </div>
@@ -188,6 +189,7 @@
                                     <label for="inputAddress">地址</label>
                                     <input type="text" class="form-control" id="inputAddress" placeholder="請輸入寄件地址">
                                 </div>
+                                <hr>
                                 <div class="btn-next">
                                     <button class="btn btn-confirm" id="next2">繼續結帳</button>
                                 </div>
@@ -402,8 +404,6 @@
         $(".part1 > i").removeClass("minus").addClass("plus");
     });
     $("#next2").click(function(){
-        // console.log(123);
-        
         $("#part3").slideDown(200);
         $(".part3 > i").removeClass("plus").addClass("minus");
         $("#part2").slideUp(200);
@@ -419,6 +419,7 @@
         $("#creditcard").addClass("display-none");
         $("#atm").removeClass("display-none");
     });
+   
 </script>
 </body>
 </html>

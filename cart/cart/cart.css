@@ -204,6 +204,11 @@ select{
     width: 75%;
     margin: 5px auto;
 }
+@media screen and (max-width: 576px) {
+	.btn-orange{
+		margin: 0px auto 20px;
+	}  
+}
 .btn-orange:hover{
     background: #F17529;
     transition: all .4s;
@@ -213,6 +218,11 @@ select{
 	color: #708090;
 	font-size: 18px;
 	margin: 15px 457px;
+}
+@media screen and (max-width: 576px) {
+	.btn-more{
+		margin: 0px 66px;
+	}  
 }
 .btn-more:hover{
 	color: #576472;
@@ -258,10 +268,14 @@ select{
 	margin: 15px 45px 0px 0px;
 	padding-bottom: 20px;
 }
+.btns>hr{
+	transform: translateX(12%);
+    width: 80%;
+}
 @media screen and (max-width: 576px) {
 	.btns{
 		text-align: center;
-		margin-top: -54px;
+		margin-top: 0px;
 		margin-right: 0;
 	}  
 }
@@ -286,6 +300,15 @@ select{
 		margin-left: 0!important;
 	}  
 }
+hr{
+	border-width: 1px;
+	display: none;
+}
+@media screen and (max-width: 576px) {
+	hr{
+		display: block;
+	}  
+}
 .btn-next{
 	text-align: end;
 	margin: 40px 1px -10px 39px;
@@ -298,6 +321,11 @@ select{
 	}  
 }
 @media screen and (max-width: 576px) {
+	.btn-next> .btn-confirm{
+		width: 100%;
+	}  
+}
+@media screen and (max-width: 576px) {
 	#part3> .deliver{
 		padding: 20px 20px 6px;
 	}  
@@ -307,8 +335,39 @@ select{
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 }
+
+.cart_end{
+	text-align: center;
+	margin-top: -10px;
+}
+@media screen and (max-width: 576px) {
+	.cart_end{
+		margin-top: -17px;
+	}  
+}
 .color-blue{
 	color: #84A9CD;
+}
+@media screen and (max-width: 576px) {
+	.cart_end> .color-blue{
+		padding: 10px 18px 0;
+		width: 100%;
+		text-align: left;
+		font-size: 18px;
+	}  
+}
+.cart_end> .color-blue{
+	font-size: 20px;
+    padding: 20px 28px 0;
+}
+.color-dark{
+	color: #708090;
+	padding-left: 10px;
+}
+@media screen and (max-width: 576px) {
+	.color-dark{
+		padding-left: 10px;
+	}  
 }
 .color-orange{
 	color: #fc9f66;
@@ -341,10 +400,16 @@ select{
 	color: #708090;
 }
 .btn-ok{
-	width: 80px;
+	width: 30%;
 	background: #84A9CD;
 	color: #fff;
-	margin: 0 518px 20px;
+	margin: 39px 389px -6px;
+}
+@media screen and (max-width: 576px) {
+	.btn-ok{
+		width: 90%;
+		margin: 23px 17px -21px;
+	}  
 }
 .btn-ok:hover{
 	background: rgb(97, 132, 167);
