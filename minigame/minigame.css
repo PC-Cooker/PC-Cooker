@@ -147,6 +147,7 @@
     animation-timing-function: ease-in-out;
     cursor: default;
     font-weight: 300;
+    z-index: 999999;
 }
 
 .nextStep {
@@ -432,11 +433,13 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
+        width: 150px;
     }
 
     .nextStep {
         right: 0%;
         bottom: 1%;
+        width: 150px;
     }
 
     .message {
@@ -453,12 +456,14 @@
 
     .resetgame {
         bottom: 20%;
-        right: 1%;
+        right: 0%;
+        width: 150px;
     }
 
     .nextStep {
         right: 0%;
-        bottom: 1%;
+        bottom: 0%;
+        width: 150px;
     }
 
     .message {
@@ -476,11 +481,13 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
+        width: 150px;
     }
 
     .nextStep {
         right: 0%;
         bottom: 1%;
+        width: 150px;
     }
 
     .message {
@@ -499,6 +506,7 @@
     .nextStep {
         right: 0%;
         bottom: 1%;
+        width: 150px;
     }
 
     .live2d {
@@ -509,7 +517,8 @@
 
     .resetgame {
         bottom: 20%;
-        right: 1%;
+        right: 0%;
+        width: 150px;
     }
 
     .message {
@@ -528,7 +537,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 1%;
+        bottom: 0%;
     }
 
     .live2d {
@@ -539,7 +548,8 @@
 
     .resetgame {
         bottom: 20%;
-        right: 1%;
+        right: 0%;
+        width: 150px;
     }
 
     .message {
