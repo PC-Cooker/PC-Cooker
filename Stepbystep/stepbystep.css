@@ -218,7 +218,7 @@ input:checked + .slider:before {
 .stepbystep_100vw{
 	width: 100%;
 	height: 300px;
-	background-color: #283F4E;
+	background-color: #84A9CD;
 	margin-top:80px;
 }
 .stepbystep_top_container{
@@ -328,12 +328,13 @@ input:checked + .slider:before {
 .learnmore_btn{
 	font-size: 12px;
 	background: #a3a7ab;
-	color: #eee;
+	color: #fff;
 	padding:5px 30px;
 	border-radius: 5px;
 }
 .learnmore_btn:hover{
 	color: #fff;
+	background: #8c8f93;
 
 }
 .software_img{
@@ -350,6 +351,7 @@ input:checked + .slider:before {
 .software_02{
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 150px;
 }
 .game{
 	width: 120px;
@@ -368,8 +370,6 @@ input:checked + .slider:before {
 .game p {
 	display: inline-block;
 }
-
-
 
 
 
