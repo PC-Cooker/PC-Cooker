@@ -131,7 +131,7 @@
     padding: 7px;
     left: 10%;
     bottom: 10%;
-    text-align: center;
+    text-align: left;
     border-radius: 12px;
     background-color: #97C5D8;
     color: #ffffff;
@@ -438,6 +438,9 @@
         right: 0%;
         bottom: 1%;
     }
+    .message{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -456,6 +459,9 @@
         right: 0%;
         bottom: 1%;
     }
+    .message{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1152px) {
@@ -473,6 +479,9 @@
     .nextStep {
         right: 0%;
         bottom: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
 
@@ -499,6 +508,9 @@
         bottom: 20%;
         right: 1%;
     }
+    .message{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 812px) {
@@ -524,5 +536,8 @@
     .resetgame {
         bottom: 20%;
         right: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
