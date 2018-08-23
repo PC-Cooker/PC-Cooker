@@ -14,7 +14,7 @@
 	<!-- navbar -->
 	<div class="container-fluid">		
 		<nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block">	
-			<div class="container">
+			<div class="container pt-2">
 				<a class="navbar-brand" href="#"><img src="img/logo_big.svg"></a>
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item pr-4">
@@ -69,22 +69,33 @@
 						</ul>
 					</li>
 					<li class="nav-item pr-4">
-						<a class="nav-link" href="#">用戶評論區</a>
+						<a class="nav-link" href="#">用戶評論</a>
 					</li>
 					<li class="nav-item pr-4">
 						<a class="nav-link" href="#">科普小遊戲</a>
 					</li>
 				</ul>
-				<button type="login" class="login"><img src="img/member.svg"></button>
+				<button type="login" class="login"><img src="img/member.svg">
+					<ul class="list-group text-left">
+							<a href="#" class="list-group-item list-group-item-action active">
+								會員資料修改	
+							</a>
+							<a href="#" class="list-group-item list-group-item-action">
+								訂單查詢
+							</a>
+							<a href="#" class="list-group-item list-group-item-action">
+								購物金
+							</a>
+							<a href="#" class="list-group-item list-group-item-action">
+								專屬優惠
+							</a>
+							<a href="#" class="list-group-item list-group-item-action">
+								客服中心
+							</a>
+						</ul>
+				</button>
+
 				<button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
-				<!-- toggle-switch start -->
-				<div class="toggle-switch d-flex ml-3">
-					<label class="switch">
-						<input type="checkbox">
-						<span class="slider round"></span>
-					</label>
-				</div>
-				<!-- toggle-switch end -->
 			</div>
 		</nav>		
 	</div>
@@ -115,312 +126,135 @@
 		
 	</div>
 
-	<!-- 熱門配單（廠商業配區） -->
-<!-- 	<div class="container promo">
-		<h3>本月主打熱門配單</h3>
-		<div class="row">
-			<div class="hot-items col-12 col-sm-4">
-				<div class="container">
-					<div class="card-item">
-						<img src="img/case-image.png">
-						<div class="card-content">			
-							<table class="table">
-								<tbody>
-									<tr>
-										<th scope="col">機殼</th>
-										<td>全漢 CMT230</td>
-									</tr>
-									<tr>
-										<th scope="row">CPU</th>
-										<td>Intel i3-7100</td>
-									</tr>
-									<tr>
-										<th scope="row">主機板</th>
-										<td>微星 B250M PRO-VDH</td>
-									</tr>
-									<tr>
-										<th scope="row">記憶體</th>
-										<td>金士頓 8G DDR4</td>
-									</tr>
-									<tr>
-										<th scope="row">硬碟</th>
-										<td>Toshiba 1TB</td>
-									</tr>
-									<tr>
-										<th scope="row">顯卡</th>
-										<td>微星 GTX1050Ti 4GT</td>
-									</tr>
-									<tr>
-										<th scope="row">電源</th>
-										<td>台達500W</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<button class="add-to-cart d-flex justify-content-center">加入購物車</button>
-					</div>
-				</div>
-			</div>
-			<div class="hot-items col-12 col-sm-4">
-				<div class="container">
-					<div class="card-item">
-						<img src="img/case-image-1.png">
-						<div class="card-content">			
-							<table class="table">
-								<tbody>
-									<tr>
-										<th scope="col">機殼</th>
-										<td>全漢 CMT230</td>
-									</tr>
-									<tr>
-										<th scope="row">CPU</th>
-										<td>Intel i3-7100</td>
-									</tr>
-									<tr>
-										<th scope="row">主機板</th>
-										<td>微星 B250M PRO-VDH</td>
-									</tr>
-									<tr>
-										<th scope="row">記憶體</th>
-										<td>金士頓 8G DDR4</td>
-									</tr>
-									<tr>
-										<th scope="row">硬碟</th>
-										<td>Toshiba 1TB</td>
-									</tr>
-									<tr>
-										<th scope="row">顯卡</th>
-										<td>微星 GTX1050Ti 4GT</td>
-									</tr>
-									<tr>
-										<th scope="row">電源</th>
-										<td>台達500W</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<button class="add-to-cart d-flex justify-content-center">加入購物車</button>
-					</div>
-				</div>
-			</div>
-			<div class="hot-items col-12 col-sm-4">
-				<div class="container">
-					<div class="card-item">
-						<img src="img/case-image-2.png">
-						<div class="card-content">			
-							<table class="table">
-								<tbody>
-									<tr>
-										<th scope="col">機殼</th>
-										<td>全漢 CMT230</td>
-									</tr>
-									<tr>
-										<th scope="row">CPU</th>
-										<td>Intel i3-7100</td>
-									</tr>
-									<tr>
-										<th scope="row">主機板</th>
-										<td>微星 B250M PRO-VDH</td>
-									</tr>
-									<tr>
-										<th scope="row">記憶體</th>
-										<td>金士頓 8G DDR4</td>
-									</tr>
-									<tr>
-										<th scope="row">硬碟</th>
-										<td>Toshiba 1TB</td>
-									</tr>
-									<tr>
-										<th scope="row">顯卡</th>
-										<td>微星 GTX1050Ti 4GT</td>
-									</tr>
-									<tr>
-										<th scope="row">電源</th>
-										<td>台達500W</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<button class="add-to-cart d-flex justify-content-center">加入購物車</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-12 d-flex flex-row-reverse my-4">
-			<button class="load-more">載入更多</button>
-		</div>
-	</div> -->
-
-
 	
 	<!-- 熱門評論 -->
 	<div class="container comment">
-		<h3>熱門評論</h3>
-		<div class="col-12 c-space my-3">
-			<div class="row">
-				<div class="col-12 col-sm-6">
-					<div class="post">
-						<div class="profile d-flex">
-							<img src="https://picsum.photos/300/200?random=1"><span>爾尼翰<br><span class="username">贊助</span></span>
-						</div>
-						<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
-							<div class="p-img my-3"><img src="img/GraphicCard.jpg"></div>
-						</div>
-
-					</div>
+		<div class="row">
+			<div class="col-12">
+				<!-- search bar -->
+				<div class="s_bar d-flex justify-content-center flex-wrap">
+					<input type="text" name="" placeholder="輸入產品關鍵字查詢用戶評論" class="searchbar">
+					<img src="img/search.svg">
 				</div>
-				<div class="col-12 col-sm-6 list">
-					<h4>購買清單</h4>
-					<div class="pd-list d-flex flex-wrap align-content-center">
-						<div class="pd-item p-3"><img src="img/case.png">
-							<p><a href="#">機殼<br>
-							全漢 CMT230</a></p></div>
-						<div class="pd-item p-3"><img src="img/CPU.png">
-							<p><a href="#">CPU<br>
-							Intel i3-7100</a></p></div>
-						<div class="pd-item p-3"><img src="img/motherboard.png">
-							<p><a href="#">主機板<br>
-								微星 B250M<br>PRO-VDH</a></p></div>
-						<div class="pd-item p-3"><img src="img/RAM.png">
-							<p><a href="#">記憶體<br>
-							金士頓 8G DDR4</a></p></div>
-						<div class="pd-item p-3"><img src="img/ssd.png">
-							<p><a href="#">硬碟<br>
-							Toshiba 1TB</a></p></div>
-						<div class="pd-item p-3"><img src="img/graphiccard.png">
-							<p><a href="#">顯卡<br>
-								微星 GTX1050Ti<br>4GT</a></p>
+				<p class="keyword"><span class="hot_keyword">熱門關鍵字</span> <span><span class="select">酷克精選</span><a href="#"> 吃雞</a><a href="#"> 魔物獵人 </a><a href="#">電競</a><a href="#"> LOL</a></span></p>
+				
+				<h3>最新評論</h3>
+				<div class="col-12 c-space my-3">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="post">
+								<div class="profile d-flex">
+									<img src="https://picsum.photos/300/200?random=1"><span>爾尼翰<br><span class="username">贊助</span></span>
+								</div>
+								<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
+									<div class="p-img my-3"><img src="img/GraphicCard.jpg"></div>
+								</div>
+				
 							</div>
-						<div class="pd-item p-3"><img src="img/power.png">
-							<p><a href="#">電源<br>
-							台達500W</a></p>
 						</div>
-						<div class="pd-item d-flex align-self-center p-3">
-							<div class="cta-button"><button>加入購物車</button></div>
+						<div class="col-12 col-sm-6 list">
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
+								</div>
+							</div>							
 						</div>
-					</div>
-					<div class="pd d-flex flex-wrap">
-						<table class="pd table text-left d-block d-sm-none">
-									<tbody>
-										<tr>
-											<th scope="col">機殼</th>
-											<td>全漢 CMT230</td>
-										</tr>
-										<tr>
-											<th scope="row">CPU</th>
-											<td>Intel i3-7100</td>
-										</tr>
-										<tr>
-											<th scope="row">主機板</th>
-											<td>微星 B250M PRO-VDH</td>
-										</tr>
-										<tr>
-											<th scope="row">記憶體</th>
-											<td>金士頓 8G DDR4</td>
-										</tr>
-										<tr>
-											<th scope="row">硬碟</th>
-											<td>Toshiba 1TB</td>
-										</tr>
-										<tr>
-											<th scope="row">顯卡</th>
-											<td>微星 GTX1050Ti 4GT</td>
-										</tr>
-										<tr>
-											<th scope="row">電源</th>
-											<td>台達500W</td>
-										</tr>
-									</tbody>
-						</table>
-						<div class="cta-button mx-auto pb-3"><button>加入購物車</button></div>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="col-12 c-space my-3">
-			<div class="row">
-				<div class="col-12 col-sm-6">
-					<div class="post">
-						<div class="profile d-flex">
-							<img src="img/user.svg"><span>爾尼翰<br><span class="username">@erniehan1024</span></span>
+				
+				<div class="col-12 c-space my-3">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="post">
+								<div class="profile d-flex">
+									<img src="img/user.svg"><span>爾尼翰<br><span class="username">@erniehan1024</span></span>
+								</div>
+								<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
+									<div class="p-img my-3"><img src="img/userpost2.jpg"></div>
+								</div>
+				
+							</div>
 						</div>
-						<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
-							<div class="p-img my-3"><img src="img/userpost2.jpg"></div>
+						<div class="col-12 col-sm-6 list">
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
+								</div>
+							</div>							
 						</div>
-
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 list">
-					<h4>購買清單</h4>
-					<div class="pd-list d-flex flex-wrap align-content-center">
-						<div class="pd-item p-3"><img src="img/case.png">
-							<p><a href="#">機殼<br>
-							全漢 CMT230</a></p></div>
-						<div class="pd-item p-3"><img src="img/CPU.png">
-							<p><a href="#">CPU<br>
-							Intel i3-7100</a></p></div>
-						<div class="pd-item p-3"><img src="img/motherboard.png">
-							<p><a href="#">主機板<br>
-								微星 B250M<br>PRO-VDH</a></p></div>
-						<div class="pd-item p-3"><img src="img/RAM.png">
-							<p><a href="#">記憶體<br>
-							金士頓 8G DDR4</a></p></div>
-						<div class="pd-item p-3"><img src="img/ssd.png">
-							<p><a href="#">硬碟<br>
-							Toshiba 1TB</a></p></div>
-						<div class="pd-item p-3"><img src="img/graphiccard.png">
-							<p><a href="#">顯卡<br>
-							微星 GTX1050Ti<br>4GT</a></p>
-						</div>
-						<div class="pd-item p-3"><img src="img/power.png">
-							<p><a href="#">電源<br>
-							台達500W</a></p>
-						</div>
-						<div class="pd-item d-flex align-self-center p-3">
-							<div class="cta-button"><button>加入購物車</button></div>
-						</div>
-					</div>
-					<div class="pd d-flex flex-wrap">
-						<table class="pd table text-left d-block d-sm-none">
-									<tbody>
-										<tr>
-											<th scope="col">機殼</th>
-											<td>全漢 CMT230</td>
-										</tr>
-										<tr>
-											<th scope="row">CPU</th>
-											<td>Intel i3-7100</td>
-										</tr>
-										<tr>
-											<th scope="row">主機板</th>
-											<td>微星 B250M PRO-VDH</td>
-										</tr>
-										<tr>
-											<th scope="row">記憶體</th>
-											<td>金士頓 8G DDR4</td>
-										</tr>
-										<tr>
-											<th scope="row">硬碟</th>
-											<td>Toshiba 1TB</td>
-										</tr>
-										<tr>
-											<th scope="row">顯卡</th>
-											<td>微星 GTX1050Ti 4GT</td>
-										</tr>
-										<tr>
-											<th scope="row">電源</th>
-											<td>台達500W</td>
-										</tr>
-									</tbody>
-						</table>
-						<div class="cta-button mx-auto pb-3"><button>加入購物車</button></div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-12 c-space my-3">
+				<div class="col-12 c-space my-3">
 					<div class="row">
 						<div class="col-12 col-sm-6">
 							<div class="post">
@@ -433,81 +267,240 @@
 							</div>
 						</div>
 						<div class="col-12 col-sm-6 list">
-							<h4>購買清單</h4>
-							<div class="pd-list d-flex flex-wrap align-content-center">
-								<div class="pd-item p-3"><img src="img/case.png">
-									<p><a href="#">機殼<br>
-									全漢 CMT230</a></p></div>
-								<div class="pd-item p-3"><img src="img/CPU.png">
-									<p><a href="#">CPU<br>
-									Intel i3-7100</a></p></div>
-								<div class="pd-item p-3"><img src="img/motherboard.png">
-									<p><a href="#">主機板<br>
-								微星 B250M<br>PRO-VDH</a></p></div>
-								<div class="pd-item p-3"><img src="img/RAM.png">
-								<p><a href="#">記憶體<br>
-								金士頓 8G DDR4</a></p></div>
-								<div class="pd-item p-3"><img src="img/ssd.png">
-									<p><a href="#">硬碟<br>
-									Toshiba 1TB</a></p></div>
-								<div class="pd-item p-3"><img src="img/graphiccard.png">
-									<p><a href="#">顯卡<br>
-								微星 GTX1050Ti<br>4GT</a></p>
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
 								</div>
-								<div class="pd-item p-3"><img src="img/power.png">
-									<p><a href="#">電源<br>
-									台達500W</a></p>
-								</div>
-								<div class="pd-item d-flex align-self-center p-3">
-									<div class="cta-button"><button>加入購物車</button></div>
-								</div>
-							</div>
-							<div class="pd d-flex flex-wrap">
-						<table class="pd table text-left d-block d-sm-none">
-									<tbody>
-										<tr>
-											<th scope="col">機殼</th>
-											<td>全漢 CMT230</td>
-										</tr>
-										<tr>
-											<th scope="row">CPU</th>
-											<td>Intel i3-7100</td>
-										</tr>
-										<tr>
-											<th scope="row">主機板</th>
-											<td>微星 B250M PRO-VDH</td>
-										</tr>
-										<tr>
-											<th scope="row">記憶體</th>
-											<td>金士頓 8G DDR4</td>
-										</tr>
-										<tr>
-											<th scope="row">硬碟</th>
-											<td>Toshiba 1TB</td>
-										</tr>
-										<tr>
-											<th scope="row">顯卡</th>
-											<td>微星 GTX1050Ti 4GT</td>
-										</tr>
-										<tr>
-											<th scope="row">電源</th>
-											<td>台達500W</td>
-										</tr>
-									</tbody>
-						</table>
-						<div class="cta-button mx-auto pb-3"><button>加入購物車</button></div>
-					</div>
+							</div>							
 						</div>
 					</div>
-		</div>
-		<div class="row">
-			<div class="col-12 d-flex flex-row-reverse my-3">
-				<button class="load-more mt-2">載入更多</button>
+				</div>
+
+				<!-- 新增的用戶評論 -->
+				<div class="col-12 c-space my-3">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="post">
+								<div class="profile d-flex">
+									<img src="https://picsum.photos/300/200?random=1"><span>爾尼翰<br><span class="username">贊助</span></span>
+								</div>
+								<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
+									<div class="p-img my-3"><img src="img/GraphicCard.jpg"></div>
+								</div>
+				
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 list">
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12 c-space my-3">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="post">
+								<div class="profile d-flex">
+									<img src="img/user.svg"><span>爾尼翰<br><span class="username">@erniehan1024</span></span>
+								</div>
+								<div class="p-text">買ROG STRIX 系列指定顯示卡，登錄送限量「Steam美金20點」，活動期間買ROG STRIX 顯示卡，登錄送限量「Steam 美金20點」ROG STRIX顯卡玩家必備電競首選。<a href="#">閱讀更多</a>
+									<div class="p-img my-3"><img src="img/userpost2.jpg"></div>
+								</div>
+				
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 list">
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="col-12 c-space my-3">
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<div class="post">
+								<div class="profile d-flex">
+									<img src="img/mita.jpg"><span>Mita<br><span class="username">@mitaliang</span></span>
+								</div>
+								<div class="p-text">很多人詢問我的吃雞配備，最近組了一台新電腦剛好可以分享給大家參考～ 這次是在 PC Cooker 上購買，他們的客製組裝服務能依需求自動配對適合自己的主機，讓我邊吃雞開實況不卡頓<a href="#">閱讀更多</a>
+									<div class="p-img my-3"><img src="img/gaming.png"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 list">
+							<h4>購買清單<img src="img/dropdown.svg" class="d-md-none d-inline-flex row-reverse" width="15px"></h4>
+							<div class="pd-list d-none d-sm-flex flex-wrap justify-content-center">
+								<div class="pd d-flex flex-wrap pd-desktop">
+									<table class="pd table text-left">
+										<tbody>
+											<tr>
+												<th scope="col">機殼</th>
+												<td>全漢 CMT230</td>
+											</tr>
+											<tr>
+												<th scope="row">CPU</th>
+												<td>Intel i3-7100</td>
+											</tr>
+											<tr>
+												<th scope="row">主機板</th>
+												<td>微星 B250M PRO-VDH</td>
+											</tr>
+											<tr>
+												<th scope="row">記憶體</th>
+												<td>金士頓 8G DDR4</td>
+											</tr>
+											<tr>
+												<th scope="row">硬碟</th>
+												<td>Toshiba 1TB</td>
+											</tr>
+											<tr>
+												<th scope="row">顯卡</th>
+												<td>微星 GTX1050Ti 4GT</td>
+											</tr>
+											<tr>
+												<th scope="row">電源</th>
+												<td>台達500W</td>
+											</tr>
+										</tbody>
+									</table>							   
+									<div class="cta-button mx-auto pb-3">
+										<button>加入購物車</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 
+	<!-- pagination -->
+	<ul class="pagination justify-content-center d-md-flex d-none">
+	    <li class="page-item disabled">
+	      <a class="page-link" href="#" tabindex="-1">上一頁</a>
+	    </li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item">
+	      <a class="page-link" href="#">下一頁</a>
+	    </li>
+  	</ul>
+	
 
 		<!-- 投稿欄位 -->
 
@@ -568,8 +561,8 @@
 			<!-- 手機 footer 手風琴 -->
 			<div class="container d-md-none">
 				<div class="tab">
-			        <input id="tab-one" type="checkbox" name="tabs">
-				    <label for="tab-one">顧客服務</label>
+			        <input id="tab-one" type="checkbox" name="tabs" class="f-tab">
+				    <label for="tab-one" class="f-tab">顧客服務</label>
 				    <div class="tab-content">
 				        <ul>
 							<li><a class="" href="#">配件/軟體加購</a></li>
@@ -580,8 +573,8 @@
 		      	  	</div>
 			    </div>
 			    <div class="tab">
-			      <input id="tab-two" type="checkbox" name="tabs">
-			      <label for="tab-two">支援服務</label>
+			      <input id="tab-two" type="checkbox" name="tabs" class="f-tab">
+			      <label for="tab-two" class="f-tab">支援服務</label>
 			      <div class="tab-content">
 			         <ul>
 						<li><a class="" href="#">網站導覽</a></li>
@@ -592,8 +585,8 @@
 			      </div>
 			    </div>
 			    <div class="tab">
-			      <input id="tab-three" type="checkbox" name="tabs">
-			      <label for="tab-three">關於我們</label>
+			      <input id="tab-three" type="checkbox" name="tabs" class="f-tab">
+			      <label for="tab-three" class="f-tab">關於我們</label>
 			      <div class="tab-content">
 			         <ul>
 						<li><a class="" href="#">關於酷客</a></li>
@@ -608,9 +601,46 @@
 		</footer>
 	</div>
 
+	<!-- 回到頂端 -->
+	<div class="toTop d-md-none">
+		<button class="circle">
+			<img src="img/up.svg">
+		</button>
+	</div>
+
 	<!-- 選擇性的 JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		 // 購買清單下拉選單
+		$('.list > h4').click(function(){
+			$('.pd-list').toggleClass('d-none');
+			$('.list > h4 > img').toggleClass('dpn');
+		});
+
+		// 手機版才會有的「回到頂端」
+		if ($('.circle').length) {
+                var scrollTrigger = 1000,
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('.circle').addClass('show');
+                        } else {
+                            $('.circle').removeClass('show');
+                        }
+                    };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('.circle').on('click', function (e) {
+                    e.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 500);
+                });
+            }
+	</script>
 </body>
 </html>
