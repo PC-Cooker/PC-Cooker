@@ -436,7 +436,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 }
 
@@ -449,12 +449,12 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
     }
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 }
 
@@ -472,7 +472,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 }
 
@@ -486,7 +486,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 
     .live2d {
@@ -497,7 +497,7 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
     }
 }
 
@@ -512,7 +512,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 
     .live2d {
@@ -523,6 +523,6 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
     }
 }

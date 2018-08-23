@@ -234,6 +234,10 @@
             $('.nextStep').text('完成');
             stepCount = stepCount + 1;
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 2) {
+            $('body').css({
+                'background': 'url(images/victory_bg.svg) no-repeat center center',
+                'backgroundSize': '200%'
+            });
             $('.case').css('opacity', 0);
             $('.message').text('組電腦就是這麼簡單').css('opacity', 1);
             $('.nextStep').text('前往選購');
