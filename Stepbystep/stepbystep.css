@@ -222,7 +222,7 @@ input:checked + .slider:before {
 	margin-top:80px;
 }
 .stepbystep_top_container{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 .stepbystep_100vw h1{
@@ -243,9 +243,10 @@ input:checked + .slider:before {
 .stepbystep_items{
 	display: flex;
 	justify-content: space-between;
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
+
 .stepbystep_items li{
 	color:#fff;
 	letter-spacing: 1px;
@@ -268,10 +269,31 @@ input:checked + .slider:before {
 	display: flex;
 	justify-content: center;
 }
-
+.stepbystep_items_mobile{
+	margin: 0 auto;
+	justify-content: space-between;
+	width: 360px;
+	display: none;
+}
+.stepbystep_items_mobile li{
+	width: 40px;
+	display: flex;
+	justify-content: center;
+}
+.stepbystep_point_mobile{
+	display: none;
+	justify-content: space-between;
+	width: 360px;
+	margin: 0 auto;
+}
+.stepbystep_point_mobile li{
+	width: 40px;
+	display: flex;
+	justify-content: center;
+}
 /* 挑選軟體區塊 */
 .stepbystep_software_container{
-	width: 1200px;
+	max-width: 1200px;
 	background: #F5F8FB;
 	margin: 0 auto;
 }
@@ -296,6 +318,7 @@ input:checked + .slider:before {
 .software_01{
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .software_01 img{
 	padding:60px 0 30px 0;
@@ -320,6 +343,8 @@ input:checked + .slider:before {
 	border-radius: 5px;
 	border: 2px solid #e7e7e7;
 	text-align: center;
+	margin: 10px auto;
+	
 }
 .three_software:hover{
 	border:2px solid #ccc;
@@ -432,8 +457,33 @@ footer > p::after{
 	.navbar{
 		display: none;
 	}
-	
+	.stepbystep_items{
+		display: none;
+	}
+	.stepbystep_items_mobile{
+		display: flex;
+	}
+	.stepbystep_point{
+		display: none;
+	}
+	.stepbystep_point_mobile{
+		display: flex;
+	}
+	.stepbystep_software_container h1::before,
+	.stepbystep_software_container h1::after{
+		display: none;
+	}
+	.stepbystep_software_container h1{
+		padding-top:30px;
+		padding-bottom:10px;
+		font-size:18px;
+	}
+
+
 	/* 響應式 footer 手風琴 */
+	.footer_web{
+		display: none;
+	}
 	.tab {
 		position: relative;
 		margin-bottom: 1px;
