@@ -131,7 +131,7 @@
     padding: 7px;
     left: 10%;
     bottom: 10%;
-    text-align: center;
+    text-align: left;
     border-radius: 12px;
     background-color: #97C5D8;
     color: #ffffff;
@@ -436,7 +436,10 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
 
@@ -449,12 +452,15 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
     }
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
 
@@ -472,7 +478,10 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
 
@@ -486,7 +495,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 
     .live2d {
@@ -497,7 +506,10 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }
 
@@ -512,7 +524,7 @@
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
+        bottom: 1%;
     }
 
     .live2d {
@@ -523,6 +535,9 @@
 
     .resetgame {
         bottom: 20%;
-        right: 0%;
+        right: 1%;
+    }
+    .message{
+        font-size: 16px;
     }
 }

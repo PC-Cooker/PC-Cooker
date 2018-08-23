@@ -228,12 +228,18 @@
             $(".CASE_HDD").css('opacity', 1).css('transform', 'translateY(0)');
             $('.part1').css("height", 0);
             $('.case_bg').css('opacity', 1);
+            $('.message').text('硬碟是用來存資料的地方').css('opacity',1);
             stepCount = stepCount + 1;
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 1) {
             $(".case_POWER").css('opacity', 1).css('transform', 'translateY(0)');
             $('.nextStep').text('完成');
+            $('.message').html('電源供應器用來接電<br>用來提供穩定的電給電腦使用').css('opacity',1);
             stepCount = stepCount + 1;
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 2) {
+            $('body').css({
+                'background': 'url(images/victory_bg.svg) no-repeat center center',
+                'backgroundSize': '200%'
+            });
             $('.case').css('opacity', 0);
             $('.message').text('組電腦就是這麼簡單').css('opacity', 1);
             $('.nextStep').text('前往選購');
@@ -248,16 +254,19 @@
             $(".modelkit_Graphic_Card").css({"opacity": 1, 'transform': 'translateY(0)'});
             $("#drag_Graphic_Card").css("height", 0);
             $('.nextStep').text('下一步');
+            $('.message').html('顯示卡將電腦的顯示訊息進行轉換<br>並向螢幕提供訊號讓螢幕正確顯示').css('opacity',1);
             gpuPlaced = true;
         } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true) {
             $(".modelkit_RAM2").css({"opacity": "1", 'transform': 'translateY(0)'});
             $("#drag_RAM2").css("height", 0);
             $('.nextStep').text('下一步');
+            $('.message').html('簡單來說就是讓電腦暫存資料的地方').css('opacity',1);
             ram2Placed = true;
         } else if (cpuPlaced == true && cpuFanPlaced == true) {
             $(".modelkit_RAM1").css({"opacity": "1", 'transform': 'translateY(0)'});
             $("#drag_RAM1").css("height", 0);
             $('.nextStep').text('下一步');
+            $('.message').html('記憶體(RAM)又稱為隨機存取記憶體<br>能夠使中央處理器(CPU)在執行時快速讀取暫存在記憶體中的指令與資料').css('opacity',1);
             ram1Placed = true;
         } else if (cpuPlaced == true) {
             $(".modelkit_CPUFAN").css({"opacity": "1", 'transform': 'translateY(0)'});
@@ -269,6 +278,7 @@
             $("#drag_CPU").css("height", 0);
             $("#drop_CPUFAN").css("height", "20vw");
             $('.nextStep').text('下一步');
+            $('.message').html('CPU(中央處理器)就像是大腦<br>若沒有他，電腦就沒辦法使用').css('opacity',1);
             cpuPlaced = true;
         }
     });
