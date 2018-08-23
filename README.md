@@ -21,6 +21,5 @@ https://pc-cooker.github.io/PC-Cooker/%E9%A6%96%E9%A0%81/index.html
 <br>
 We do not own the rights to the images. This site is for nonprofit educational purposes only.  All media on our site is used for purpose of review & commentary under terms of fair use. All images used belong to their respective companies. All media used on the website will be credited to their respectful owners. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.  No Copyright Infringement intended. 
 <hr>
-<br>
 說明：中文版本是以台灣本地《著作權法》作為法條援用（因網站為中文內容）
 英文版本則以最有代表性的英語系國家之法條及網路上相關版權聲明撰寫作為參照，故援用美國聯邦政府1976年版權法第107條版權免責聲明。
