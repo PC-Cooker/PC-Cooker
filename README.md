@@ -12,8 +12,9 @@ https://pc-cooker.github.io/PC-Cooker/minigame/minigame.html
 https://pc-cooker.github.io/PC-Cooker/各種用戶評論(PC版)/用戶評論 ver.2.0/comment.html
 https://pc-cooker.github.io/PC-Cooker/%E5%90%84%E7%A8%AE%E7%94%A8%E6%88%B6%E8%A9%95%E8%AB%96(PC%E7%89%88)/%E7%94%A8%E6%88%B6%E8%A9%95%E8%AB%96%20ver.2.0/comment.html
 <br>
-首頁
+首頁<br>
 https://pc-cooker.github.io/PC-Cooker/%E9%A6%96%E9%A0%81/index.html
+<br>
 ***
 本網站為非營利與教育性質，並未向任何人收取任何費用。本網站所刊載之圖片皆無意侵犯版權，均符合中華民國《著作權法》合理使用所規範之要件，根據中華民國《著作權法》第47條、51條及52條，本站係以教育機構成果發表為目之創作，屬非營利目的與教學研究範疇內，符合引用公開發表之著作要件與轉載他人著作之條件。另依《著作權法》第65條合法利用他人著作之判準，本站所刊載之圖片及相關內容，不構成著作財產權之侵害。若有版權問題，請洽本站開發人員。
 
