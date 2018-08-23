@@ -637,7 +637,7 @@
 	<script type="text/javascript">
 		 // 購買清單下拉選單
 		$('.list > h4').click(function(){
-			$('.pd-list').toggleClass('d-none');
+			$(this).next('div.pd-list').toggleClass('d-none');
 			$('.list > h4 > img').toggleClass('dpn');
 		});
 
