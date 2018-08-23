@@ -588,9 +588,14 @@ button.circle:focus{
 		border: 0;
 	}
 
+	.cta-button{
+		width: 95%;
+	}
+
 	.pd > .cta-button button{
 		margin-top: 10px;
 		padding: 10px 20px;
+		width: 100%;
 	}
 
 	.caption p{
