@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我要組電腦" transform="translate(-392.000000, -370.000000)" fill="#FFFFFF">
+            <path d="M405.878068,371.214508 L414.345465,382.645493 C415.33167,383.976871 415.051853,385.855642 413.720476,386.841848 C413.203786,387.224581 412.577797,387.431176 411.934794,387.431176 L395,387.431176 C393.343146,387.431176 392,386.08803 392,384.431176 C392,383.788173 392.206595,383.162183 392.589328,382.645493 L401.056725,371.214508 C402.04293,369.883131 403.921702,369.603314 405.253079,370.589519 C405.491124,370.765848 405.701739,370.976463 405.878068,371.214508 Z" id="Triangle"></path>
+        </g>
+    </g>
+</svg>
