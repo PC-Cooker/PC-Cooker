@@ -469,17 +469,25 @@ footer > p::after{
 	.stepbystep_point_mobile{
 		display: flex;
 	}
-	.stepbystep_software_container h1::before,
-	.stepbystep_software_container h1::after{
+	.stepbystep_software_container h1::before{
 		display: none;
+	}
+	.stepbystep_software_container h1::after{
+		width: 300px;
 	}
 	.stepbystep_software_container h1{
 		padding-top:30px;
 		padding-bottom:10px;
 		font-size:18px;
 	}
-
-
+	.software_02{
+		justify-content: center;
+		width: 360px;
+	}
+	.game{
+		width: 120px;
+		margin: 1px 20px;
+	}
 	/* 響應式 footer 手風琴 */
 	.footer_web{
 		display: none;
