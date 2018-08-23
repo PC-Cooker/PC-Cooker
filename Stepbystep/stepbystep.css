@@ -328,13 +328,20 @@ input:checked + .slider:before {
 .learnmore_btn{
 	font-size: 12px;
 	background: #a3a7ab;
+<<<<<<< HEAD
 	color: #fff;
+=======
+	color: #eee;
+>>>>>>> b95c74761206edb439a266f89fe16999419fea42
 	padding:5px 30px;
 	border-radius: 5px;
 }
 .learnmore_btn:hover{
 	color: #fff;
+<<<<<<< HEAD
 	background: #8c8f93;
+=======
+>>>>>>> b95c74761206edb439a266f89fe16999419fea42
 
 }
 .software_img{
@@ -351,7 +358,10 @@ input:checked + .slider:before {
 .software_02{
 	display: flex;
 	flex-wrap: wrap;
+<<<<<<< HEAD
 	margin-bottom: 150px;
+=======
+>>>>>>> b95c74761206edb439a266f89fe16999419fea42
 }
 .game{
 	width: 120px;
@@ -381,6 +391,11 @@ input:checked + .slider:before {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b95c74761206edb439a266f89fe16999419fea42
 
 
 /* footer */
