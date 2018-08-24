@@ -344,7 +344,7 @@ input:checked + .slider:before {
 	border: 2px solid #e7e7e7;
 	text-align: center;
 	margin: 10px auto;
-	
+	cursor: pointer;
 }
 .three_software:hover{
 	border:2px solid #ccc;
@@ -387,10 +387,8 @@ input:checked + .slider:before {
 	align-items: center;
 	margin: 5px 40px;
 	border:1px solid transparent;
+	border-radius: 5px;
 	cursor: pointer;
-}
-.game:hover{
-	border:1px solid #ccc;
 }
 .game_click{
 	border:1px solid #84A9CD;
@@ -403,7 +401,18 @@ input:checked + .slider:before {
 .game p {
 	display: inline-block;
 }
-
+.game_more{
+	width: 150px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+	margin: 5px 40px;
+	border:1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+}
 
 
 
@@ -496,7 +505,9 @@ footer > p::after{
 		width: 120px;
 		margin: 1px 20px;
 	}
-
+	.game_more{
+		margin:5px 5px;
+	}
 	/* 響應式 footer 手風琴 */
 	.footer_web{
 		display: none;
