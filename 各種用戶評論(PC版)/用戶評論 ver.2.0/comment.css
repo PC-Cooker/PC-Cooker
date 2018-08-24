@@ -207,6 +207,16 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	padding: 5px;
 }
 
+.m_list{
+	width: 100%;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul.b_list{
+	width: 50%;
+}
+
 .social_icon{
 	position: absolute;
 	bottom: 10px;

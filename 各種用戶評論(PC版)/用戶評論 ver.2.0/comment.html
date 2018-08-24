@@ -100,7 +100,7 @@
 		</nav>
 		<!-- 手機版 navbar -->
 		<div class="row  d-md-none m_navbar">
-			<nav class="navbar navbar-expand-lg fixed-top d-md-none justify-content-around">
+			<nav class="navbar navbar-expand-lg fixed-top justify-content-around">
 				<button class="m_menu"><img src="img/menu_mobile.svg" alt=""></button>
 				<a href="#"><img src="img/logo_mobile.svg" alt=""></a>
 				<a href="#"><img src="img/shopping_mobile.svg"></a>
@@ -111,16 +111,22 @@
 					<li><a href="#">最新活動</a></li>
 					<li><a href="#">我要組電腦</a></li>
 					<li class="buy_component"><a href="#">我要買零件 <img src="img/dropdown.svg" alt="" width="12px" class="ml-1"></a>
-						<ul class="d-none b_list">
-							<li><a href="#">中央處理器</a></li>
-							<li><a href="#">主機板</a></li>
-							<li><a href="#">顯示卡</a></li>
-							<li><a href="#">記憶體</a></li>
-							<li><a href="#">內接硬碟</a></li>
-							<li><a href="#">固態硬碟</a></li>
-							<li><a href="#">電源供應器</a></li>
-							<li><a href="#">機殼</a></li>
-						</ul>
+						<div class="m_list d-md-none d-none flex-wrap flex-row">
+							<div class="m_list">
+								<ul class="b_list">
+									<li><a href="#">中央處理器</a></li>
+									<li><a href="#">主機板</a></li>
+									<li><a href="#">顯示卡</a></li>
+									<li><a href="#">記憶體</a></li>
+								</ul>
+								<ul class="b_list">
+									<li><a href="#">內接硬碟</a></li>
+									<li><a href="#">固態硬碟</a></li>
+									<li><a href="#">電源供應器</a></li>
+									<li><a href="#">機殼</a></li>
+								</ul>
+							</div>
+						</div>
 					</li>
 					<li><a href="#">用戶評論區</a></li>
 					<li><a href="#">科普小遊戲</a></li>
@@ -670,7 +676,7 @@
 		});
 		// 購買零件下拉選單
 		$('.buy_component').click(function(){
-			$(this).children('ul.b_list').toggleClass('d-none');
+			$(this).children('.m_list').toggleClass('d-none');
 			$('li.buy_component > a > img').toggleClass('m_dpn');
 		});
 
