@@ -386,9 +386,14 @@ input:checked + .slider:before {
 	justify-content: center;
 	align-items: center;
 	margin: 5px 40px;
+	border:1px solid transparent;
+	cursor: pointer;
+}
+.game:hover{
+	border:1px solid #ccc;
 }
 .game_click{
-	border:1px solid #ccc;
+	border:1px solid #84A9CD;
 }
 .game img{
 	padding:10px;
@@ -491,8 +496,13 @@ footer > p::after{
 		width: 120px;
 		margin: 1px 20px;
 	}
+
 	/* 響應式 footer 手風琴 */
 	.footer_web{
+		display: none;
+	}
+	footer > p::before,
+	footer > p::after{
 		display: none;
 	}
 	.tab {
