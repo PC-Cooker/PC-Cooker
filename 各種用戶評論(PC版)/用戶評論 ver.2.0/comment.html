@@ -675,9 +675,15 @@
 			$('.list > h4 > img').toggleClass('dpn');
 		});
 		// 購買零件下拉選單
-		$('.buy_component').click(function(){
-			$(this).children('.m_list').toggleClass('d-none');
+		$('.buy_component > a').click(function(){
+			$(this).next('.m_list').toggleClass('d-none');
 			$('li.buy_component > a > img').toggleClass('m_dpn');
+
+			if($('.m_list').hasClass('d-none')){
+				$('li.buy_component > a').removeClass('active');
+			}else{
+				$('li.buy_component > a').addClass('active');
+			}
 		});
 
 		// 手機版才會有的「回到頂端」

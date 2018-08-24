@@ -198,10 +198,10 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	font-size: 18px;
 	padding: 5px;
 }
-.dropMenu a:hover{
+.dropMenu a:hover, .active{
 	background: #283f4e;
 	text-decoration: none;
-	border-radius: 5px;
+	border-radius: 5px 5px 0 0;
 }
 .dropMenu li{
 	padding: 5px;
@@ -212,6 +212,7 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: 0 0 5px 5px;
 }
 ul.b_list{
 	width: 50%;
@@ -219,7 +220,7 @@ ul.b_list{
 
 .social_icon{
 	position: absolute;
-	bottom: 10px;
+	bottom: 50px;
 	left: 28%;
 	padding: 10px;
 }
@@ -228,13 +229,17 @@ ul.b_list{
 	padding: 10px;
 }
 
-.b_list{
-	border-radius: 5px;
-}
 .b_list li{
 	padding: 0;
 	border-bottom: 1px solid #ccc;
 	background: #fff;
+	border-right: 1px solid #ccc;
+}
+.b_list li:last-child{
+	border-bottom: 0;
+}
+.b_list + .b_list li{
+	border-right:0;
 }
 .b_list li a{
 	font-size: 16px;
@@ -243,7 +248,9 @@ ul.b_list{
 }
 .b_list li a:hover{
 	color: #fff;
+	border-radius: 0;
 }
+
 
  /* 手機清單的navbar fixed-top雷 */
 .fixed-top-space2{
