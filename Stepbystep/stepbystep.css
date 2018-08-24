@@ -379,13 +379,16 @@ input:checked + .slider:before {
 	margin-bottom: 150px;
 }
 .game{
-	width: 120px;
+	width: 150px;
 	text-align: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin: 1px 50px;
+	margin: 5px 40px;
+}
+.game_click{
+	border:1px solid #ccc;
 }
 .game img{
 	padding:10px;
