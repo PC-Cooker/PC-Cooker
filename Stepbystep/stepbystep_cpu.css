@@ -299,7 +299,6 @@ input:checked + .slider:before {
 }
 .schedule_fixed{
 	position: fixed;
-	background: #84A9CD;
 	top:80px;
 }
 /*挑選CPU*/

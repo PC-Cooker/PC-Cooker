@@ -253,23 +253,19 @@
 		 $(this).toggleClass("game_click")
 	 });
      
-
-
+     
+     var a = $(".schedule").offset().top-80;
      $(window).scroll(function(){
          var p = $(this).scrollTop();
-         var a = $(".schedule").offset().top-80;
          var no = false;
          console.log(p);
         if( p < a ){
-            if(no){
                 $(".schedule").removeClass("schedule_fixed");
                 no = false;
-            }
-        }else if (p >= a){
-            if(!no){
+
+        }else{
                 $(".schedule").addClass("schedule_fixed");
                 no = true;
-            }
         }
      });
     </script>
