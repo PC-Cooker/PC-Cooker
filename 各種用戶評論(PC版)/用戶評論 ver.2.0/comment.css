@@ -164,8 +164,83 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
     transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
+.m_navbar{
+	position: relative;
+}
 
+/*手機版時不要出現*/
+.dropMenu{
+	width: 100vw;
+	min-height: 0;
+	height: 0;
+	background-color: #84A9CD;
+	transition: all .3s;
+	position: fixed;
+	z-index: 1000;
+	overflow: hidden;
+}
 
+.dropMenu ul{
+	width: 100%;
+}
+/* click menu and toggle */
+.dropMenu-collapsed{
+	min-height: 100vh;
+	transition: all .3s;
+	position: fixed;
+/*	top: 89px;*/
+	overflow: hidden;
+}
+
+.dropMenu a{
+	width: 100%;
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px;
+}
+.dropMenu a:hover{
+	background: #283f4e;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.dropMenu li{
+	padding: 5px;
+}
+
+.social_icon{
+	position: absolute;
+	bottom: 30px;
+	left: 28%;
+	padding: 10px;
+}
+
+.social_icon img{
+	padding: 10px;
+}
+
+.b_list{
+	border-radius: 5px;
+}
+.b_list li{
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+}
+.b_list li a{
+	font-size: 16px;
+	padding: 4px;
+	color: #84A9CD;
+}
+.b_list li a:hover{
+	color: #fff;
+}
+
+ /* 手機清單的navbar fixed-top雷 */
+.fixed-top-space2{
+	height: 70px;
+	background-color: #84A9CD;
+}
 /* here's the end of navbar*/
 
 
@@ -539,17 +614,17 @@ button.circle:focus{
 	}
 	p.keyword a{
 	    padding-right: 0;
-	    padding-left: 3px;
+        padding-left: 3px;
 	}
 	p.keyword span.select{
 		padding: 0;
 		padding-left: 5px;
 	}
 	.s_bar img {
-        position: absolute;
-        width: 25px;
-        top: 10px;
-        left: 296px;
+    position: absolute;
+    width: 25px;
+    top: 10px;
+    left: 296px;
 	}
 
 	.hot_keyword{
@@ -602,7 +677,7 @@ button.circle:focus{
 		font-size: 22px;
 	}
 
-	.dpn{
+	.dpn, .m_dpn{
 		margin-left: 10px; 
 		transform: translateY(-3px) rotate(180deg);
 	}
