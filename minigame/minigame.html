@@ -130,6 +130,7 @@
         <canvas id="live2d" class="position-absolute live2d" width="400" height="450"></canvas>
         <div class="nextStep position-absolute case_bg">開始</div>
         <div class="message" style="opacity:0"></div>
+        <div><img class="logo_minigame" src="images/logo_minigame.svg"></div>
     </div>
 </div>
 <!-- footer -->
@@ -243,7 +244,7 @@
             $('.case').css('opacity', 0);
             showMessage('組電腦就是這麼簡單', 50000);
             $('.nextStep').text('前往選購');
-            $('.row').append('<div class="position-absolute case_bg resetgame">重玩</div>');
+            $('.minigame').append('<div class="position-absolute case_bg resetgame">重玩</div>');
             $('.resetgame').click(function () {
                 location.href = location.href
             });
@@ -370,7 +371,6 @@
             }
         })
     });
-    screen.orientation.lock('landscape');
 </script>
 <script type="text/javascript">
     var message_Path = 'live2d/'
