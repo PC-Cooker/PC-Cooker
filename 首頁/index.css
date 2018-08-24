@@ -216,7 +216,8 @@ input:checked + .slider:before {
 /* index */
 .index_100vw{
 	width: 100%;
-	background-color: #84A9CD;
+	background: url(images/bg.svg) no-repeat center center;
+	background-size: cover;
 }
 .index_container{
 	margin: 0 auto;
