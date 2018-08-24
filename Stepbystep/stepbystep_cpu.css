@@ -291,7 +291,16 @@ input:checked + .slider:before {
 	display: flex;
 	justify-content: center;
 }
-
+.schedule{
+	width: 100%;
+	background: #84A9CD;
+	height: 40px;
+}
+.schedule_fixed{
+	position: fixed;
+	background: #84A9CD;
+	top:80px;
+}
 /*挑選CPU*/
 .cpu_intro{
 	max-width: 1200px;
@@ -310,6 +319,7 @@ input:checked + .slider:before {
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
+	background: #000;
 }
 .cpu_items{
 	width: 250px;
@@ -333,6 +343,15 @@ input:checked + .slider:before {
 	font-size:24px;
 	color:#fac375;
 	padding:0 10px 15px 10px;
+	margin: 0;
+	display: inline-block;
+}
+.cpu_items h2{
+	font-size:18px;
+	color:#000;
+	font-weight: normal;
+	display: inline-block;
+	padding:0 0 15px 10px;
 	margin: 0;
 }
 .cpu_items h3{

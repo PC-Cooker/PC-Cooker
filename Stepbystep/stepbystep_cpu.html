@@ -97,48 +97,50 @@
 		<div class="stepbystep_top_container">
 			<h1>我要組電腦</h1>
 			<h3>從主機板、顯示卡一步一步選購最符合你的需求<br>
-				最佳最嚴謹的篩選條件，讓您不會組裝失誤</h3>
-			<ul	class="stepbystep_items">
-				<li><img src="images/li01.svg"> 軟體</li>
-				<li><img src="images/li02.svg"> 中央處理器</li>
-				<li><img src="images/li03.svg"> 主機板</li>	
-				<li><img src="images/li04.svg"> 記憶體</li>
-				<li><img src="images/li05.svg"> 顯示卡</li>
-				<li><img src="images/li06.svg"> 硬碟</li>
-				<li><img src="images/li07.svg"> 電源供應器</li>
-				<li><img src="images/li08.svg"> 機殼</li>
-			</ul>
-			<ul	class="stepbystep_items_mobile">
-					<li><img src="images/li01.svg"></li>
-					<li><img src="images/li02.svg"></li>
-					<li><img src="images/li03.svg"></li>	
-					<li><img src="images/li04.svg"></li>
-					<li><img src="images/li05.svg"></li>
-					<li><img src="images/li06.svg"></li>
-					<li><img src="images/li07.svg"></li>
-					<li><img src="images/li08.svg"></li>
-			</ul>
-			<ul	class="stepbystep_point">
-					<li></li>
-					<li><img src="images/point.svg"></li>
-					<li></li>	
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			</ul>
-			<ul	class="stepbystep_point_mobile">
-					<li><img src="images/point.svg"></li>
-					<li></li>
-					<li></li>	
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			</ul>
-		</div>
+                最佳最嚴謹的篩選條件，讓您不會組裝失誤</h3>
+        </div>
+        <div class="schedule">
+                <ul	class="stepbystep_items">
+                    <li><img src="images/li01.svg"> 軟體</li>
+                    <li><img src="images/li02.svg"> 中央處理器</li>
+                    <li><img src="images/li03.svg"> 主機板</li>	
+                    <li><img src="images/li04.svg"> 記憶體</li>
+                    <li><img src="images/li05.svg"> 顯示卡</li>
+                    <li><img src="images/li06.svg"> 硬碟</li>
+                    <li><img src="images/li07.svg"> 電源供應器</li>
+                    <li><img src="images/li08.svg"> 機殼</li>
+                </ul>
+                <ul	class="stepbystep_items_mobile">
+                        <li><img src="images/li01.svg"></li>
+                        <li><img src="images/li02.svg"></li>
+                        <li><img src="images/li03.svg"></li>	
+                        <li><img src="images/li04.svg"></li>
+                        <li><img src="images/li05.svg"></li>
+                        <li><img src="images/li06.svg"></li>
+                        <li><img src="images/li07.svg"></li>
+                        <li><img src="images/li08.svg"></li>
+                </ul>
+                <ul	class="stepbystep_point">
+                        <li></li>
+                        <li><img src="images/point.svg"></li>
+                        <li></li>	
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+                <ul	class="stepbystep_point_mobile">
+                        <li><img src="images/point.svg"></li>
+                        <li></li>
+                        <li></li>	
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div>
 	</div>
     <!-- 主機板挑選區塊 -->
     <div class="cpu_intro">
@@ -149,7 +151,7 @@
         <div class="cpu_items">
             <div class="cpu_items_img"><img src="images/cpu01.png"></div>
             <h3>Xeon E3-1200 v5 處理器專用的全能ATX 電競主機板</h3>
-            <h1>網路售價 NT.$3270</h1>
+            <h2>網路售價</h2><h1>NT.$3270</h1>
             <div class="buy">加入購物袋</div>
         </div>
         <div class="cpu_items"></div>
@@ -250,6 +252,31 @@
 	 $(".game").click(function(){
 		 $(this).toggleClass("game_click")
 	 });
-	</script>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                var chincode_body = $("body");
+                var def_nav = $(".schedule").offset().top;
+                var nav = $(".schedule");
+                var scroll = false;
+                console.log(chincode_body);
+                console.log(def_nav);
+                console.log(nav);
+                $(document).scroll(function(){
+                    if(chincode_body.scrollTop()<def_nav){
+                        if(scroll){
+                            nav.removeClass("schedule_fixed");
+                            scroll = false;
+                        }
+                    }else if(chincode_body.scrollTop()>=def_nav){
+                        if(!scroll){
+                            nav.addClass("schedule_fixed");
+                            scroll = true;
+                        }
+                    }
+                });
+            });
+    </script>
 </body>
 </html>
