@@ -227,18 +227,19 @@ button.add-to-cart:hover, button.loginNow:hover{
 /* searchbar 樣式 */
 .s_bar{
 	position: relative;
+	padding-bottom: 20px;
 }
 .s_bar img{
 	position: absolute;
-	width: 28px;
-    top: 20%;
-    right: 20px;
+	width: 25px;
+    top: 19%;
+    left: 508px;
 }
 .searchbar{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding: 10px 15px;
+	padding: 8px 15px;
 	border-radius: 50px;
 	border: 2px solid #84A9CD;
 }
@@ -266,7 +267,7 @@ button.add-to-cart:hover, button.loginNow:hover{
 }
 
 p.keyword{
-  padding: 10px 0 20px 15px;
+  padding-left: 20px;
 }
 
 
@@ -280,21 +281,24 @@ p.keyword{
 }
 
 p.keyword span.select{
-	color: #84A9CD;
 	padding-left: 8px;
 	cursor: pointer;
 }
 
-p.keyword span + span{
+p.keyword span{
 	cursor: pointer;
 }
 
+p.keyword span:last-child{
+	color: #84A9CD;
+}
+
 p.keyword a{
-	color: #666;
+    color: #84A9CD;
+	padding-right: 5px;
 }
 
 p.keyword a:hover{
-	color: #84A9CD;
 	text-decoration: none;
 }
 
@@ -522,6 +526,35 @@ button.circle:focus{
 	h1, h3{
 		overflow-y: hidden;
 	}
+
+
+	/* searchbar */
+	p.keyword{
+  		padding-left: 0;
+  		text-align: justify;
+	}
+
+	p.keyword a:hover{
+	text-decoration: underline;
+	}
+	p.keyword a{
+	    padding-right: 0;
+	    padding-left: 3px;
+	}
+	p.keyword span.select{
+		padding: 0;
+		padding-left: 5px;
+	}
+	.s_bar img {
+        position: absolute;
+        width: 25px;
+        top: 10px;
+        left: 296px;
+	}
+
+	.hot_keyword{
+	  padding: 1.2px 6px;
+	}
 	/* 購物清單 */
 	.list h4 {
 		padding: 8px 0;
@@ -555,9 +588,14 @@ button.circle:focus{
 		border: 0;
 	}
 
+	.cta-button{
+		width: 95%;
+	}
+
 	.pd > .cta-button button{
 		margin-top: 10px;
 		padding: 10px 20px;
+		width: 100%;
 	}
 
 	.caption p{

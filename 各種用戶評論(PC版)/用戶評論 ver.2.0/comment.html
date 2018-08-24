@@ -97,7 +97,14 @@
 
 				<button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
 			</div>
-		</nav>		
+		</nav>
+		<div class="row">
+			<nav class="navbar navbar-expand-lg fixed-top d-md-none justify-content-around">
+				<button><img src="img/menu_mobile.svg" alt=""></button>
+				<a href="#"><img src="img/logo_mobile.svg" alt=""></a>
+				<a href="#"><img src="img/shopping_mobile.svg"></a>
+			</nav>
+		</div>
 	</div>
 	<!-- end of navbar -->	
 
@@ -132,11 +139,26 @@
 		<div class="row">
 			<div class="col-12">
 				<!-- search bar -->
-				<div class="s_bar d-flex justify-content-center flex-wrap">
-					<input type="text" name="" placeholder="輸入產品關鍵字查詢用戶評論" class="searchbar">
-					<img src="img/search.svg">
+				<div class="s_bar d-flex flex-wrap">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="row">
+									<input type="text" name="" placeholder="輸入產品關鍵字查詢用戶評論" class="searchbar">
+									<img src="img/search.svg">
+								</div>
+							</div>
+							<div class="col-12 col-md-6 pt-2">
+								<div class="row">
+									<p class="keyword"><span class="hot_keyword">熱門關鍵字</span> <span><span class="select"><a href="#">黑色沙漠</a></span><a href="#"> 吃雞</a><a href="#"> 魔物獵人 </a><a href="#">電競</a><a href="#"> LOL</a></span>
+										<span class="d-none d-md-inline">ROG STRIX</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<p class="keyword"><span class="hot_keyword">熱門關鍵字</span> <span><span class="select">酷克精選</span><a href="#"> 吃雞</a><a href="#"> 魔物獵人 </a><a href="#">電競</a><a href="#"> LOL</a></span></p>
+				<!-- end of search bar -->
 				
 				<h3>最新評論</h3>
 				<div class="col-12 c-space my-3">
@@ -615,7 +637,7 @@
 	<script type="text/javascript">
 		 // 購買清單下拉選單
 		$('.list > h4').click(function(){
-			$('.pd-list').toggleClass('d-none');
+			$(this).next('div.pd-list').toggleClass('d-none');
 			$('.list > h4 > img').toggleClass('dpn');
 		});
 
