@@ -141,7 +141,7 @@
                         <li></li>
                 </ul>
         </div>
-	</div>
+    </div>
     <!-- 主機板挑選區塊 -->
     <div class="cpu_intro">
         <h1>中央處理器</h1>
@@ -252,31 +252,49 @@
 	 $(".game").click(function(){
 		 $(this).toggleClass("game_click")
 	 });
+     
+
+
+     $(window).scroll(function(){
+         var p = $(this).scrollTop();
+         var a = $(".schedule").offset().top-80;
+         var no = false;
+         console.log(p);
+        if( p < a ){
+            if(no){
+                $(".schedule").removeClass("schedule_fixed");
+                no = false;
+            }
+        }else if (p >= a){
+            if(!no){
+                $(".schedule").addClass("schedule_fixed");
+                no = true;
+            }
+        }
+     });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>
-            $(document).ready(function(){
-                var chincode_body = $("body");
-                var def_nav = $(".schedule").offset().top;
-                var nav = $(".schedule");
-                var scroll = false;
-                console.log(chincode_body);
-                console.log(def_nav);
-                console.log(nav);
-                $(document).scroll(function(){
-                    if(chincode_body.scrollTop()<def_nav){
-                        if(scroll){
-                            nav.removeClass("schedule_fixed");
-                            scroll = false;
-                        }
-                    }else if(chincode_body.scrollTop()>=def_nav){
-                        if(!scroll){
-                            nav.addClass("schedule_fixed");
-                            scroll = true;
-                        }
+    <!-- <script>
+        $(document).ready(function(){
+            var chincode_body = $("body");
+            var def_nav = $(".schedule").offset().top;
+            var nav = $(".schedule");
+            var scroll = false;
+            var a = chincode_body.scrollTop();
+            console.log(a)
+            $(document).scroll(function(){
+                if(chincode_body.scrollTop()<def_nav){
+                    if(scroll){
+                        nav.removeClass("schedule_fixed");
+                        scroll = false;
                     }
-                });
+                }else if(chincode_body.scrollTop()>=def_nav){
+                    if(!scroll){
+                        nav.addClass("schedule_fixed");
+                        scroll = true;
+                    }
+                }
             });
-    </script>
+        });
+        </script> -->
 </body>
 </html>
