@@ -217,8 +217,8 @@ input:checked + .slider:before {
 /* Step by Step 上方區塊*/
 .stepbystep_100vw{
 	width: 100%;
-	height: 300px;
-	background-color: #84A9CD;
+	height: 430px;
+	background:url(images/bg-top.svg) no-repeat center center;
 	margin-top:80px;
 }
 .stepbystep_top_container{
@@ -295,7 +295,6 @@ input:checked + .slider:before {
 }
 .schedule{
 	width: 100%;
-	background: #84A9CD;
 	height: 40px;
 	overflow: hidden;
 	transition: 1s all;
@@ -303,6 +302,8 @@ input:checked + .slider:before {
 .schedule_fixed{
 	position: fixed;
 	top:80px;
+	background: #B3CEE6;
+	opacity: 0.85;
 }
 /*挑選CPU*/
 .cpu_intro{
@@ -311,11 +312,11 @@ input:checked + .slider:before {
 }
 .cpu_intro h1{
 	font-size:24px;
-	font-weight: normal;
+	font-weight: 300;
 }
 .cpu_intro h3{
 	font-size:16px;
-	font-weight: normal;
+	font-weight: 300;
 }
 .cpu_buy{
 	max-width: 1200px;
