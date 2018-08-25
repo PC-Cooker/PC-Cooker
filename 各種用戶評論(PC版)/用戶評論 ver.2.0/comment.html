@@ -680,10 +680,14 @@
 			$('li.buy_component > a > img').toggleClass('m_dpn');
 
 			if($('.m_list').hasClass('d-none')){
-				$('li.buy_component > a').removeClass('active');
+				$('li.buy_component > a').removeClass('active2');
 			}else{
-				$('li.buy_component > a').addClass('active');
+				$('li.buy_component > a').addClass('active2');
 			}
+		});
+		// mouseover 第一個active 要 remove 掉
+		$('.nav-item > .list-group > a').mouseover(function(){
+		  $('.nav-item > .list-group > a:first-child').removeClass('active');		   
 		});
 
 		// 手機版才會有的「回到頂端」
@@ -721,6 +725,7 @@
 	        	$('.m_menu > img').attr('src','img/clear.svg');
         	}        	      	       	
         });
+
 	</script>
 </body>
 </html>
