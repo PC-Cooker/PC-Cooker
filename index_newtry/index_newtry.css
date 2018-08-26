@@ -107,7 +107,8 @@ a:hover{
 }
 .index_mb_mobile{
     width: 375px;
-    height: 50vh;
+    max-width: 375px;
+    height: 335px;
     background: url(images/index_mb.svg) no-repeat center bottom;
     background-size: cover;
     position: absolute;
