@@ -78,7 +78,7 @@
 					</li>
 				</ul>
 				<button type="login" class="login"><img src="images/member.svg"></button>
-				<button type="cart" class="cart"><img src="images/shopping-cart.svg"></button>
+				<button type="cart" class="cart"><div class="cart_circle"></div> <img src="images/shopping-cart.svg"></button>
 				<!-- toggle-switch start -->
 				<div class="toggle-switch d-flex ml-3">
 					<label class="switch">
@@ -296,6 +296,11 @@
 	 $('.cpu_items').click(function(){
 		 $(this).siblings().removeClass('cpu_items_border')
 		 $(this).toggleClass('cpu_items_border')
+		 if($(this).hasClass('cpu_items_border')){
+			 $('.cart_circle').addClass('red_circle')
+		 }else{
+			$('.cart_circle').removeClass('red_circle')
+		 }
 	 });
 
     </script>
