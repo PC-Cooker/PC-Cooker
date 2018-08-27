@@ -432,17 +432,20 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
     }
 
     .nextStep {
         right: 0%;
         bottom: 1%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
     }
 
     .message {
         font-size: 16px;
+        left: 20%;
     }
 
     .logo_minigame {
@@ -461,17 +464,20 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
     }
 
     .nextStep {
         right: 0%;
-        bottom: 0%;
-        width: 150px;
+        bottom: 1%;
+        width: 80px;
+        font-size: 16px;
     }
 
     .message {
         font-size: 16px;
+        left: 20%;
     }
 }
 
@@ -485,17 +491,20 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
     }
 
     .nextStep {
         right: 0%;
         bottom: 1%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
     }
 
     .message {
         font-size: 16px;
+        left: 20%;
     }
 }
 
@@ -507,12 +516,6 @@
         overflow: hidden;
     }
 
-    .nextStep {
-        right: 0%;
-        bottom: 1%;
-        width: 150px;
-    }
-
     .live2d {
         transform: translate(-38%, 40%) scale(.7);
         left: 0;
@@ -522,11 +525,20 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
+    }
+
+    .nextStep {
+        right: 0%;
+        bottom: 1%;
+        width: 80px;
+        font-size: 16px;
     }
 
     .message {
         font-size: 16px;
+        left: 20%;
     }
 }
 
@@ -539,11 +551,6 @@
         overflow: hidden;
     }
 
-    .nextStep {
-        right: 0%;
-        bottom: 0%;
-    }
-
     .live2d {
         transform: translate(-38%, 40%) scale(.7);
         left: 0;
@@ -553,11 +560,20 @@
     .resetgame {
         bottom: 20%;
         right: 0%;
-        width: 150px;
+        width: 80px;
+        font-size: 16px;
+    }
+
+    .nextStep {
+        right: 0%;
+        bottom: 1%;
+        width: 80px;
+        font-size: 16px;
     }
 
     .message {
         font-size: 16px;
+        left: 20%;
     }
 
     .container {
