@@ -388,7 +388,12 @@ input:checked + .slider:before {
 	font-weight: 300;
 	margin: 0;
 }
-
+.next_btn{
+	width: 100px;
+	height: 100px;
+	background: #000;
+	border-radius: 50%;
+}
 
 
 
