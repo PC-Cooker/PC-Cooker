@@ -515,34 +515,33 @@
     });
 
 // mouseover 第一個active 要 remove 掉
-		$('.nav-item > .list-group > a').mouseover(function(){
-		  $('.nav-item > .list-group > a:first-child').removeClass('active');		   
-		});
-		$('.list-group.text-left > a').mouseover(function(){
-		  $('.list-group.text-left > a:first-child').removeClass('active');		   
-		});
-		// 手機版 menu 
-        $('.m_menu').click(function(){
-        	
-        	if ($('.dropMenu').hasClass('dropMenu-collapsed')) {
-        		$('.dropMenu').removeClass('dropMenu-collapsed');
-        		$('.m_menu > img').attr('src','img/menu_mobile.svg');
-        	} 
-        	else {
-        		$('.dropMenu').addClass('dropMenu-collapsed');
-	        	$('.m_menu > img').attr('src','img/clear.svg');
-        	}        	      	       	
-        });
+   $('.nav-item > .list-group > a').mouseover(function(){
+      $('.nav-item > .list-group > a:first-child').removeClass('active');		   
+    });
+   $('.list-group.text-left > a').mouseover(function(){
+      $('.list-group.text-left > a:first-child').removeClass('active');		   
+   });
+// 手機版 menu 
+   $('.m_menu').click(function(){
+	if ($('.dropMenu').hasClass('dropMenu-collapsed')) {
+		$('.dropMenu').removeClass('dropMenu-collapsed');
+		$('.m_menu > img').attr('src','img/menu_mobile.svg');
+	} 
+	else {
+		$('.dropMenu').addClass('dropMenu-collapsed');
+		$('.m_menu > img').attr('src','img/clear.svg');
+	}        	      	       	
+    });
 // 購買零件下拉選單
-		$('.buy_component > a').click(function(){
-			$(this).next('.m_list').toggleClass('d-none');
-			$('li.buy_component > a > img').toggleClass('m_dpn');
-			if($('.m_list').hasClass('d-none')){
-				$('li.buy_component > a').removeClass('active2');
-			}else{
-				$('li.buy_component > a').addClass('active2');
-			}
-		});
+    $('.buy_component > a').click(function(){
+	$(this).next('.m_list').toggleClass('d-none');
+	$('li.buy_component > a > img').toggleClass('m_dpn');
+	if($('.m_list').hasClass('d-none')){
+		$('li.buy_component > a').removeClass('active2');
+	}else{
+		$('li.buy_component > a').addClass('active2');
+	}
+   });
 </script>
 </body>
 </html>
