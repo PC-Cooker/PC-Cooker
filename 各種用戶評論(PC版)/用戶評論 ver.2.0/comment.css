@@ -199,9 +199,13 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	padding: 5px;
 	font-weight: 300;
 }
-.dropMenu a:hover, .active2{
+.dropMenu a:hover{
 	background: #283f4e;
 	text-decoration: none;
+	border-radius: 5px;
+}
+
+.dropMenu .active2:hover{
 	border-radius: 5px 5px 0 0;
 }
 .dropMenu li{
