@@ -19,7 +19,7 @@ $('.nextStep').click(function () {
     } else if (cpuPlaced == true && cpuFanPlaced == true && ram1Placed == true && ram2Placed == true && gpuPlaced == true && stepCount == 2) {
         $('body').css({
             'background': 'url(images/victory_bg.svg) no-repeat center center',
-            'backgroundSize': '200%'
+            'backgroundSize': '110%'
         });
         $('.case').css('opacity', 0);
         showMessage('組電腦就是這麼簡單', 50000);
