@@ -78,7 +78,7 @@
 					</li>
 				</ul>
 				<button type="login" class="login"><img src="images/member.svg"></button>
-				<button type="cart" class="cart"><img src="images/shopping-cart.svg"></button>
+				<button type="cart" class="cart"><div class="cart_circle"></div> <img src="images/shopping-cart.svg"></button>
 				<!-- toggle-switch start -->
 				<div class="toggle-switch d-flex ml-3">
 					<label class="switch">
@@ -131,8 +131,8 @@
                         <li></li>
                 </ul>
                 <ul	class="stepbystep_point_mobile">
-                        <li><img src="images/point.svg"></li>
                         <li></li>
+                        <li><img src="images/point.svg"></li>
                         <li></li>	
                         <li></li>
                         <li></li>
@@ -152,7 +152,7 @@
             <div class="cpu_items_img"><img src="images/cpu01.png"></div>
             <h3>Xeon E3-1200 v5 處理器專用的全能ATX 電競主機板</h3>
             <h2>網路售價</h2><h1>NT.$3270</h1>
-            <div class="buy">加入購物袋</div>
+            <div class="buy">選取</div>
         </div>
         <div class="cpu_items">
             <div class="cpu_items_img"><img src="images/cpu01.png"></div>
@@ -179,12 +179,14 @@
                 <div class="buy">加入購物袋</div>
             </div>
             <div class="cpu_items">
-                    <div class="cpu_items_img"><img src="images/cpu01.png"></div>
-                    <h3>Xeon E3-1200 v5 處理器專用的全能ATX 電競主機板</h3>
-                    <h2>網路售價</h2><h1>NT.$3270</h1>
-                    <div class="buy">加入購物袋</div>
-                </div>
-    </div>
+				<div class="cpu_items_img"><img src="images/cpu01.png"></div>
+				<h3>Xeon E3-1200 v5 處理器專用的全能ATX 電競主機板</h3>
+				<h2>網路售價</h2><h1>NT.$3270</h1>
+				<div class="buy">加入購物袋</div>
+			</div>
+			<div class="next_btn"></div>
+	</div>
+	
 		<!-- footer -->
 	<div class="container-fluid black">
 			<footer>
@@ -291,6 +293,16 @@
                 no = true;
         }
      });
+	 $('.cpu_items').click(function(){
+		 $(this).siblings().removeClass('cpu_items_border')
+		 $(this).toggleClass('cpu_items_border')
+		 if($(this).hasClass('cpu_items_border')){
+			 $('.cart_circle').addClass('red_circle')
+		 }else{
+			$('.cart_circle').removeClass('red_circle')
+		 }
+	 });
+
     </script>
 </body>
 </html>

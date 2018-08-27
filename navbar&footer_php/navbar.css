@@ -18,7 +18,7 @@ button:focus{
 
 /* start of navbar*/
 .navbar{
-	background-color: #84A9CD;
+	background-color: rgba(132, 169, 205, 0.85);
 	width: 100%;
 	height: 80px;
 	padding: 10px 0;
@@ -85,7 +85,7 @@ a.element:not([href]):not([tabindex]):hover{
 /* 會員下拉選單 */
 button.login .list-group{
 	min-width: 150px;
-	top: 43px; /* 位置要設近一點，滑鼠比較容易摸到 */
+	top: 41px; /* 位置要設近一點，滑鼠比較容易摸到 */
 	left: -16px;
 	height: auto;
 	color: rgba(0, 0, 0, 0.6);
@@ -194,10 +194,15 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	color: #fff;
 	font-size: 18px;
 	padding: 5px;
+	font-weight: 300;
 }
-.dropMenu a:hover, .active2{
+.dropMenu a:hover{
 	background: #283f4e;
 	text-decoration: none;
+	border-radius: 5px;
+}
+
+.dropMenu .active2:hover{
 	border-radius: 5px 5px 0 0;
 }
 .dropMenu li{

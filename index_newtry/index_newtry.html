@@ -55,9 +55,9 @@
     <div class="hot_container">
         <div class="hot_texth1"><h1>新上架商品</h1></div>
         <div class="hot_texth2">
-            <div class="hot_cpu"><h2>中央處理器</h2></div> 
-            <div><h2>主機板</h2></div> 
-            <div><h2>顯示卡</h2></div> 
+            <div class="hot_click hot_now"><h2>中央處理器</h2></div> 
+            <div class="hot_click"><h2>主機板</h2></div>
+            <div class="hot_click"><h2>顯示卡</h2></div>
         </div>
     </div>
     <div class="new_items">
@@ -260,6 +260,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <!-- RWD-Footer -->
         <div class="container d-md-none">
             <div class="tab">
@@ -300,6 +301,48 @@
             </div>
         </div>
         <p class="py-3">Copyright © 2018 PC COOKER All rights reserved.</p>
+=======
+        <!-- 手機 footer 手風琴 -->
+			<div class="container d-md-none">
+				<div class="tab">
+			        <input id="tab-one" type="checkbox" name="tabs" class="f-tab">
+				    <label for="tab-one" class="f-tab">顧客服務</label>
+				    <div class="tab-content">
+				        <ul>
+							<li><a class="" href="#">配件/軟體加購</a></li>
+							<li><a class="" href="#">保固方式</a></li>
+							<li><a class="" href="#">送貨資訊</a></li>
+							<li><a class="" href="#">退換貨方式</a></li>
+						</ul>
+		      	  	</div>
+			    </div>
+			    <div class="tab">
+			      <input id="tab-two" type="checkbox" name="tabs" class="f-tab">
+			      <label for="tab-two" class="f-tab">支援服務</label>
+			      <div class="tab-content">
+			         <ul>
+						<li><a class="" href="#">網站導覽</a></li>
+						<li><a class="" href="#">聯絡我們</a></li>
+						<li><a class="" href="#">線上客服</a></li>
+						<li><a class="" href="#">隱私權條款</a></li>
+					 </ul>
+			      </div>
+			    </div>
+			    <div class="tab">
+			      <input id="tab-three" type="checkbox" name="tabs" class="f-tab">
+			      <label for="tab-three" class="f-tab">關於我們</label>
+			      <div class="tab-content">
+			         <ul>
+						<li><a class="" href="#">關於酷客</a></li>
+						<li><a class="" href="#">最新活動</a></li>
+						<li><a class="" href="#">我要組電腦</a></li>
+						<li><a class="" href="#">我要買零件</a></li>
+					 </ul>
+			      </div>
+			    </div>
+			</div>
+        <p class="py-3 copy_right">Copyright © 2018 PC COOKER All rights reserved.</p>
+>>>>>>> 243093ebc6722ebb6deee54666e8307072b28577
     </footer>
     </div>
 
@@ -308,11 +351,14 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script>
-    
+        $('.hot_click').click(function(){
+            $(this).siblings().removeClass()
+            $(this).addClass('hot_cpu')
+        });
     </script>
 </body>
 </html>
