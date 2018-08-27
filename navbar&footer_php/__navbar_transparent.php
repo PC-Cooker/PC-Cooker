@@ -344,7 +344,7 @@
 						<a class="nav-link" href="#">科普小遊戲</a>
 					</li>
 				</ul>
-				<button type="login" class="login"><img src="img/member.svg">
+				<button type="login" class="login"><img src="img/user_icon.svg">
 					<ul class="list-group text-left">
 							<a href="#" class="list-group-item list-group-item-action active">
 								會員資料修改	
@@ -364,7 +364,7 @@
 						</ul>
 				</button>
 
-				<button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
+				<button type="cart" class="cart"><img src="img/shoppingbag_icon.svg"></button>
 			</div>
 		</nav>
 		<!-- 手機版 navbar -->
