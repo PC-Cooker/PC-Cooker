@@ -1,0 +1,18 @@
+{
+    "mouseover": [
+        {
+            "selector": ".title a",
+            "text": ["要看看 {text} 嗎？"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["在找什麼東西呢，需要幫忙嗎？"]
+        }
+    ],
+    "click": [
+        {
+            "selector": "#landlord #live2d",
+            "text": ["變態！", "買電腦、找酷客","Hentai！", "買電腦、找酷客", "買電腦、找酷客"]
+        }
+    ]
+}
