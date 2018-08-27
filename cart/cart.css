@@ -29,6 +29,7 @@
 	color: #708090;
 	font-size: 25px;
 	margin: -10px 30px;
+	background: transparent;
 }
 @media screen and (max-width: 576px) {
 	.breadtitle>a{
@@ -65,6 +66,7 @@ a.focus{
 	height: 75px;
 	line-height: 70px;
 	cursor: pointer;
+	background: transparent;
 }
 @media screen and (max-width: 576px) {
 	.check_cart{
@@ -171,6 +173,12 @@ select{
 	text-align: end;
 	margin-bottom: 40px;
 	margin-right: 46px;
+}
+@media screen and (max-width: 576px) {
+	.total_qty{
+		text-align: center;
+		margin-right: 0;
+	}  
 }
 .buy_more{
 	color: #708090;
