@@ -21,7 +21,7 @@ button:focus{
 
 /* start of navbar*/
 .navbar{
-	background-color: #84A9CD;
+	background-color: rgba(132, 169, 205, 0.85);
 	width: 100%;
 	height: 80px;
 	padding: 10px 0;
@@ -88,7 +88,7 @@ a.element:not([href]):not([tabindex]):hover{
 /* 會員下拉選單 */
 button.login .list-group{
 	min-width: 150px;
-	top: 43px; /* 位置要設近一點，滑鼠比較容易摸到 */
+	top: 41px; /* 位置要設近一點，滑鼠比較容易摸到 */
 	left: -16px;
 	height: auto;
 	color: rgba(0, 0, 0, 0.6);
@@ -197,6 +197,7 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	color: #fff;
 	font-size: 18px;
 	padding: 5px;
+	font-weight: 300;
 }
 .dropMenu a:hover, .active2{
 	background: #283f4e;
@@ -524,8 +525,10 @@ ul.pagination > li.page-item:nth-child(2) a, ul.pagination > li.page-item a:acti
 
 /* footer */
 .black{
-	background-color: #708090;
+	background: url(img/footer_bg.svg)no-repeat center center;
+    background-size: cover;
 }
+
 
 footer{
    padding: 30px 0;
@@ -557,7 +560,7 @@ footer > p{
 
 footer > p::before,
 footer > p::after{
-	transform: translateY(-3px);
+	transform: translateY(-2px);
 	width: 400px;
 	content:"";
 	height: 1px;
@@ -567,7 +570,7 @@ footer > p::after{
 	vertical-align: middle;
 }
 
-
+/* go to top 回到頂端*/
 .circle{
 	position: fixed;
 	bottom: 20px;
@@ -599,8 +602,6 @@ button.circle:focus{
 
 /* 手機版 */
 
-/* navbar */
-
 @media screen and (max-width: 576px)  {
 	*{
 		overflow-x: hidden;
@@ -608,6 +609,7 @@ button.circle:focus{
 	.h-section h1, .h-section p{
 		padding-left: 0;
 	}
+	/* 購買清單 */
 	.list{
 		margin-top: 0;
 		overflow-y: hidden;
@@ -700,6 +702,7 @@ button.circle:focus{
 		margin-left: 10px; 
 		transform: translateY(-3px) rotate(180deg);
 	}
+
 	.list > h4 > img{
 		margin-left: 10px; 
 		transition: all .4s;
@@ -787,5 +790,4 @@ button.circle:focus{
 	  transform: rotateX(180deg);
 	}
 	/* 響應式手風琴 end */
-
 }
