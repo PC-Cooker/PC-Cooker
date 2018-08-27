@@ -11,7 +11,8 @@
 }
 /* footer */
 .black{
-	background-color: #708090;
+	background: url(img/footer_bg.svg)no-repeat center center;
+    background-size: cover;
 }
 
 footer{

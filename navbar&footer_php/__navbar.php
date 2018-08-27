@@ -19,7 +19,7 @@
 
 	/* start of navbar*/
 	.navbar{
-		background-color: #84A9CD;
+		background-color: rgba(132, 169, 205, 0.85);
 		width: 100%;
 		height: 80px;
 		padding: 10px 0;
@@ -195,6 +195,7 @@
 		color: #fff;
 		font-size: 18px;
 		padding: 5px;
+		font-weight: 300;
 	}
 	.dropMenu a:hover, .active2{
 		background: #283f4e;
@@ -344,7 +345,7 @@
 						<a class="nav-link" href="#">科普小遊戲</a>
 					</li>
 				</ul>
-				<button type="login" class="login"><img src="img/member.svg">
+				<button type="login" class="login"><img src="img/user_icon.svg">
 					<ul class="list-group text-left">
 							<a href="#" class="list-group-item list-group-item-action active">
 								會員資料修改	
@@ -364,7 +365,7 @@
 						</ul>
 				</button>
 
-				<button type="cart" class="cart"><img src="img/shopping-cart.svg"></button>
+				<button type="cart" class="cart"><img src="img/shoppingbag_icon.svg"></button>
 			</div>
 		</nav>
 		<!-- 手機版 navbar -->
@@ -372,7 +373,7 @@
 			<nav class="navbar navbar-expand-lg fixed-top justify-content-around">
 				<button class="m_menu"><img src="img/menu_mobile.svg" alt=""></button>
 				<a href="#"><img src="img/logo_mobile.svg" alt=""></a>
-				<a href="#"><img src="img/shopping_mobile.svg"></a>
+				<a href="#"><img src="img/shoppingbag_icon.svg"></a>
 			</nav>
 			<div class="dropMenu">
 				<div class="fixed-top-space2"></div>

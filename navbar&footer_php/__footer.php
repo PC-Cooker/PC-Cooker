@@ -12,7 +12,8 @@
 }
 /* footer */
 .black{
-	background-color: #708090;
+	background: url(img/footer_bg.svg)no-repeat center center;
+    background-size: cover;
 }
 
 footer{
@@ -144,7 +145,7 @@ footer > p::after{
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-sm-4 d-none d-sm-block">
-					<img src="img/logo_big.svg" class="f-logo">
+					<img src="img/logo_footer.svg" class="f-logo">
 				</div>
 				<div class="col-12 col-sm-8 d-none d-sm-block">
 					<nav class="nav">
