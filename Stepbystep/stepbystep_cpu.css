@@ -346,7 +346,9 @@ input:checked + .slider:before {
 	border-radius: 5px;
 	overflow: hidden;
 	cursor: pointer;
-	transition: transform .2s;
+}
+.cpu_items:hover{
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .cpu_items_border{
 	border: 1px solid #84a9cc;
