@@ -181,14 +181,22 @@ a:hover{
 }
 .hot_texth2{
     display: flex;
+    cursor: pointer;
+}
+
+.hot_click{
+    border-bottom:3px solid transparent;
+    cursor: pointer;
 }
 .hot_cpu{
     border-bottom: 3px solid #97c5d8;
     cursor: pointer;
 }
-.hot_cpu_click{
-    border-bottom: 3px solid #97c5d8;
+.hot_now{
+    border-bottom:3px solid #97c5d8;
+    cursor: pointer;
 }
+
 .new_items{
     max-width: 1200px;
     margin: 0 auto;
@@ -265,6 +273,9 @@ a:hover{
     bottom: 0;
     text-align: center;
 }
+.new_connect_btn:hover{
+    background-image: linear-gradient(to bottom, #c8e4ee, #5983ab);
+}
 .new_connect_btn a{
     color:#fff;
     font-size:18px;
@@ -281,6 +292,11 @@ a:hover{
     text-align: center;
     border-right: 1px solid #ccc;
     position: relative;
+    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+.new_right_items:hover{
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
 }
 .new_right_items img{
     width: 150px;
@@ -348,6 +364,12 @@ a:hover{
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+    transition: all .3s;
+    cursor: pointer;
+}
+.No1_01:hover{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 .No1_img{
     text-align: center;

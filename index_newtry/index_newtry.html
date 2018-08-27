@@ -56,7 +56,7 @@
     <div class="hot_container">
         <div class="hot_texth1"><h1>新上架商品</h1></div>
         <div class="hot_texth2">
-            <div class="hot_cpu hot_click"><h2>中央處理器</h2></div> 
+            <div class="hot_click hot_now"><h2>中央處理器</h2></div> 
             <div class="hot_click"><h2>主機板</h2></div>
             <div class="hot_click"><h2>顯示卡</h2></div>
         </div>
@@ -309,14 +309,14 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script>
-    $(".hot_click").click(function(){
-        $(".hot_click").removeClass("hot_cpu");
-        $(this).addClass("hot_cpu_click");
-    });
+        $('.hot_click').click(function(){
+            $(this).siblings().removeClass()
+            $(this).addClass('hot_cpu')
+        });
     </script>
 </body>
 </html>
