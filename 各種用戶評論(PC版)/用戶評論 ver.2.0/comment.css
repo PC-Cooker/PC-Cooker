@@ -270,7 +270,7 @@ ul.b_list{
 /* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
 .fixed-top-space{
 	height: 90px;
-	background-color: #84A9CD;
+	/*background-color: #84A9CD;*/
 }
 
 .blue{
@@ -735,7 +735,7 @@ button.circle:focus{
 	  position: relative;
 	  display: block;
 	  padding: 0 0 0 1em;
-	  background: #708090;
+	  background: #6F7E8C;
 	  line-height: 3;
 	  cursor: pointer;
 	  border-bottom: 1px solid #fff;
@@ -743,7 +743,7 @@ button.circle:focus{
 	.tab-content {
 	  max-height: 0;
 	  overflow: hidden;
-	  background: #708090;
+	  background: #6F7E8C;
 	  -webkit-transition: max-height .35s;
 	  -o-transition: max-height .35s;
 	  transition: max-height .35s;
