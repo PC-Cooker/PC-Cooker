@@ -49,7 +49,7 @@
 								<span>Computer Case</span>
 							</a>
 							<a href="#" class="list-group-item list-group-item-action">
-								電源
+								電源供應器
 								<br>
 								<span>Power Supply Unit</span>
 							</a>
