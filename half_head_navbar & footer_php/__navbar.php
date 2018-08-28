@@ -153,6 +153,16 @@
         	else {
         		$('.dropMenu').addClass('dropMenu-collapsed');
 	        	$('.m_menu > img').attr('src','img/clear.svg');
-        	}        	      	       	
+        	}
+		// 購買零件下拉選單
+    $('.buy_component > a').click(function(){
+	$(this).next('.m_list').toggleClass('d-none');
+	$('li.buy_component > a > img').toggleClass('m_dpn');
+	if($('.m_list').hasClass('d-none')){
+		$('li.buy_component > a').removeClass('active2');
+	}else{
+		$('li.buy_component > a').addClass('active2');
+	}
+   });
         });
 	</script>
