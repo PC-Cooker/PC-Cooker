@@ -238,8 +238,9 @@ a:hover{
 .new_items_close{
     height: 0;
     overflow: hidden;
+    opacity: 0;
 }
-.new_items h5{
+.new_connect h5{
     color:#aaa;
     font-size:14px;
     font-weight: 300;
