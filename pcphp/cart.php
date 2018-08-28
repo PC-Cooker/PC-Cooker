@@ -1,121 +1,162 @@
 <?php
 require __DIR__ . '/__db_connect.php';
-$pageName = 'cart';
-$data = [];
-if (!empty($_SESSION['cart'])) {
-    $keys = array_keys($_SESSION['cart']);
-    $sql = sprintf("SELECT * FROM product_book WHERE sid IN (%s)", implode(',', $keys));
-    $rs = $mysqli->query($sql);
-    while ($r = $rs->fetch_assoc()) {
-        $r['qty'] = $_SESSION['cart'][$r['sid']];
-        $data[$r['sid']] = $r;
-    }
-}
-?>
-<?php include __DIR__ . '/__html_head.php' ?>
-    <div class="container">
-        <?php include __DIR__ . '/__navbar.php' ?>
-        <div class="row">
-            <div class="col">
-                <?php if (!empty($_SESSION['cart'])): ?>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>移除</th>
-                            <th>封面</th>
-                            <th>書名</th>
-                            <th>價格</th>
-                            <th>數量</th>
-                            <th>小計</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $total = 0;
-                        foreach ($keys as $k):
-                            $r = $data[$k]; //整筆資料 包含qty
-                            $total += $r['Price'] * $r['qty'];
-                            ?>
-                            <tr class="product-item" data-sid="<?= $k ?>">
-                                <th><i class="fas fa-trash-alt remove-item"></i></th>
-                                <td><img src="./imgs/small/<?= $r['sid'] ?>.jpg" alt=""></td>
-                                <td><?= $r['ProductName'] ?></td>
-                                <td class="price" data-price="<?= $r['Price'] ?>"><?= $r['Price'] ?></td>
-                                <td class="qty" data-qty="<?= $r['qty'] ?>">
-                                    <select class="qty-sel">
-                                        <?php for ($i = 1; $i <= 10; $i++): ?>
-                                            <option value="<?= $i ?>"><?= $i ?></option>
-                                        <?php endfor; ?>
-                                    </select>
-                                <td><?= $r['Price'] * $r['qty'] ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <div class="alert alert-primary">
-                        總計:<span id="total-price"></span>
-                    </div>
-                    <?php if (isset($_SESSION['user'])): ?>
-                        <button onclick="location.href='cart_confirm.php'" type="button" class="btn btn-primary">結帳</button>
-                    <?php else: ?>
-                        <button onclick="location.href='login.php'" type="button" class="btn btn-danger">登入</button>
-                    <?php endif ?>
-                    <?php else: ?>
-                    <div class="alert alert-danger" role="alert">
-                        購物車目前沒有資料
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <script>
-        var trashbin = $('.remove-item');
-        var dallorCommas = function (n) {
-            return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        };
-        var calTotal = function () {
-            var total = 0;
-            var items = $('.product-item');
-            if (items.length == 0) {
-                window.location.reload();
-                return;
-            }
-            items.each(function () {
-                total += $(this).find('.price').attr('data-price') * $(this).find('.qty').attr('data-qty');
-            });
 
-            $('#total-price').text(dallorCommas(total));
-        };
-        var p_items = $('.product-item');
-        if (p_items.length) {
-            calTotal();
+$page_name = 'cart';
+
+
+if(!empty($_SESSION['cart'])){
+
+    $keys = array_keys($_SESSION['cart']);
+
+    $sql = sprintf("SELECT * FROM `products` WHERE `sid` IN (%s)", implode(',', $keys));
+    $rs = $mysqli->query($sql);
+
+    $pdata = [];
+
+    while($row=$rs->fetch_assoc()):
+        $row['qty'] = $_SESSION['cart'][$row['sid']];
+        $pdata[$row['sid']] = $row;
+    endwhile;
+
+}
+//print_r($pdata);
+//exit;
+?>
+<?php include __DIR__. '/__html_head.php' ?>
+<div class="container">
+
+    <?php include __DIR__. '/__navbar.php' ?>
+
+    <?php if(!empty($_SESSION['cart'])): ?>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">取消</th>
+            <th scope="col">封面</th>
+            <th scope="col">書名</th>
+            <th scope="col">單價</th>
+            <th scope="col">數量</th>
+            <th scope="col">小計</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($keys as $v):
+            $row = $pdata[$v];
+        ?>
+        <tr data-sid="<?= $row['sid'] ?>">
+            <td><button class="remove-item">
+                    <i class="fas fa-trash-alt"></i>
+                </button></td>
+            <td><img src="./imgs/small/<?= $row['book_id'] ?>.jpg" alt=""></td>
+            <td><?= $row['bookname'] ?></td>
+            <td class="unit-price price" data-price="<?= $row['price'] ?>"></td>
+            <td class="qty" data-qty="<?= $row['qty'] ?>">
+                <select name="" id="">
+                    <?php for($i=1; $i<=50; $i++): ?>
+                    <option value="<?=$i?>" <?= $i==$row['qty'] ? 'selected' : ''?>><?=$i?></option>
+                    <?php endfor; ?>
+                </select>
+            </td>
+            <td class="sub-total price"  data-price="<?= $row['qty'] * $row['price'] ?>"></td>
+
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
+        <div class="alert alert-success" role="alert">總計: <span id="total-price">0</span></div>
+
+    <?php if(isset($_SESSION['user'])): ?>
+        <div class="col-md-3">
+            <a href="checkout.php" class="btn btn-primary">結帳</a>
+        </div>
+    <?php else: ?>
+        <div class="col-md-3">
+            <a href="login.php" class="btn btn-warning">請先登入再結帳</a>
+        </div>
+    <?php endif; ?>
+
+
+    <?php else: ?>
+        <div class="alert alert-warning" role="alert">
+            購物車裡沒有商品
+        </div>
+    <?php endif ?>
+
+
+</div>
+<script>
+    var dallorCommas = function(n){
+        return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    };
+
+    var modifyPrice = function(){
+        let prices = $('td.price');
+        prices.each(function(){
+            let p = parseInt( $(this).attr('data-price') );
+            $(this).text( dallorCommas(p) );
+        });
+    };
+    modifyPrice();
+
+
+
+    function calcTotal(){
+        let subs = $('.sub-total');
+        let t = 0;
+        subs.each(function(){
+            t += parseInt($(this).attr('data-price'));
+        });
+
+        $('#total-price').text( dallorCommas(t) );
+
+    }
+
+    calcTotal();
+
+
+
+    $('button.remove-item').click(function(){
+        let tr = $(this).closest('tr');
+        let sid = tr.attr('data-sid');
+        $.get('add_to_cart.php', {sid:sid}, function(data){
+            tr.remove();
+            calcTotal();
+            countCart(data);
+        }, 'json');
+
+
+    });
+
+    var combo_change = function(event){
+        // console.log(event);
+        let me = $(this);
+        me.off('change'); // 取消偵聽
+        me.prop('disabled', true);
+
+        let tr = $(this).closest('tr');
+        let sid = tr.attr('data-sid');
+        let qty = parseInt( $(this).val() );
+        if(qty<1){
+            $(this).val( $(this).parent().attr('data-qty') );
+            return;
         }
-        //一開始設定正確的數量
-        p_items.each(function () {
-            var sel = $(this).find('.qty-sel');
-            sel.val($(this).find('.qty').attr('data-qty'));
-        });
-        p_items.find('.qty-sel').change(function () {
-            var tr = $(this).closest('tr');
-            var sid = tr.attr('data-sid');
-            var qty = $(this).val();
-            var price = tr.find('Price').attr('data-price');
-            tr.find('.qty').attr('data-qty', qty);
-            $.get('add_to_cart.php', {sid: sid, qty: qty}, function (data) {
-                tr.find('td:last-child').text(qty * price);
-                window.location.reload();
-                changeQty(data);
-                calTotal();
-            }, 'json');
-        });
-        trashbin.click(function () {
-            var tr = $(this).closest('tr');
-            var sid = tr.attr('data-sid');
-            $.get('add_to_cart.php', {sid: sid}, function (data) {
-                tr.remove();
-                changeQty(data);
-                calTotal();
-            }, 'json');
-        });
-    </script>
-<?php include __DIR__ . '/__html_foot.php' ?>
+        $(this).parent().attr('data-qty', qty);
+
+        let price = $('.unit-price', tr).attr('data-price');
+        $.get('add_to_cart.php', {sid:sid, qty: qty }, function(data){
+            let sub_t = $('.sub-total', tr);
+            sub_t.attr('data-price', qty*price);
+            sub_t.text( dallorCommas(qty*price) );
+
+            calcTotal();
+            countCart(data);
+            me.prop('disabled', false);
+            me.on('change', input_change);
+        }, 'json');
+    };
+
+    $('td.qty > select').on('change', combo_change);
+
+</script>
+<?php include __DIR__. '/__html_foot.php' ?>
