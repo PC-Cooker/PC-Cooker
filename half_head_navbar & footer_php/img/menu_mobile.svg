@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="33px" height="24px" viewBox="0 0 33 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="26px" height="18px" viewBox="0 0 26 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group Copy</title>
+    <title>Group 12</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-8-Copy-3" transform="translate(-13.000000, -15.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g id="Group-Copy" transform="translate(13.000000, 15.000000)">
-                <rect id="Rectangle-7" x="0" y="0" width="33" height="3" rx="1.5"></rect>
-                <rect id="Rectangle-7-Copy" x="0" y="10.5" width="27" height="3" rx="1.5"></rect>
-                <rect id="Rectangle-7-Copy-2" x="0" y="21" width="22" height="3" rx="1.5"></rect>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="iPhone-8" transform="translate(-307.000000, -24.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Group-12" transform="translate(308.000000, 25.000000)">
+                <path d="M0.5,0.25 L23.5,0.25" id="Line"></path>
+                <path d="M0.5,16.25 L15.5,16.25" id="Line-Copy-2"></path>
+                <path d="M0.5,8.25 L19.5,8.25" id="Line-Copy"></path>
             </g>
         </g>
     </g>
