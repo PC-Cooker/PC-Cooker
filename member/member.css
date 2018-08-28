@@ -1,161 +1,32 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
-body{
-	background-color: #F5F8FB;
-}
-*{
-	padding: 0;
-	margin: 0;
-    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
-    list-style: none;
-}
-
-.container{
-	width: 100%;
-}
-
-
-
-/* start of navbar*/
-.navbar{
-	background-color: #84A9CD;
-	width: 100%;
-	height: 80px;
-	padding: 10px 0;
-	font-size: 18px;
-}
-
-.nav-item .nav-link{
-	color: #fff;
-}
-.nav-item a{
-	font-size:16px;
-}
-button{
-	border: none;
-	background: transparent;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-.cart, .login{
-	padding: 0 10px;
-	transform: scale(0.85);
-}
-
-	/* 改變預設字體粗度 */
-.navbar-expand-lg .navbar-nav .nav-link{
-    font-weight: 300;
-}
-
-	/* navbar 字體 hover */
-.navbar-expand-lg .navbar-nav li.nav-item{
-    position: relative;
-}
-
-.navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 69%;
-}
-
-.navbar-expand-lg .navbar-nav a.nav-link:after {
-   content: '';
-    position: absolute;
-    left: 8px;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    border-radius: 5px;
-    background: #eee;
-    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-
-
-	/* toggle switch start */
-.toggle-switch{
-    margin-top: auto;
-    transform: scale(0.85);
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 28px;
-}
-
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 3px;
-  right: 0;
-  bottom: 0;
-  background-color: #283E4E;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #84A9CD;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/* toggle switch end */
-
-
-/* here's the end of navbar*/
-
-
-
-
-/* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
-.fixed-top-space{
-	height: 90px;
-	background-color: #84A9CD;
-}
-
-.blue{
-	background-color: #84A9CD;
-}
-
 /* -----------------------------login------------------- */
 .island{
   background: 95%  100%   no-repeat  url(img/island.svg) #84A9CD;
-  height: 100vh;
+  height: 90.5vh;
 }
-.col-md-3 {
-  max-width: 100%;
-  margin-top: 150px;
+@media screen and (max-width: 576px) {
+	.island{
+    height: 87vh;
+	}  
+}
+@media screen and (max-width: 1600px) {
+	.island{
+    height: 88.2vh;
+	}  
+}
+.card{
+  width: 400px;
+  margin-top: 115px;
+}
+@media screen and (max-width: 1600px) {
+	.card{
+    margin-top: 40px;
+	}  
+}
+@media screen and (max-width: 576px) {
+	.card{
+    transform: scale(.9);
+    margin-top: -10px;
+	}  
 }
 .btn_register{
   border-radius:  20px 0 0 20px;
