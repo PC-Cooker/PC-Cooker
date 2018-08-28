@@ -99,8 +99,8 @@
 			<h3>從主機板、顯示卡一步一步選購最符合你的需求<br>
 				最佳最嚴謹的篩選條件，讓您不會組裝失誤</h3>
 			<ul	class="stepbystep_items">
-				<li><img src="images/li01.svg"> 軟體</li>
-				<li><img src="images/li02.svg"> 中央處理器</li>
+				<li class="software_li"><img src="images/li01.svg"> 軟體</li>
+				<li class="cpu_li"><img src="images/li02.svg"> 中央處理器</li>
 				<li><img src="images/li03.svg"> 主機板</li>	
 				<li><img src="images/li04.svg"> 記憶體</li>
 				<li><img src="images/li05.svg"> 顯示卡</li>
@@ -118,7 +118,10 @@
 					<li><img src="images/li07.svg"></li>
 					<li><img src="images/li08.svg"></li>
 			</ul>
-			<ul	class="stepbystep_point">
+			<div class="point_container">
+				<div class="point"><img src="images/point.svg"></div>
+			</div>
+			<!-- <ul	class="stepbystep_point">
 					<li><img src="images/point.svg"></li>
 					<li></li>
 					<li></li>	
@@ -127,7 +130,7 @@
 					<li></li>
 					<li></li>
 					<li></li>
-			</ul>
+			</ul> -->
 			<ul	class="stepbystep_point_mobile">
 					<li><img src="images/point.svg"></li>
 					<li></li>
@@ -142,7 +145,7 @@
 	</div>
 	<!-- stepbystep 軟體分類挑選 -->
 	<div class="stepbystep_software_container">
-		
+		<div class="next_page_btn"></div>
 		<h1>請選擇平時使用電腦的用途？</h1>
 		<div class="software_01">
 			<div class="three_software music">
@@ -165,7 +168,7 @@
 			</div>
 		</div>
 		<div class="rem_music">
-			
+
 		</div>
 
 
@@ -367,6 +370,23 @@
 		 }
 		 $('.rem_paint').toggleClass('rem_paint_open');
 	 });
+
+	 // 指標三角形的特效
+	 $('.cpu_li').click(function(){
+		if( $('.point').hasClass('point_move_software') ){
+			 $('.point').removeClass('point_move_software')
+		 }
+		 $('.point').addClass('point_move');
+	 });
+	 
+	 $('.software_li').click(function(){
+		 if( $('.point').hasClass('point_move') ){
+			 $('.point').removeClass('point_move')
+		 }
+		 $('.point').addClass('point_move_software')
+	 });
+	 // 結束-指標三角形的特效
+	 
 	</script>
 </body>
 </html>
