@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+        .select-component{
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        button{
+            background: lightblue;
+        }
+        .component{
+            width: 200px;
+            background: pink;
+            margin: 10px;
+            height: 0px;
+            overflow: hidden;
+            /* border: 1px solid black; */
+        }
+        .component_active{
+        height: auto;
+    }
+        select{
+            width: 95%;
+            margin: 5px;
+        }
+    </style>
+  </head>
+  <body>
+      <select name="" id=""></select>
+    <div class="select-component">
+    
+        <button class="cpu_btn">中央處理器</button>   
+        <div class="select-cpu component">
+            <select class="label-cpu">
+                <option value="1">Intel 英特爾</option>
+                <option value="2">AMD 超微</option>
+            </select><br>
+            <select class="price-cpu">
+                <option value="1">5000元以下</option>
+                <option value="2">5000元以上</option>
+            </select>
+        </div>
+        <button>主機板</button>
+        <div class="select-mb component">
+            <select class="label-mb">
+                <option value="1">ASUS華碩</option>
+                <option value="2">GIGABYTE技嘉</option>
+                <option value="3">MSI微星</option>
+            </select><br>
+            <select class="price-mb">
+                <option value="1">3000元以下</option>
+                <option value="2">3000到5000</option>
+                <option value="3">5000元以上</option>
+            </select>
+        </div>
+        <button>顯示卡</button>
+        <div class="select-gpu component">
+            <select class="label-gpu">
+                <option value="1">ASUS華碩</option>
+                <option value="2">GIGABYTE技嘉</option>
+                <option value="3">MSI微星</option>
+            </select><br>
+            <select class="price-gpu">
+                <option value="1">3000元以下</option>
+                <option value="2">3000到6000</option>
+                <option value="3">6000到9000</option>
+                <option value="4">9000到12000</option>
+                <option value="5">12000到18000</option>
+                <option value="6">18000元以上</option>
+            </select>
+        </div>
+        <button>記憶體</button>
+        <div class="select-ram component">
+            <select class="label-ram">
+                <option value="1">ADATA威剛</option>
+                <option value="2">Kingston金士頓</option>
+                <option value="3">Micron美光</option>
+                <option value="4">Transcend創見</option>
+                <option value="5">UMAX世成</option>
+            </select><br>
+            <select class="price-ram">
+                <option value="1">2000元以下</option>
+                <option value="2">2000到4000</option>
+                <option value="3">4000元以上</option>
+            </select>
+        </div>
+        <button>內接硬碟</button>
+        <div class="select-hdd component">
+            <select class="label-hdd">
+                <option value="1">Seagate希捷</option>
+                <option value="2">Toshiba東芝</option>
+                <option value="3">WD威騰</option>
+            </select><br>
+            <select class="price-hdd">
+                <option value="1">3000元以下</option>
+                <option value="2">3000到5000</option>
+                <option value="3">5000元以上</option>
+            </select>
+        </div>
+        <button>固態硬碟</button>
+        <div class="select-ssd component">
+            <select class="label-ssd">
+                <option value="1">ADATA威剛</option>
+                <option value="2">Kingston金士頓</option>
+                <option value="3">SanDisk晟碟</option>
+                <option value="4">Micron美光</option>
+                <option value="5">WD威騰</option>
+            </select><br>
+            <select class="price-ssd">
+                <option value="1">2000元以下</option>
+                <option value="2">2000到5000</option>
+                <option value="3">5000元以上</option>
+            </select>
+        </div>
+        <button>電源供應器</button>
+        <div class="select-power component">
+            <select class="w-power">
+                <option value="1">400W</option>
+                <option value="2">450W</option>
+                <option value="3">500W</option>
+                <option value="4">600W</option>
+            </select>
+        </div>
+        <button>機殼</button>
+        <div class="select-case component">
+            <select class="price-case">
+                <option value="1">2000元以下</option>
+                <option value="2">2000元以上</option>
+            </select>
+    </div>
+</div>
+
+
+
+    <!-- Optional   JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script>
+        // $(button).click(function(){
+        //     $(this).find(".component")
+        // });
+        
+    $("button").click(function(){
+        // $(".select-cpu").toggleClass("component_active")
+        $(this).next().toggleClass("component_active")
+    });
+    $("select").cl
+    
+   
+    </script>
+  </body>
+</html>

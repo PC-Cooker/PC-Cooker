@@ -150,11 +150,19 @@ input:checked + .slider:before {
 
 
 /* start of component */
+button:focus{
+    outline: 0;
+   }
 .moreSearchBox{
     border-radius: 5px;
     height: 740px;
     padding: 20px 15px;
     border: 1px solid #ccc;
+}
+@media screen and (max-width: 576px) {
+	.moreSearchBox{
+		display: none;
+	}  
 }
 .moreSearchArea{
     padding-top: 0px;
@@ -162,19 +170,40 @@ input:checked + .slider:before {
 .col-md-3 {
     max-width: 23%;
 }
+@media screen and (max-width: 576px) {
+	.col-md-3{
+        /* transform: scale(.8); */
+        max-width: 48%;
+        margin: 0 5px 5px 2px;
+	}  
+}
 .col-md-9 {
     max-width: 77%;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 10px;
     display: block;
+}
+@media screen and (max-width: 576px) {
+	.col-md-9{
+        max-width: 100%;
+        padding: 0;
+	}  
 }
 .col-md-9>.row{
     margin-left: -10px;
     margin-right: -80px;
 }
+@media screen and (max-width: 576px) {
+	.col-md-9 > .row{
+        margin: 0;
+	}  
+}
 .breadcrumb{
     background: transparent;
     padding: .75rem 0.1rem;
+}
+.breadcrumb> .active{
+    background: transparent;
 }
 .breadcrumb-item+.breadcrumb-item {
     padding-left: 0.3rem;
@@ -258,13 +287,24 @@ input:checked + .slider:before {
 	position: relative;
 	margin: 0px 5px 10px;
 }
-
+@media screen and (max-width: 576px) {
+	.producteach{
+        width: auto;
+        height: auto;
+        margin: 0;
+	}  
+}
 .productitem a {
 	color: #282828;
 	font-size:14px;
     margin: 5px 9px;
     text-align: center;
     display: inline-block;
+}
+@media screen and (max-width: 576px) {
+	.productitem a{
+        margin: -5px 9px;
+	}  
 }
 .productitem a:hover {
     color: #282828;
@@ -275,6 +315,12 @@ input:checked + .slider:before {
     color: #FB9F66;
     text-align: center;
 }
+@media screen and (max-width: 576px) {
+	.productitem h3{
+        font-size: 1.45rem;
+        margin: 4px;
+	}  
+}
 .producteach_img{
 	width: 200px;
 	height: 200px;
@@ -282,6 +328,13 @@ input:checked + .slider:before {
     background-size: contain;
     border-radius: 5px;
     margin: 2px;
+}
+@media screen and (max-width: 576px) {
+	.producteach_img{
+        width: auto;
+        height: 150px;
+        margin: 0;
+	}  
 }
 .productitem_btn{
 	padding: 5px;
@@ -295,10 +348,20 @@ input:checked + .slider:before {
     height: 40px;
     line-height: 29px;
 }
+@media screen and (max-width: 576px) {
+	.productitem_btn{
+        display: none;
+	}  
+}
 .productitem_btn:hover{
 	color:#fff;
     background-color:#F17529;
     transition: all .4s;
+}
+@media screen and (max-width: 576px) {
+	.pagination{
+        display: none;
+	}  
 }
 .page-link{
     background: transparent;
@@ -318,20 +381,69 @@ input:checked + .slider:before {
     box-shadow: 0 0 0 0;
 }
 
+/* start of mobile-search */
+.mobile-search{
+    display: none;
+}
+@media screen and (max-width: 576px) {
+	.mobile-search{
+        display: block;
+        margin-bottom: 10px;
+        height: 8vh;
+        background: #F5F8FB;
+        overflow: hidden;
+    }
+    .searchbar{
+        border: 2px solid #84A9CD;
+        border-radius: 25px;
+        width: 100%;
+        color: #84A9CD;
+        height: 45px;
+    }
+    .ul-width{
+        width: 100%;
+    }
+    .search-btn{
+        background: #84A9CD;
+        border-radius: .25rem;
+        width: 100%;
+        color: #fff;
+        height: 40px;
+    }
+    .mobile-search-active{
+        height: 100vh;
+    }
+}
+
 /* start of product */
 .rightbox{
     width: 375px;
 }
-h4{
+@media screen and (max-width: 576px) {
+	.rightbox{
+        width: 100%;
+	}  
+}
+.rightbox > h4{
     font-size: 23px;
     line-height: 33px;
-    color: #708090;
+    color: #282828;
     font-weight: 400;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+	.rightbox > h4{
+        font-size: 18px;
+        margin-bottom: 3px;
+	}  
 }
 .qty_price{
     color: #708090;
     margin: 10px 15px 10px 0;
     display: inline-block;
+}
+.price{
+    color: #282828;
 }
 .qty{
     width: 93px;
@@ -347,16 +459,23 @@ h4{
 .moreimg{
     width: 100%;
 }
-.btn-danger{
+.btn-orange{
+    background-color: #FB9F66;
+	color: #fff;
+}
+.btn-orange:hover{
+    background-color:#F17529;
+    transition: all .4s;
+}
+.btn-red{
+    color:#fff;
     background: #f08080;
     border: 1px solid #f08080;
 }
-.btn-danger:hover{
-    background: #f08080;
-    border: 1px solid #f08080;
-    transform: translateY(-6px);
-    box-shadow: 0 6px 0 #d87070;
-    transition: top .4s;
+.btn-red:hover{
+    background: #d85151;
+    border: 1px solid #d85151;
+    transition: all .4s;
 }
 
 
