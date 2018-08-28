@@ -420,9 +420,14 @@ input:checked + .slider:before {
 	border:1px solid transparent;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: all .5s;
 }
+.game:hover{
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
 .game_click{
-	border:1px solid #84A9CD;
+	border:1px solid #fac375;
 }
 .game img{
 	padding:10px;
@@ -467,7 +472,7 @@ input:checked + .slider:before {
 	margin: 0 30px;;
 	background: #000;
 	opacity: 0;
-	transition:  all 2s;
+	transition:  opacity 2s;
 }
 .rem_book_open{
 	height: 600px;
@@ -501,7 +506,7 @@ input:checked + .slider:before {
 	cursor: pointer;
 }
 .next_page_btn:hover{
-	right:-50px;
+	right:-100px;
 }
 
 
