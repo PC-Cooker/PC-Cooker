@@ -346,6 +346,9 @@ input:checked + .slider:before {
 	margin: 10px auto;
 	cursor: pointer;
 }
+.three_software_active{
+	background: #fff;
+}
 .three_software:hover{
 	border:2px solid #ccc;
 }
@@ -414,8 +417,49 @@ input:checked + .slider:before {
 	cursor: pointer;
 }
 
+.rem_music{
+	width: 100%;
+	height: 0px;
+	border-radius: 5px;
+	margin: 0 30px;;
+	opacity: 0;
+	transition: opacity 1s;
+	background: #ff0;
 
-
+}
+.rem_music_open{
+	height: 600px;
+	border:2px solid #e7e7e7;
+	opacity: 1;
+}
+.rem_book{
+	width: 100%;
+	height: 0px;
+	border-radius: 5px;
+	margin: 0 30px;;
+	background: #000;
+	opacity: 0;
+	transition:  opacity 1s;
+}
+.rem_book_open{
+	height: 600px;
+	border:2px solid #e7e7e7;
+	opacity: 1;
+}
+.rem_paint{
+	width: 100%;
+	height: 0px;
+	border-radius: 5px;
+	margin: 0 30px;
+	opacity: 0;
+	transition: opacity 1s;
+	background: blue;
+}
+.rem_paint_open{
+	height: 600px;
+	border:2px solid #e7e7e7;
+	opacity: 1;
+}
 
 
 

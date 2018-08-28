@@ -164,6 +164,9 @@
 				<a href="#" class="learnmore_btn">瞭解更多</a>
 			</div>
 		</div>
+		<div class="rem_music"></div>
+		<div class="rem_book"></div>
+		<div class="rem_paint"></div>
 		<h1>請告訴我你平時玩什麼？</h1>
 		<div class="software_game">
 			<img src="images/software_game.svg" alt="">
@@ -330,6 +333,34 @@
 	<script>
 	 $(".game").click(function(){
 		 $(this).toggleClass("game_click")
+	 });
+	 $('.three_software').click(function(){
+		 $(this).siblings().removeClass('three_software_active')
+		 $(this).toggleClass('three_software_active')
+	 });
+
+	 $('.three_software.music').click(function(){
+		 if($('.rem_book').hasClass('rem_book_open')||$('.rem_paint').hasClass('rem_paint_open')){
+			 $('.rem_book').removeClass('rem_book_open')
+			 $('.rem_paint').removeClass('rem_paint_open')
+		 }
+		 $('.rem_music').toggleClass('rem_music_open');
+	 });
+
+	 $('.three_software.book').click(function(){
+		 if($('.rem_music').hasClass('rem_music_open')||$('.rem_paint').hasClass('rem_paint_open')){
+			 $('.rem_music').removeClass('rem_music_open')
+			 $('.rem_paint').removeClass('rem_paint_open')
+		 }
+		$('.rem_book').toggleClass('rem_book_open');
+	 });
+	 
+	 $('.three_software.paint').click(function(){
+		 if($('.rem_music').hasClass('rem_music_open')||$('.rem_book').hasClass('rem_book_open')){
+			 $('.rem_music').removeClass('rem_music_open')
+			 $('.rem_book').removeClass('rem_book_open')
+		 }
+		 $('.rem_paint').toggleClass('rem_paint_open');
 	 });
 	</script>
 </body>
