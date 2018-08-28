@@ -205,6 +205,39 @@ a:hover{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    transition: all 1s;
+}
+
+
+.new_items02{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+    opacity: 0;
+}
+.new_items03{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+    opacity: 0;
+}
+.new_items_open{
+    height: auto;
+    opacity: 1;
+}
+.new_items_close{
+    height: 0;
+    overflow: hidden;
 }
 .new_items h5{
     color:#aaa;
