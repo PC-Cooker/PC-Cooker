@@ -37,6 +37,24 @@ if (!empty($cate)) {
     $params['cate'] = $cate;
 }
 
+
+if (!empty($_GET['label'])) {
+    $label = $_GET['label'];
+    $where .= " AND `Label`='$label' ";
+    $params['label'] = $label;
+}
+if (!empty($_GET['chipsets'])) {
+    $chipsets = $_GET['chipsets'];
+    $where .= " AND `Chipsets`='$chipsets' ";
+    $params['chipsets'] = $chipsets;
+}
+
+if (!empty($_GET['chip'])) {
+    $chip = $_GET['chip'];
+    $where .= " AND `Chip`='$chip' ";
+    $params['chip'] = $chip;
+}
+
 $total_sql = "SELECT COUNT(1) FROM product_book $where";
 $total_rows = $mysqli->query($total_sql)->fetch_row()[0];
 $total_pages = ceil($total_rows / $per_page);
@@ -82,43 +100,43 @@ $product_rs = $mysqli->query($product_sql);
                     <!-- 當類別是1 的時候 秀出 value 是 Intel 的，false就空字串 -->
                     <?php if($cate==1): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=1&chip=">Intel 英特爾</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=1&chip=">AMD 超微</a>	
+                    <a type="button" class="btn btn-lightblue btn-size2  <?= $chip=='Intel' ? 'btn_active' : '' ?>"   href="?cate=1&chip=Intel">Intel 英特爾</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $chip=='AMD' ? 'btn_active' : '' ?>"  href="?cate=1&chip=AMD">AMD 超微</a>	
                     
                     <?php elseif($cate==2): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
                     <!-- 點了 asus 之後 應該要跳出 label（廠牌） 都是 asus 的商品 -->
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=ASUS">ASUS華碩</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=GIGABYTE">GIGABYTE技嘉</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=MSI">MSI微星</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='ASUS' ? 'btn_active' : '' ?> "  href="?cate=2&label=ASUS">ASUS華碩</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='GIGABYTE' ? 'btn_active' : '' ?> "  href="?cate=2&label=GIGABYTE">GIGABYTE技嘉</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='MSI' ? 'btn_active' : '' ?> "   href="?cate=2&label=MSI">MSI微星</a>
 
                     <?php elseif($cate==3): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=3">ADATA威剛</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=3">Kingston金士頓</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=3">Micron美光</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=3">Transcend創見</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=3">UMAX世成</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='ADATA' ? 'btn_active' : '' ?>"  href="?cate=3&label=ADATA">ADATA威剛</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Kingston' ? 'btn_active' : '' ?>"  href="?cate=3&label=Kingston">Kingston金士頓</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Micron' ? 'btn_active' : '' ?>" href="?cate=3&label=Micron">Micron美光</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Transcend' ? 'btn_active' : '' ?>" href="?cate=3&label=Transcend">Transcend創見</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='UMAX' ? 'btn_active' : '' ?>" href="?cate=3&label=UMAX">UMAX世成</a>
                     <?php elseif($cate==4): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=4">ADATA威剛</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=4">Kingston金士頓</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=4">SanDisk晟碟</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=4">Micron美光</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=4">WD威騰</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='ADATA' ? 'btn_active' : '' ?>" href="?cate=4&label=ADATA">ADATA威剛</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Kingston' ? 'btn_active' : '' ?>" href="?cate=4&label=Kingston">Kingston金士頓</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='SanDisk' ? 'btn_active' : '' ?>" href="?cate=4&label=SanDisk">SanDisk晟碟</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Micron' ? 'btn_active' : '' ?>" href="?cate=4&label=Micron">Micron美光</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='WD' ? 'btn_active' : '' ?>" href="?cate=4&label=WD">WD威騰</a>
                     <?php elseif($cate==5): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=5">Seagate希捷</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=5">Toshiba東芝</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=5">WD威騰</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Seagate' ? 'btn_active' : '' ?>" href="?cate=5&label=Seagate">Seagate希捷</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Toshiba' ? 'btn_active' : '' ?>" href="?cate=5&label=Toshiba">Toshiba東芝</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='WD' ? 'btn_active' : '' ?>" href="?cate=5&label=WD">WD威騰</a>
                     <?php elseif($cate==6): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=6">ASUS華碩</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=6">GIGABYTE技嘉</a>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=6">MSI微星</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='ASUS' ? 'btn_active' : '' ?>" href="?cate=6&label=ASUS">ASUS華碩</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='GIGABYTE' ? 'btn_active' : '' ?>" href="?cate=6&label=GIGABYTE">GIGABYTE技嘉</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='MSI' ? 'btn_active' : '' ?>" href="?cate=6&label=MSI">MSI微星</a>
                     <?php elseif($cate==7): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" href="?cate=7">台達</a>
+                    <a type="button" class="btn btn-lightblue btn-size2 <?= $label=='Seasonic' ? 'btn_active' : '' ?>" href="?cate=7&label=Seasonic">海韻</a>
                     <?php elseif($cate==8): ?>
 
                     <?php endif; ?>
@@ -131,7 +149,7 @@ $product_rs = $mysqli->query($product_sql);
                     <a type="button" class="btn btn-lightblue btn-size2" value="5000元以上">5000元以上</a>
                     <?php elseif($cate==2): ?>
                     <p class="mb-2 mt-4 dark">價格</p>
-                    <a type="button" class="btn btn-lightblue btn-size2" value="3000元以下">3000元以下</a>
+                    <a type="button" class="btn btn-lightblue btn-size2" value="3000元以下" >3000元以下</a>
                     <a type="button" class="btn btn-lightblue btn-size2" value="3000到5000">3000到5000</a>
                     <a type="button" class="btn btn-lightblue btn-size2" value="5000元以上">5000元以上</a>
                      <?php elseif($cate==3): ?>
@@ -174,7 +192,7 @@ $product_rs = $mysqli->query($product_sql);
                         <a type="button" class="btn btn-lightblue btn-size2" value="Ryzen 2000">Ryzen 2000</a>
                     <?php elseif($cate==2): ?>
                         <p class="mb-2 mt-4 dark">Intel晶片組</p>		
-                        <a type="button" class="btn btn-lightblue btn-size2" value="H110">H110</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="H110" href="?cate=2&label=MSI&chipsets=H110">H110</a>
                         <a type="button" class="btn btn-lightblue btn-size2" value="B250">B250</a>
                         <a type="button" class="btn btn-lightblue btn-size2" value="B360">B360</a>
                         <a type="button" class="btn btn-lightblue btn-size2" value="Z370">Z370</a>
@@ -283,7 +301,7 @@ $product_rs = $mysqli->query($product_sql);
                                 <option value="4">GIGABYTE技嘉</option>
                                 <option value="5">MSI微星</option>
                                 <?php elseif($cate==7): ?>
-                                <option value="13">台達</option>
+                                <option value="13">海韻</option>
                                 <?php elseif($cate==8): ?>
                                 <?php endif; ?> 
                             </select>
@@ -305,7 +323,7 @@ $product_rs = $mysqli->query($product_sql);
         <div class="col-md-9 col-xs-12 pl-3">
             <div class="row">
                 <?php while ($r = $product_rs->fetch_assoc()): ?>
-                    <div class="col-md-3">
+                    <div class="col-md-3 <?= $r['Chipsets'] ?>">
                         <div class="productitem">
                             <div class="producteach">
                                 <div class="producteach_img" data-sid="<?= $r['sid'] ?>"><img src="imgs/small/<?= $r['sid'] ?>.jpg" alt="" width="200px" height="200px"></div>

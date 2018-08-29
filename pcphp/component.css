@@ -55,7 +55,10 @@ body{
 	.col-md-9{
         max-width: 100%;
         padding: 0;
-	}  
+    }
+    .col-md-9.pl-3{
+        padding-left: 0!important;
+    }
 }
 
 .col-md-9>.row{
@@ -264,6 +267,7 @@ a.btn.btn-lightblue.focus, .btn-lightblue:focus{
     box-shadow: 0 0 0 0;
 }
 
+
 /* start of mobile-search */
 .mobile-search{
     display: none;
@@ -365,7 +369,11 @@ a.btn.btn-lightblue{
     font-size: 13px;
     color: #84A9CD;
 }
-
+.btn_active{
+    background: #84A9CD!important;
+    border: 1px solid #84A9CD!important;
+    color: #fff!important;
+}
 a.btn.btn-lightblue:hover, a.btn.btn-lightblue:active{
     background: #84A9CD;
     border: 1px solid #84A9CD;
