@@ -134,5 +134,9 @@ footer > p::after{
     input.f-tab[type=radio]:checked + label.f-tab::after {
 	  transform: rotateX(180deg);
 	}
+	footer > p::before,
+	footer > p::after{
+		height: 0;
+	}
 	/* 響應式手風琴 end */
 }

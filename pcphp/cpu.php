@@ -27,7 +27,7 @@ foreach ($m_raw as $k => $v) {
 $per_page = 8;
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
-$label = isset($_GET['Label']) ? intval($_GET['Label']) : 0;
+
 
 $where = " WHERE 1 ";
 
@@ -35,12 +35,6 @@ if (!empty($cate)) {
 
     $where .= " AND category_sid=$cate ";
     $params['cate'] = $cate;
-}
-
-if (!empty($label)) {
-
-    $where .= " AND Label=$label ";
-    $params['Label'] = $label;
 }
 
 $total_sql = "SELECT COUNT(1) FROM product_book $where";
@@ -90,12 +84,10 @@ $product_rs = $mysqli->query($product_sql);
                     <p class="mb-2 mt-4 dark">廠牌</p>
                     <a type="button" class="btn btn-lightblue btn-size2" href="?cate=1&chip=">Intel 英特爾</a>
                     <a type="button" class="btn btn-lightblue btn-size2" href="?cate=1&chip=">AMD 超微</a>	
-    <!--
-    <input type="button" class="btn btn-lightblue btn-size2" value="Intel 英特爾">
-    <input type="button" class="btn btn-lightblue btn-size2" value="AMD 超微">	
-    -->
+                    
                     <?php elseif($cate==2): ?>
                     <p class="mb-2 mt-4 dark">廠牌</p>
+                    <!-- 點了 asus 之後 應該要跳出 label（廠牌） 都是 asus 的商品 -->
                     <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=ASUS">ASUS華碩</a>
                     <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=GIGABYTE">GIGABYTE技嘉</a>
                     <a type="button" class="btn btn-lightblue btn-size2" href="?cate=2&label=MSI">MSI微星</a>
@@ -241,7 +233,74 @@ $product_rs = $mysqli->query($product_sql);
                 </div>
                                             
             </div>
-        </div>                             
+        </div>
+        
+        
+        <!-- mobile-search -->
+        <div class="col-md-12 mobile-search">
+                <div class="row">
+                    <ul class="ul-width">
+                        <button class="searchbar mb-3">快速搜尋</button>
+                        <li>
+                            <select class="form-control mobile-select mb-1" onChange="location = this.options[this.selectedIndex].value;">
+                                <option value="?cate=1" <?= $cate==1 ? 'selected' : '' ?>>中央處理器</option>
+                                <option value="?cate=2" <?= $cate==2 ? 'selected' : '' ?>>主機板</option>
+                                <option value="?cate=3" <?= $cate==3 ? 'selected' : '' ?>>記憶體</option>
+                                <option value="?cate=4" <?= $cate==4 ? 'selected' : '' ?>>固態硬碟</option>
+                                <option value="?cate=5" <?= $cate==5 ? 'selected' : '' ?>>內接硬碟</option>
+                                <option value="?cate=6" <?= $cate==6 ? 'selected' : '' ?>>顯示卡</option>
+                                <option value="?cate=7" <?= $cate==7 ? 'selected' : '' ?>>電源供應器</option>
+                                <option value="?cate=8" <?= $cate==8 ? 'selected' : '' ?>>機殼</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="form-control mobile-select mb-1">
+                                <?php if($cate==1): ?>
+                                <option value="1">Intel 英特爾</option>
+                                <option value="2">AMD 超微</option>
+                                <?php elseif($cate==2): ?>
+                                <option value="3">ASUS華碩</option>
+                                <option value="4">GIGABYTE技嘉</option>
+                                <option value="5">MSI微星</option>
+                                <?php elseif($cate==3): ?>
+                                <option value="6">ADATA威剛</option>
+                                <option value="7">Kingston金士頓</option>
+                                <option value="8">Micron美光</option>
+                                <option value="9">Transcend創見</option>
+                                <option value="10">UMAX世成</option>
+                                <?php elseif($cate==4): ?>
+                                <option value="6">ADATA威剛</option>
+                                <option value="7">Kingston金士頓</option>
+                                <option value="11">SanDisk晟碟</option>
+                                <option value="8">Micron美光</option>
+                                <option value="12">WD威騰</option>
+                                <?php elseif($cate==5): ?>
+                                <option value="13">Seagate希捷</option>
+                                <option value="14">Toshiba東芝</option>
+                                <option value="12">WD威騰</option>
+                                <?php elseif($cate==6): ?>
+                                <option value="3">ASUS華碩</option>
+                                <option value="4">GIGABYTE技嘉</option>
+                                <option value="5">MSI微星</option>
+                                <?php elseif($cate==7): ?>
+                                <option value="13">台達</option>
+                                <?php elseif($cate==8): ?>
+                                <?php endif; ?> 
+                            </select>
+                        </li>
+                        <li>
+                            <select class="form-control mobile-select mb-3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button class="search-btn">搜尋</button>
+                        </li>
+                    </ul>
+            </div>
+        </div>
         <!--product-->
         <div class="col-md-9 col-xs-12 pl-3">
             <div class="row">
@@ -290,6 +349,9 @@ $product_rs = $mysqli->query($product_sql);
                 console.log(data)
                 changeQty(data);
             }, 'json');
+        });
+        $(".searchbar").click(function(){
+            $(".mobile-search").toggleClass("mobile-search-active");
         });
 
    </script>  
