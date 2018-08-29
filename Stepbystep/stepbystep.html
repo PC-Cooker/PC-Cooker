@@ -561,7 +561,31 @@
 			$('.point').removeClass('point_case')
 			$('.point').addClass('point_case')
 		});
+		// var a = $(".navbar").offset().bottom;
+     	// $(window).scroll(function(){
+        //  var p = $(this).scrollTop();
+        //  var no = false;
+        //  console.log(p);
+        // if( p < a ){
+        //         $(".navbar").removeClass("navbar_appear");
+        //         no = false;
 
+        // }else{
+        //         $(".navbar").addClass("navbar_appear");
+        //         no = true;
+        // }
+
+		var a = $('.stepbystep_software_container').offset().top-340;
+		console.log(a);
+		$(window).scroll(function(){
+			var p = $(this).scrollTop();
+			console.log(p);
+			if(p>a){
+				$('.navbar').addClass('navbar_appear')
+			}else{
+				$('.navbar').removeClass('navbar_appear')
+			}
+		})
 	</script>
 </body>
 </html>

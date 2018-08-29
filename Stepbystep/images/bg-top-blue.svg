@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920px" height="430px" viewBox="0 0 1920 430" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 11</title>
+    <title>Group 12</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="1920" height="430"></rect>
-        <linearGradient x1="17.3115976%" y1="77.3850272%" x2="110.911246%" y2="58.4068122%" id="linearGradient-3">
-            <stop stop-color="#9EBCD7" offset="0%"></stop>
-            <stop stop-color="#4B759C" offset="100%"></stop>
+        <linearGradient x1="91.5902701%" y1="61.5697759%" x2="-9.04276642%" y2="61.569755%" id="linearGradient-3">
+            <stop stop-color="#BAD4E8" offset="0%"></stop>
+            <stop stop-color="#A2BED4" offset="27.4430231%"></stop>
+            <stop stop-color="#BCD5E8" offset="39.3331747%"></stop>
+            <stop stop-color="#9EBDD9" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="71.3201958%" y1="50%" x2="71.3202012%" y2="91.1708024%" id="linearGradient-4">
-            <stop stop-color="#678DB0" offset="0%"></stop>
-            <stop stop-color="#6B91B3" offset="23.2397482%"></stop>
-            <stop stop-color="#7C9FBF" offset="100%"></stop>
+        <linearGradient x1="38.5893096%" y1="60.707463%" x2="5.14346524%" y2="63.3424697%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="4.04317679%" y1="82.2510747%" x2="12.1519479%" y2="73.7139819%" id="linearGradient-5">
+        <path d="M0,856 C69.71,857.415 139.134,861.369 208.679,865.595 C276.817,869.734 341.367,883.337 408.351,895.787 C480.898,909.271 545.524,905.843 617.114,892.223 C692.752,877.833 764.267,849.021 841.999,845 C1000.629,836.795 1131.835,934.414 1285.072,957.99 C1389.455,974.05 1489.677,941.784 1590.484,921.105 C1698.69,898.909 1810.202,892.805 1920.171,903.274 C1918.71,789.882 1920,676.402 1920,563 L0,563 C0,563 0,856 0,856" id="path-5"></path>
+        <linearGradient x1="71.3202012%" y1="0%" x2="71.3202012%" y2="91.1708024%" id="linearGradient-6">
+            <stop stop-color="#84A9CC" offset="0%"></stop>
+            <stop stop-color="#BFD7EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="4.04317679%" y1="82.2510747%" x2="12.1519479%" y2="73.7139819%" id="linearGradient-7">
             <stop stop-color="#E2EDF8" offset="0%"></stop>
             <stop stop-color="#84A9CC" offset="100%"></stop>
         </linearGradient>
-        <path d="M0,727 C0,727 201,721 311,761 C391.754,790.365 476.736,825.159 564.421,810.754 C649.063,796.85 706.45,739.19 776.754,697.429 C847.114,655.635 921.604,632.148 1004.05,642.534 C1099.482,654.556 1192.232,691.493 1281,727 C1471,803 1920,567 1920,567 L1920,0 L0,0 L0,727 Z" id="path-6"></path>
+        <path d="M0.171,727 C0.171,727 201.171,721 311.171,761 C391.925,790.365 476.907,825.159 564.592,810.754 C649.234,796.85 706.621,739.19 776.925,697.429 C847.285,655.635 921.775,632.148 1004.221,642.534 C1099.653,654.556 1192.403,691.493 1281.171,727 C1471.171,803 1920.171,567 1920.171,567 L1920.171,0 L0.171,0 L0.171,727 Z" id="path-8"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-11">
+        <g id="Group-12">
             <mask id="mask-2" fill="white">
                 <use xlink:href="#path-1"></use>
             </mask>
             <g id="Mask" fill-rule="nonzero"></g>
             <g mask="url(#mask-2)">
-                <g transform="translate(-1.000000, -509.000000)">
-                    <path d="M0,832 C69.71,833.415 139.134,837.369 208.679,841.595 C276.817,845.734 341.367,859.337 408.351,871.787 C480.898,885.271 545.524,881.843 617.114,868.223 C692.752,853.833 764.267,825.021 841.999,821 C1000.629,812.795 1131.835,910.414 1285.072,933.99 C1389.455,950.05 1489.677,917.784 1590.484,897.105 C1698.69,874.909 1810.202,868.805 1920.171,879.274 C1918.71,765.882 1920,652.402 1920,539 L0,539 C0,539 0,832 0,832" id="Fill-3" fill="url(#linearGradient-3)"></path>
-                    <g id="Fill-5" fill="none">
-                        <use fill="url(#linearGradient-4)" xlink:href="#path-6"></use>
-                        <use fill-opacity="0.1" fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                <g transform="translate(-1.000000, -533.000000)">
+                    <g id="Fill-3">
+                        <use fill="url(#linearGradient-3)" xlink:href="#path-5"></use>
+                        <use fill-opacity="0.1" fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                    </g>
+                    <g id="Fill-5">
+                        <use fill="url(#linearGradient-6)" xlink:href="#path-8"></use>
+                        <use fill-opacity="0.1" fill="url(#linearGradient-7)" xlink:href="#path-8"></use>
                     </g>
                 </g>
             </g>

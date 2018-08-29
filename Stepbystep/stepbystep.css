@@ -22,13 +22,18 @@ a:hover{
 
 /* start of navbar*/
 .navbar{
-	background-color: #84A9CD;
+	background-color: rgba(132, 169, 205, 0.85);
 	width: 100%;
 	height: 80px;
 	padding: 10px 0;
 	font-size: 18px;
 	position: fixed;
 	z-index: 2;
+	top:-80px;
+	transition: all 1s;
+}
+.navbar_appear{
+	top:0;
 }
 
 .nav-item .nav-link{
@@ -220,7 +225,7 @@ input:checked + .slider:before {
 	width: 100%;
 	height: 430px;
 	background: url(images/bg-top-blue.svg)no-repeat center;
-	margin-top:80px;
+	/* margin-top:80px; */
 	background-size: cover;
 }
 .stepbystep_top_container{
