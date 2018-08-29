@@ -445,7 +445,7 @@ a:hover{
 .section_01{
 	width: 0%;
 	height: 25vh;
-    background-image: linear-gradient(240deg, #b4cee7, #5a82a7);
+    background: #84a9cc;
     transition: width .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .section_01:hover{
