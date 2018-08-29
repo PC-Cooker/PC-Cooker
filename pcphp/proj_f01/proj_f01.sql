@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2018 年 08 月 29 日 04:24
+-- 產生時間： 2018 年 08 月 29 日 09:52
 -- 伺服器版本: 10.1.34-MariaDB
 -- PHP 版本： 7.2.7
 
@@ -339,10 +339,10 @@ INSERT INTO `product_book` (`sid`, `category_sid`, `Chip`, `Label`, `CodeName`, 
 (107, 3, NULL, 'Kingston', NULL, NULL, '8G', NULL, 'Kingston 8G 2666MHz', 2310),
 (108, 3, NULL, 'Kingston', NULL, NULL, '16G', NULL, 'Kingston 16G 2400MHz', 4650),
 (109, 3, NULL, 'Kingston', NULL, NULL, '16G', NULL, 'Kingston 16G 2666MHz', 4680),
-(110, 3, NULL, 'Micron', NULL, NULL, '4G', NULL, 'Kingston 4G 2400MHz', 1190),
-(111, 3, NULL, 'Micron', NULL, NULL, '8G', NULL, 'Kingston 8G 2400MHz', 2090),
-(112, 3, NULL, 'Micron', NULL, NULL, '8G', NULL, 'Kingston 8G 2666MHz', 2180),
-(113, 3, NULL, 'Micron', NULL, NULL, '16G', NULL, 'Kingston 16G 2666MHz', 4599),
+(110, 3, NULL, 'Micron', NULL, NULL, '4G', NULL, 'Micron 4G 2400MHz', 1190),
+(111, 3, NULL, 'Micron', NULL, NULL, '8G', NULL, 'Micron 8G 2400MHz', 2090),
+(112, 3, NULL, 'Micron', NULL, NULL, '8G', NULL, 'Micron 8G 2666MHz', 2180),
+(113, 3, NULL, 'Micron', NULL, NULL, '16G', NULL, 'Micron 16G 2666MHz', 4599),
 (114, 4, NULL, 'ADATA', NULL, NULL, NULL, '120G', 'ADATA Ultimate SU650', 880),
 (115, 4, NULL, 'ADATA', NULL, NULL, NULL, '240G', 'ADATA Ultimate SU650', 1450),
 (116, 4, NULL, 'ADATA', NULL, NULL, NULL, '480G', 'ADATA Ultimate SU650', 2680),
@@ -426,10 +426,10 @@ INSERT INTO `product_book` (`sid`, `category_sid`, `Chip`, `Label`, `CodeName`, 
 (194, 6, 'AMD', 'MSI', NULL, 'RX580', NULL, NULL, 'MSI RX580 ARMOR MK2 8G OC', 13500),
 (195, 6, 'AMD', 'GIGABYTE', NULL, 'RX580', NULL, NULL, 'GIGABYTE RX580 GAMING-8GD', 11590),
 (196, 6, 'AMD', 'GIGABYTE', NULL, 'RX580', NULL, NULL, 'GIGABYTE AORUS-RX580-8GD', 11990),
-(197, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, '400W', 1490),
-(198, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, '450W', 1690),
-(199, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, '500W', 1990),
-(200, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, '650W', 3990),
+(197, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, 'Seasonic 400W', 1490),
+(198, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, 'Seasonic 450W', 1690),
+(199, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, 'Seasonic 500W', 1990),
+(200, 7, NULL, 'Seasonic', NULL, NULL, NULL, NULL, 'Seasonic 650W', 3990),
 (201, 8, NULL, NULL, NULL, NULL, NULL, NULL, 'CoolerMaster MasterBox MB500', 2490),
 (202, 8, NULL, NULL, NULL, NULL, NULL, NULL, 'CoolerMaster MasterBox Pro 5', 2990),
 (203, 8, NULL, NULL, NULL, NULL, NULL, NULL, 'Apexgaming Z2', 2230),
