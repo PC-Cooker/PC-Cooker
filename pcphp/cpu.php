@@ -198,14 +198,14 @@ $product_rs = $mysqli->query($product_sql);
                         <a type="button" class="btn btn-lightblue btn-size3" value="16G">16G</a>
                      <?php elseif($cate==4): ?>
                         <p class="mb-2 mt-4 dark">容量大小</p>		
-                        <input type="button" class="btn btn-lightblue btn-size2" value="<512G"><512G</a>
-                        <input type="button" class="btn btn-lightblue btn-size2" value="512G~1TB">512G~1TB</a>
-                        <input type="button" class="btn btn-lightblue btn-size2" value=">1TB">>1TB</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="<512G"><512G</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="512G~1TB">512G~1TB</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value=">1TB">>1TB</a>
                      <?php elseif($cate==5): ?>
                         <p class="mb-2 mt-4 dark">容量大小</p>		
-                        <input type="button" class="btn btn-lightblue btn-size2" value="<2TB"><2TB</a>
-                        <input type="button" class="btn btn-lightblue btn-size2" value="2TB~4TB">2TB~4TB</a>
-                        <input type="button" class="btn btn-lightblue btn-size2" value=">4TB">>4TB</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="<2TB"><2TB</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="2TB~4TB">2TB~4TB</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value=">4TB">>4TB</a>
 
                      <?php elseif($cate==6): ?>
                         <p class="mb-2 mt-4 dark">NVIDIA顯示晶片組</p>		
