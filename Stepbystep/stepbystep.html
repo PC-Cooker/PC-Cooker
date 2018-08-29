@@ -121,16 +121,6 @@
 			<div class="point_container">
 				<div class="point point_software"><img src="images/point.svg"></div>
 			</div>
-			<!-- <ul	class="stepbystep_point">
-					<li><img src="images/point.svg"></li>
-					<li></li>
-					<li></li>	
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			</ul> -->
 			<ul	class="stepbystep_point_mobile">
 					<li><img src="images/point.svg"></li>
 					<li></li>
@@ -324,7 +314,10 @@
 			</div>
 		</div>
 	</div>
-		<!-- footer -->
+	<!-- 中央處理器 -->
+	<div class="cpu_container">
+	</div>
+	<!-- footer -->
 	<div class="container-fluid black">
 			<footer>
 				<div class="container footer_web">
@@ -468,7 +461,7 @@
 	// 	 $('.point').addClass('point_move_mb')
 	//  });
 	 // 結束-指標三角形的特效
-
+		
 	 	$('.software_li').click(function(){
 			$('.point').removeClass('point_software')
 			$('.point').removeClass('point_cpu')
@@ -479,6 +472,8 @@
 			$('.point').removeClass('point_power')
 			$('.point').removeClass('point_case')
 			$('.point').addClass('point_software')
+			$('.stepbystep_software_container').removeClass('stepbystep_close')
+			$('.cpu_container').removeClass('cpu_container_open')
 		});
 
 		$('.cpu_li').click(function(){
@@ -491,6 +486,8 @@
 			$('.point').removeClass('point_power')
 			$('.point').removeClass('point_case')
 			$('.point').addClass('point_cpu')
+			$('.stepbystep_software_container').addClass('stepbystep_close')
+			$('.cpu_container').addClass('cpu_container_open')
 		});
 
 		$('.mb_li').click(function(){

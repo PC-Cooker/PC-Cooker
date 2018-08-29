@@ -218,9 +218,10 @@ input:checked + .slider:before {
 /* Step by Step 上方區塊*/
 .stepbystep_100vw{
 	width: 100%;
-	height: 310px;
-	background-color: #84A9CD;
+	height: 430px;
+	background: url(images/bg-top-blue.svg)no-repeat center;
 	margin-top:80px;
+	background-size: cover;
 }
 .stepbystep_top_container{
 	max-width: 1200px;
@@ -228,15 +229,16 @@ input:checked + .slider:before {
 }
 .stepbystep_100vw h1{
 	color: #fff;
-	font-size:30px;
+	font-size:48px;
+	font-weight: 200;
 	text-align: center;
-	padding-top:80px;
+	padding-top:40px;
 	padding-bottom:40px;
 }
 .stepbystep_100vw h3{
 	color:#fff;
 	font-size:16px;
-	font-weight: normal;
+	font-weight: 300;
 	text-align: center;
 	padding-bottom:40px;
 	line-height: 24px;
@@ -255,6 +257,8 @@ input:checked + .slider:before {
 	align-items: center;
 	justify-content: center;
 	width: 120px;
+	font-weight: 300;
+	font-size: 16px;
 }
 .stepbystep_items img{
 	padding:0 5px;
@@ -301,7 +305,7 @@ input:checked + .slider:before {
 	position: absolute;
 	left: 60px;
 	top:0;
-	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 1s;
 	z-index: 1;
 }
 .point_software{
@@ -335,6 +339,13 @@ input:checked + .slider:before {
 	background: #F5F8FB;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
+	opacity: 1;
+	transition: all 1s;
+}
+.stepbystep_close{
+	height: 0;
+	opacity: 0;
 }
 .stepbystep_software_container h1{
 	font-size:24px;
@@ -576,7 +587,19 @@ input:checked + .slider:before {
 	right:-100px;
 }
 
-
+/*中央處理器*/
+.cpu_container{
+	max-width: 100%;
+	margin: 0 auto;
+	height: 0;
+	background: #fff;
+	opacity: 0;
+	transition: opacity .3s;
+}
+.cpu_container_open{
+	opacity: 1;
+	height: 600px;
+}
 
 
 
