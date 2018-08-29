@@ -354,9 +354,10 @@ input:checked + .slider:before {
 }
 .stepbystep_software_container h1{
 	font-size:24px;
-	font-weight: normal;
+	font-weight: 300;
 	text-align: center;
 	padding:40px 0;
+	color: #708090;
 }
 .stepbystep_software_container h1::before,
 .stepbystep_software_container h1::after{
