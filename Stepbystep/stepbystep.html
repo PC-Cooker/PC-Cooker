@@ -101,12 +101,12 @@
 			<ul	class="stepbystep_items">
 				<li class="software_li"><img src="images/li01.svg"> 軟體</li>
 				<li class="cpu_li"><img src="images/li02.svg"> 中央處理器</li>
-				<li><img src="images/li03.svg"> 主機板</li>	
-				<li><img src="images/li04.svg"> 記憶體</li>
-				<li><img src="images/li05.svg"> 顯示卡</li>
-				<li><img src="images/li06.svg"> 硬碟</li>
-				<li><img src="images/li07.svg"> 電源供應器</li>
-				<li><img src="images/li08.svg"> 機殼</li>
+				<li class="mb_li"><img src="images/li03.svg"> 主機板</li>	
+				<li class="ram_li"><img src="images/li04.svg"> 記憶體</li>
+				<li class="gpu_li"><img src="images/li05.svg"> 顯示卡</li>
+				<li class="hdd_li"><img src="images/li06.svg"> 硬碟</li>
+				<li class="power_li"><img src="images/li07.svg"> 電源供應器</li>
+				<li class="case_li"><img src="images/li08.svg"> 機殼</li>
 			</ul>
 			<ul	class="stepbystep_items_mobile">
 					<li><img src="images/li01.svg"></li>
@@ -119,7 +119,7 @@
 					<li><img src="images/li08.svg"></li>
 			</ul>
 			<div class="point_container">
-				<div class="point"><img src="images/point.svg"></div>
+				<div class="point point_software"><img src="images/point.svg"></div>
 			</div>
 			<!-- <ul	class="stepbystep_point">
 					<li><img src="images/point.svg"></li>
@@ -444,21 +444,127 @@
 	 });
 
 	 // 指標三角形的特效
-	 $('.cpu_li').click(function(){
-		if( $('.point').hasClass('point_move_software') ){
-			 $('.point').removeClass('point_move_software')
-		 }
-		 $('.point').addClass('point_move');
-	 });
+	//  $('.cpu_li').click(function(){
+	// 	if( $('.point').hasClass('point_move_software') ){
+	// 		 $('.point').removeClass('point_move_software')
+	// 	 }
+	// 	 $('.point').addClass('point_move');
+	//  });
 	 
-	 $('.software_li').click(function(){
-		 if( $('.point').hasClass('point_move') ){
-			 $('.point').removeClass('point_move')
-		 }
-		 $('.point').addClass('point_move_software')
-	 });
+	//  $('.software_li').click(function(){
+	// 	 if( $('.point').hasClass('point_move') ){
+	// 		 $('.point').removeClass('point_move')
+	// 	 }
+	// 	 $('.point').addClass('point_move_software')
+	//  });
+	//  $('.software_li').click(function(){
+	// 	 if( $('.point').hasClass('point_move') ){
+	// 		 $('.point').removeClass('point_move')
+	// 	 }
+	// 	 $('.point').addClass('point_move_software')
+	//  });
+
+	//  $('.mb_li').click(function(){
+	// 	 $('.point').addClass('point_move_mb')
+	//  });
 	 // 結束-指標三角形的特效
-	 
+
+	 	$('.software_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_software')
+		});
+
+		$('.cpu_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_cpu')
+		});
+
+		$('.mb_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_mb')
+		});
+		
+		$('.ram_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_ram')
+		});
+
+		$('.gpu_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_gpu')
+		});
+
+		$('.hdd_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_hdd')
+		});
+
+		$('.power_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_power')
+		});
+
+		$('.case_li').click(function(){
+			$('.point').removeClass('point_software')
+			$('.point').removeClass('point_cpu')
+			$('.point').removeClass('point_mb')
+			$('.point').removeClass('point_ram')
+			$('.point').removeClass('point_gpu')
+			$('.point').removeClass('point_hdd')
+			$('.point').removeClass('point_power')
+			$('.point').removeClass('point_case')
+			$('.point').addClass('point_case')
+		});
+
 	</script>
 </body>
 </html>

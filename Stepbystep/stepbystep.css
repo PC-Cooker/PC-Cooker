@@ -304,20 +304,31 @@ input:checked + .slider:before {
 	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	z-index: 1;
 }
-.cpu_li{
-	background: #000;
-	cursor: pointer;
-}
-.software_li{
-	background: #000;
-	cursor: pointer;
-}
-.point_move{
-	left: 210px;
-}
-.point_move_software{
+.point_software{
 	left:60px;
 }
+.point_cpu{
+	left:210px
+}
+.point_mb{
+	left:369px;
+}
+.point_ram{
+	left:529px;
+}
+.point_gpu{
+	left:679px;
+}
+.point_hdd{
+	left:835px;
+}
+.point_power{
+	left:990px;
+}
+.point_case{
+	left:1142px;
+}
+
 /* 挑選軟體區塊 */
 .stepbystep_software_container{
 	max-width: 1200px;
@@ -531,7 +542,7 @@ input:checked + .slider:before {
 	overflow: hidden;
 }
 .rem_book_open{
-	height: 600px;
+	height: auto;
 	opacity: 1;
 	margin: 25px 0;
 }
@@ -545,7 +556,7 @@ input:checked + .slider:before {
 	overflow: hidden;
 }
 .rem_paint_open{
-	height: 600px;
+	height: auto;
 	opacity: 1;
 	margin: 25px 0;
 }
