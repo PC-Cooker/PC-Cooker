@@ -446,7 +446,7 @@ a:hover{
 	width: 0%;
 	height: 25vh;
     background: #84a9cc;
-    transition: width .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: width .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .section_01:hover{
 	width:100%;
@@ -500,6 +500,7 @@ a:hover{
 	color:#282828;
     font-size:16px;
     font-weight: 300;
+    margin: 0;
 	transition: all .5s;
 }
 .section_img01{
@@ -507,8 +508,8 @@ a:hover{
 	height: 25vh;
 	background: url(images/section_img01.svg) no-repeat center center;
 	background-size:contain;
-	opacity: 0;
-	transition: all 1s;
+    opacity: 0;
+    transition:all 600ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 .section_img02{
 	position: absolute;
@@ -518,7 +519,7 @@ a:hover{
 	background: url(images/section_img02.svg) no-repeat center center;
 	background-size: contain;
 	opacity: 0;
-	transition:all 1s;
+	transition:all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .section_img03{
     width: 55%;
@@ -526,7 +527,7 @@ a:hover{
 	background: url(images/section_img03.svg) no-repeat center center;
 	background-size:contain;
 	opacity: 0;
-	transition: all 1s;
+	transition:all 600ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 .section_img04{
     position: absolute;
@@ -536,7 +537,7 @@ a:hover{
 	background: url(images/section_img04.svg) no-repeat center center;
 	background-size: contain;
 	opacity: 0;
-	transition:all 1s;
+	transition:all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /*訂閱電子報*/
