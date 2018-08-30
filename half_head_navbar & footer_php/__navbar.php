@@ -56,7 +56,7 @@
 						</ul>
 					</li>
 					<li class="nav-item pr-4">
-						<a class="nav-link" href="#">用戶評論</a>
+						<a class="nav-link" href="#">用戶評論區</a>
 					</li>
 					<li class="nav-item pr-4">
 						<a class="nav-link" href="#">科普小遊戲</a>
