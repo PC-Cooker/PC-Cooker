@@ -596,8 +596,8 @@
         // }
 
 		var a = $('.stepbystep_software_container').offset().top-340;
-		console.log(a);
-		$(window).scroll(function(){
+			console.log(a);
+			$(window).scroll(function(){
 			var p = $(this).scrollTop();
 			console.log(p);
 			if(p>a){
@@ -605,7 +605,17 @@
 			}else{
 				$('.navbar').removeClass('navbar_appear')
 			}
-		})
+		});
+		var b = $('.stepbystep_items').offset().top;
+			console.log(b);
+			$(window).scroll(function(){
+			var c = $(this).scrollTop();
+			if(c>b){
+				$('.stepbystep_items').addClass('stepbystep_items_fixed')
+			}else{
+				$('.stepbystep_items').removeClass('stepbystep_items_fixed')
+			}
+			});
 	</script>
 </body>
 </html>

@@ -254,6 +254,12 @@ input:checked + .slider:before {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+.stepbystep_items_fixed{
+	position: fixed;
+	bottom:0px;
+	background: #000;
+	z-index: 5;
+}
 
 .stepbystep_items li{
 	color:#fff;
