@@ -184,10 +184,19 @@ $product_rs = $mysqli->query($product_sql);
                 </div>
 
                 <div class="moreSearchArea">
-                    <?php if($cate==1): ?>
+                   <?php # if($cate==1): ?>
+                        <!-- <p class="mb-2 mt-4 dark">CPU類型</p>		
+                        <a type="button" class="btn btn-lightblue btn-size2" value="Kaby Lake">Kaby Lake</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="Coffee Lake">Coffee Lake</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="Ryzen 1000">Ryzen 1000</a>
+                        <a type="button" class="btn btn-lightblue btn-size2" value="Ryzen 2000">Ryzen 2000</a> -->
+                    <?php # echo '1'?>
+                    <?php if($cate==1 && $chip=='Intel'): ?>
                         <p class="mb-2 mt-4 dark">CPU類型</p>		
                         <a type="button" class="btn btn-lightblue btn-size2" value="Kaby Lake">Kaby Lake</a>
                         <a type="button" class="btn btn-lightblue btn-size2" value="Coffee Lake">Coffee Lake</a>
+                    <?php elseif($cate==1 && $chip=='AMD'): ?>
+                        <p class="mb-2 mt-4 dark">CPU類型</p>		
                         <a type="button" class="btn btn-lightblue btn-size2" value="Ryzen 1000">Ryzen 1000</a>
                         <a type="button" class="btn btn-lightblue btn-size2" value="Ryzen 2000">Ryzen 2000</a>
                     <?php elseif($cate==2): ?>
@@ -260,7 +269,7 @@ $product_rs = $mysqli->query($product_sql);
                     <ul class="ul-width">
                         <button class="searchbar mb-3">快速搜尋</button>
                         <li>
-                            <select class="form-control mobile-select mb-1" onChange="location = this.options[this.selectedIndex].value;">
+                            <select class="form-control mobile-select mb-1"  onChange="location = this.options[this.selectedIndex].value;">
                                 <option value="?cate=1" <?= $cate==1 ? 'selected' : '' ?>>中央處理器</option>
                                 <option value="?cate=2" <?= $cate==2 ? 'selected' : '' ?>>主機板</option>
                                 <option value="?cate=3" <?= $cate==3 ? 'selected' : '' ?>>記憶體</option>
@@ -320,7 +329,7 @@ $product_rs = $mysqli->query($product_sql);
             </div>
         </div>
         <!--product-->
-        <div class="col-md-9 col-xs-12 pl-3">
+        <div class="col-md-9 col-xs-12">
             <div class="row">
                 <?php while ($r = $product_rs->fetch_assoc()): ?>
                     <div class="col-md-3 <?= $r['Chipsets'] ?>">
