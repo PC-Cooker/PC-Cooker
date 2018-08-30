@@ -142,25 +142,26 @@
 				<div class="software_img"><img src="images/software_music.svg"></div>
 				<h2>影音編輯</h2>
 				<h3>Video Editor</h3>
-				<a  href="#" class="learnmore_btn">瞭解更多</a>
+				<!-- <a  href="" class="learnmore_btn">瞭解更多</a> -->
 			</div>
 			<div class="three_software book">
 				<div class="software_img"><img src="images/software_book.svg"></div>
 				<h2>文書處理</h2>
 				<h3>Document Processing</h3>
-				<a href="#" class="learnmore_btn">瞭解更多</a>
+				<!-- <a href="" class="learnmore_btn">瞭解更多</a> -->
 			</div>
 			<div class="three_software paint">
 				<div class="software_img"><img src="images/software_paint.svg"></div>
 				<h2>繪圖設計</h2>
 				<h3>Design&Draw</h3>
-				<a href="#" class="learnmore_btn">瞭解更多</a>
+				<!-- <a href="" class="learnmore_btn">瞭解更多</a> -->
 			</div>
 		</div>
 		<div class="rem_music">
 			<div class="rem_text">
 				<h2>影音編輯推薦</h2>
 				<h3>如果平時你是使用Ae特效居多的工作者，推薦您的電腦效能為</h3>
+				<img class="rem_cancel" src="images/rem_cancel.svg">
 			</div>
 			<div class="rem_music_flex">
 				<div class="rem_music_div">
@@ -452,7 +453,9 @@
 		 }
 		 $('.rem_paint').toggleClass('rem_paint_open');
 	 });
-
+	$('.rem_cancel').click(function(){
+		$('.rem_music').removeClass('rem_music_open')
+	});
 	 // 指標三角形的特效
 	//  $('.cpu_li').click(function(){
 	// 	if( $('.point').hasClass('point_move_software') ){

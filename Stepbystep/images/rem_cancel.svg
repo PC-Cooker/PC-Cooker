@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我要組電腦" transform="translate(-1035.000000, -512.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Cancel" transform="translate(1033.000000, 510.000000)">
+                <rect id="Rectangle-path" opacity="0" x="0" y="0" width="30" height="30"></rect>
+                <polygon id="Shape" points="14.1607896 15.2884918 2.88461538 4.01228731 4.01225704 2.88461538 15.2884615 14.1607896 26.5646358 2.88461538 27.6923077 4.01228731 16.4159821 15.2884918 27.6923077 26.564666 26.5646358 27.6923077 15.2884615 16.4160123 4.01225704 27.6923077 2.88461538 26.564666 14.1607896 15.2884918"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

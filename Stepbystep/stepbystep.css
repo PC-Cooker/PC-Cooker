@@ -357,7 +357,7 @@ input:checked + .slider:before {
 	font-weight: 300;
 	text-align: center;
 	padding:40px 0;
-	color: #708090;
+	color: #282828;
 }
 .stepbystep_software_container h1::before,
 .stepbystep_software_container h1::after{
@@ -382,14 +382,16 @@ input:checked + .slider:before {
 .software_01 h2,
 .software_game h2{
 	font-size:24px;
+	font-weight: 300;
 	letter-spacing: 1px;
 	margin-bottom:0px;
+	margin-top:20px;
 }
 .software_01 h3,
 .software_game h3{
 	font-size:14px;
+	font-weight: 300;
 	color:#aaa;
-	font-weight: normal;
 	padding-bottom:30px;
 	padding-top:0px;
 }
@@ -397,16 +399,16 @@ input:checked + .slider:before {
 	width: 300px;
 	height: 300px;
 	border-radius: 5px;
-	border: 2px solid #e7e7e7;
+	border: 1px solid #e7e7e7;
 	text-align: center;
 	margin: 10px auto;
 	cursor: pointer;
 }
 .three_software_active{
-	background: #fff;
+	background: #f5f5f5;
 }
 .three_software:hover{
-	border:2px solid #ccc;
+	border:1px solid #ccc;
 }
 
 .learnmore_btn{
@@ -519,6 +521,7 @@ input:checked + .slider:before {
 }
 .rem_text{
 	margin: 35px;
+	position: relative;
 }
 .rem_text h2{
 	font-size:30px;
@@ -527,6 +530,11 @@ input:checked + .slider:before {
 .rem_text h3{
 	font-size:14px;
 	font-weight: 300;
+}
+.rem_cancel{
+	position: absolute;
+	right:35px;
+	top:15px;
 }
 .rem_music_flex{
 	display: flex;
