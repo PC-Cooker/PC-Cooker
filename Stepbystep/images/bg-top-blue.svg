@@ -1,48 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1920px" height="430px" viewBox="0 0 1920 430" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1920px" height="468px" viewBox="0 0 1920 468" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 12</title>
+    <title>Fill 5</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="0" width="1920" height="430"></rect>
-        <linearGradient x1="91.5902701%" y1="61.5697759%" x2="-9.04276642%" y2="61.569755%" id="linearGradient-3">
-            <stop stop-color="#BAD4E8" offset="0%"></stop>
-            <stop stop-color="#A2BED4" offset="27.4430231%"></stop>
-            <stop stop-color="#BCD5E8" offset="39.3331747%"></stop>
-            <stop stop-color="#9EBDD9" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="38.5893096%" y1="60.707463%" x2="5.14346524%" y2="63.3424697%" id="linearGradient-4">
-            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
-            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
-        </linearGradient>
-        <path d="M0,856 C69.71,857.415 139.134,861.369 208.679,865.595 C276.817,869.734 341.367,883.337 408.351,895.787 C480.898,909.271 545.524,905.843 617.114,892.223 C692.752,877.833 764.267,849.021 841.999,845 C1000.629,836.795 1131.835,934.414 1285.072,957.99 C1389.455,974.05 1489.677,941.784 1590.484,921.105 C1698.69,898.909 1810.202,892.805 1920.171,903.274 C1918.71,789.882 1920,676.402 1920,563 L0,563 C0,563 0,856 0,856" id="path-5"></path>
-        <linearGradient x1="71.3202012%" y1="0%" x2="71.3202012%" y2="91.1708024%" id="linearGradient-6">
+        <linearGradient x1="71.3202012%" y1="0%" x2="71.3202012%" y2="91.1708024%" id="linearGradient-1">
             <stop stop-color="#84A9CC" offset="0%"></stop>
             <stop stop-color="#BFD7EE" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="4.04317679%" y1="82.2510747%" x2="12.1519479%" y2="73.7139819%" id="linearGradient-7">
+        <linearGradient x1="4.04317679%" y1="82.2510747%" x2="12.1519479%" y2="73.7139819%" id="linearGradient-2">
             <stop stop-color="#E2EDF8" offset="0%"></stop>
             <stop stop-color="#84A9CC" offset="100%"></stop>
         </linearGradient>
-        <path d="M0.171,727 C0.171,727 201.171,721 311.171,761 C391.925,790.365 476.907,825.159 564.592,810.754 C649.234,796.85 706.621,739.19 776.925,697.429 C847.285,655.635 921.775,632.148 1004.221,642.534 C1099.653,654.556 1192.403,691.493 1281.171,727 C1471.171,803 1920.171,567 1920.171,567 L1920.171,0 L0.171,0 L0.171,727 Z" id="path-8"></path>
+        <path d="M0,417.921948 C0,417.921948 201,414.472799 311,437.467129 C391.754,454.347841 476.736,474.349459 564.421,466.068626 C649.063,458.075797 706.45,424.92947 776.754,400.922815 C847.114,376.897189 921.604,363.395493 1004.05,369.365971 C1099.482,376.276917 1192.232,397.510456 1281,417.921948 C1471,461.611175 1920,325.944628 1920,325.944628 L1920,0 L0,0 L0,417.921948 Z" id="path-3"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-12">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <g id="Mask" fill-rule="nonzero"></g>
-            <g mask="url(#mask-2)">
-                <g transform="translate(-1.000000, -533.000000)">
-                    <g id="Fill-3">
-                        <use fill="url(#linearGradient-3)" xlink:href="#path-5"></use>
-                        <use fill-opacity="0.1" fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
-                    </g>
-                    <g id="Fill-5">
-                        <use fill="url(#linearGradient-6)" xlink:href="#path-8"></use>
-                        <use fill-opacity="0.1" fill="url(#linearGradient-7)" xlink:href="#path-8"></use>
-                    </g>
-                </g>
+        <g id="我要組電腦">
+            <g id="Fill-5">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                <use fill-opacity="0.1" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
             </g>
         </g>
     </g>

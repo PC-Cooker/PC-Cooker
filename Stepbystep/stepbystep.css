@@ -449,15 +449,41 @@ input:checked + .slider:before {
 	border-radius: 5px;
 	cursor: pointer;
 	transition: all .5s;
-}
-.game:hover{
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+	position: relative;
 }
 
+.select_not{
+	position: absolute;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	width: 30px;
+	height: 30px;
+	top:0;
+	right:0;
+	opacity: 0;
+}
+.game:hover .select_not{
+	opacity: 1;
+}
+.select{
+	position: absolute;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	width: 30px;
+	height: 30px;
+	top:0;
+	right:0;
+	opacity: 0;
+}
+.select_light{
+	opacity: 1;
+}
 .game_click{
 	border:1px solid #fac375;
 }
-.game img{
+.game_img{
 	padding:10px;
 	width: 100px;
 	height: 100px;
