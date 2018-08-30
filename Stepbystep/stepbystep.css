@@ -638,7 +638,7 @@ input:checked + .slider:before {
 	max-width: 100%;
 	margin: 0 auto;
 	height: 0;
-	background: #fff;
+	/* background: #fff; */
 	opacity: 0;
 	transition: opacity .3s;
 }
