@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="184px" viewBox="0 0 100 184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>機殼</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1692.000000, -661.000000)" fill="#84A9CD" fill-rule="nonzero">
+            <g id="電腦零件ICON">
+                <g id="機殼" transform="translate(1692.000000, 661.000000)">
+                    <path d="M0,0.31 L0,183.31 L100,183.31 L100,0.31 L0,0.31 Z M79,159.31 L21,159.31 L21,149.31 L79,149.31 L79,159.31 Z M57,80.31 L57,62.31 L75,62.31 L75,80.31 L57,80.31 Z M79,49.31 L21,49.31 L21,27.31 L79,27.31 L79,49.31 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
