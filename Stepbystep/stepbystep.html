@@ -334,6 +334,70 @@
 	</div>
 	<!-- 中央處理器 -->
 	<div class="cpu_container">
+		<div class="cpu_text">
+			<h3>您選擇了 <span class="ms_text">魔物獵人</span> 以下為您推薦適合的中央處理器</h3>
+		</div>
+		<div class="cpu_flex">
+			<div class="cpu_sale">
+				<div class="cpu_sale_img">
+					<div class="select_no"><img src="images/not_select.svg"></div>
+					<div class="select_yes"><img src="images/select.svg"></div>
+					<img src="images/product/1.jpg">
+				</div>
+				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+				<h2>NT$4000</h2>
+			</div>
+			<div class="cpu_sale">
+				<div class="cpu_sale_img">
+					<div class="select_no"><img src="images/not_select.svg"></div>
+					<div class="select_yes"><img src="images/select.svg"></div>
+					<img src="images/product/1.jpg">
+				</div>
+				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+				<h2>NT$4000</h2>
+			</div>
+			<div class="cpu_sale">
+				<div class="cpu_sale_img">
+					<div class="select_no"><img src="images/not_select.svg"></div>
+					<div class="select_yes"><img src="images/select.svg"></div>
+					<img src="images/product/1.jpg">
+				</div>
+				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+				<h2>NT$4000</h2>
+			</div>
+		</div>
+		<div class="cpu_text">
+			<h3>查看更多其他中央處理器</h3>
+		</div>
+		<div class="cpu_flex">
+				<div class="cpu_sale">
+					<div class="cpu_sale_img">
+						<div class="select_no"><img src="images/not_select.svg"></div>
+						<div class="select_yes"><img src="images/select.svg"></div>
+						<img src="images/product/1.jpg">
+					</div>
+					<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+					<h2>NT$4000</h2>
+				</div>
+				<div class="cpu_sale">
+					<div class="cpu_sale_img">
+						<div class="select_no"><img src="images/not_select.svg"></div>
+						<div class="select_yes"><img src="images/select.svg"></div>
+						<img src="images/product/1.jpg">
+					</div>
+					<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+					<h2>NT$4000</h2>
+				</div>
+				<div class="cpu_sale">
+					<div class="cpu_sale_img">
+						<div class="select_no"><img src="images/not_select.svg"></div>
+						<div class="select_yes"><img src="images/select.svg"></div>
+						<img src="images/product/1.jpg">
+					</div>
+					<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+					<h2>NT$4000</h2>
+				</div>
+			</div>
 	</div>
 	<!-- footer -->
 	<div class="container-fluid black">
@@ -455,6 +519,13 @@
 	 });
 	$('.rem_cancel').click(function(){
 		$('.rem_music').removeClass('rem_music_open')
+	});
+
+	$('.cpu_sale').click(function(){
+		$(this).siblings().find('.select_yes').css('opacity','0')
+		$(this).siblings().find('.select_no').css('opacity','1')
+		$(this).find('.select_no').css('opacity','0')
+		$(this).find('.select_yes').css('opacity','1')
 	});
 	 // 指標三角形的特效
 	//  $('.cpu_li').click(function(){
@@ -581,6 +652,7 @@
 			$('.point').removeClass('point_case')
 			$('.point').addClass('point_case')
 		});
+		
 		// var a = $(".navbar").offset().bottom;
      	// $(window).scroll(function(){
         //  var p = $(this).scrollTop();
@@ -595,17 +667,17 @@
         //         no = true;
         // }
 
-		var a = $('.stepbystep_software_container').offset().top-340;
-			console.log(a);
-			$(window).scroll(function(){
-			var p = $(this).scrollTop();
-			console.log(p);
-			if(p>a){
-				$('.navbar').addClass('navbar_appear')
-			}else{
-				$('.navbar').removeClass('navbar_appear')
-			}
-		});
+		// var a = $('.stepbystep_software_container').offset().top-340;
+		// 	console.log(a);
+		// 	$(window).scroll(function(){
+		// 	var p = $(this).scrollTop();
+		// 	console.log(p);
+		// 	if(p>a){
+		// 		$('.navbar').addClass('navbar_appear')
+		// 	}else{
+		// 		$('.navbar').removeClass('navbar_appear')
+		// 	}
+		// });
 		
 	</script>
 </body>
