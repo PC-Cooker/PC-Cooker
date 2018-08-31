@@ -256,11 +256,21 @@ input:checked + .slider:before {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+.process{
+	max-width: 1200px;
+	margin: 0 auto;
+	transition: all 1s;
+}
 .stepbystep_items_fixed{
+	max-width: 1200px;
 	position: fixed;
-	bottom:0px;
-	background: #000;
+	margin: 0 auto;
+	justify-content: space-between;
+	/* top:80px; */
+	bottom:0;
+	background: #84a9cc;
 	z-index: 5;
+	border-radius: 5px 5px 0 0;
 }
 
 .stepbystep_items li{
@@ -311,7 +321,7 @@ input:checked + .slider:before {
 }
 .point_container{
 	width: 1190px;
-	height: 50px;
+	height: 25px;
 	position: relative;
 }
 .point{
@@ -638,18 +648,20 @@ input:checked + .slider:before {
 }
 
 /*中央處理器*/
-.cpu_container{
+.sale_container{
 	max-width: 1200px;
-	margin: 10px auto 100px auto;
 	height: 0;
 	opacity: 0;
-	transition: opacity .3s;
+	transition: opacity 2s;
 	overflow: hidden;
 }
-.cpu_container_open{
+.cpu_open{
 	opacity: 1;
 	height: auto;
+	margin: 10px auto 100px auto;
 }
+
+
 .cpu_text{
 	margin: 30px 30px  10px 30px;
 }
@@ -706,6 +718,43 @@ input:checked + .slider:before {
 	opacity: 0;
 }
 
+
+/*主機板*/
+.mb_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
+/* 記憶體 */
+.ram_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
+/* 顯示卡 */
+.gpu_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
+/* 硬碟 */
+.hdd_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
+/* 電源供應器 */
+.power_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
+/* 機殼 */
+.case_open{
+	opacity: 1;
+	height: auto;
+	margin: 10px auto 100px auto;
+}
 
 
 /* footer */
