@@ -5,7 +5,7 @@ body{
 *{
 	padding: 0;
 	margin: 0;
-    font-family: 'Noto Sans TC', Arial, sans-serif;
+    font-family: Arial,'Noto Sans TC', sans-serif;
     list-style: none;
 }
 ::selection{
@@ -355,7 +355,7 @@ input:checked + .slider:before {
 	overflow: hidden;
 	opacity: 1;
 	transition: all 1s;
-	height: 0;
+	height: auto;
 }
 .stepbystep_close{
 	height: 0;
@@ -641,13 +641,14 @@ input:checked + .slider:before {
 .cpu_container{
 	max-width: 1200px;
 	margin: 10px auto 100px auto;
-	height: auto;
-	opacity: 1;
+	height: 0;
+	opacity: 0;
 	transition: opacity .3s;
+	overflow: hidden;
 }
 .cpu_container_open{
 	opacity: 1;
-	height: 600px;
+	height: auto;
 }
 .cpu_text{
 	margin: 30px 30px  10px 30px;
@@ -666,6 +667,8 @@ input:checked + .slider:before {
 .cpu_flex{
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
 
 }
 .cpu_sale{
@@ -673,7 +676,7 @@ input:checked + .slider:before {
 	height: 300px;
 	background: #fff;
 	border-radius: 5px;
-	margin: 10px 30px;
+	margin: 10px 20px;
 	position: relative;
 }
 .cpu_sale_img{

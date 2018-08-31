@@ -397,6 +397,15 @@
 					<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
 					<h2>NT$4000</h2>
 				</div>
+				<div class="cpu_sale">
+					<div class="cpu_sale_img">
+						<div class="select_no"><img src="images/not_select.svg"></div>
+						<div class="select_yes"><img src="images/select.svg"></div>
+						<img src="images/product/1.jpg">
+					</div>
+					<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
+					<h2>NT$4000</h2>
+				</div>
 			</div>
 	</div>
 	<!-- footer -->
@@ -527,6 +536,7 @@
 		$(this).find('.select_no').css('opacity','0')
 		$(this).find('.select_yes').css('opacity','1')
 	});
+
 	 // 指標三角形的特效
 	//  $('.cpu_li').click(function(){
 	// 	if( $('.point').hasClass('point_move_software') ){
@@ -579,6 +589,9 @@
 			$('.point').addClass('point_cpu')
 			$('.stepbystep_software_container').addClass('stepbystep_close')
 			$('.cpu_container').addClass('cpu_container_open')
+			$('html,body').animate({
+            scrollTop: $(".cpu_container").offset().top-80},
+            'slow');
 		});
 
 		$('.mb_li').click(function(){
