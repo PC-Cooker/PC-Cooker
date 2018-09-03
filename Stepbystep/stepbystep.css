@@ -394,6 +394,7 @@ input:checked + .slider:before {
 	align-items: center;
 	align-content: center;
 }
+
 .down_ul li{
 	font-size: 14px;
 	font-weight: 300;
@@ -401,7 +402,13 @@ input:checked + .slider:before {
 	text-align: center;
 	cursor: pointer;
 	margin-top: 10px;
+	filter: opacity(.2);
 }
+
+.down_ul li.down_software{
+	filter: opacity(1);	
+}
+
 .down_ul li img{
 	width: 30px;
 	height: 30px;

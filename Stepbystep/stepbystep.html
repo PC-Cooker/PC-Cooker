@@ -99,19 +99,19 @@
 			<div class="li_down">
 				<div class="li_down_left">
 					<ul class="down_ul">
-						<li class="software_li down_li"><img src="img/li01-down.svg"><br>軟體</li>
-						<li class="cpu_li down_li"><img src="img/li02-down.svg"><br>中央處理器</li>
-						<li class="mb_li down_li"><img src="img/li03-down.svg"><br>主機板</li>
-						<li class="ram_li down_li"><img src="img/li04-down.svg"><br>記憶體</li>
-						<li class="gpu_li down_li"><img src="img/li05-down.svg"><br>顯示卡</li>
-						<li class="hdd_li down_li"><img src="img/li06-down.svg"><br>硬碟</li>
-						<li class="power_li down_li"><img src="img/li07-down.svg"><br>電源供應器</li>
-						<li class="case_li down_li"><img src="img/li08-down.svg"><br>機殼</li>
+						<li class="software_li down_li down_software"><img src="img/li01-down.svg"><br>軟體</li>
+						<li class="cpu_li down_li down_cpu"><img src="img/li02-down.svg"><br>中央處理器</li>
+						<li class="mb_li down_li down_mb"><img src="img/li03-down.svg"><br>主機板</li>
+						<li class="ram_li down_li down_ram"><img src="img/li04-down.svg"><br>記憶體</li>
+						<li class="gpu_li down_li down_gpu"><img src="img/li05-down.svg"><br>顯示卡</li>
+						<li class="hdd_li down_li down_hdd"><img src="img/li06-down.svg"><br>硬碟</li>
+						<li class="power_li down_li down_power"><img src="img/li07-down.svg"><br>電源供應器</li>
+						<li class="case_li down_li down_case"><img src="img/li08-down.svg"><br>機殼</li>
 					</ul>
 				</div>
 				<div class="li_down_right">
 					<div><h1>目前合計：</h1></div>
-					<a href=""><div class="li_shop"><h5>結帳去</h5></div></a>
+					<a href=""><div class="li_shop"><h5>查看挑選清單</h5></div></a>
 				</div>
 			</div>
 
@@ -1036,6 +1036,9 @@
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_software').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".stepbystep_software_container").offset().top-130},
@@ -1062,7 +1065,9 @@
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
-
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_cpu').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_cpu").offset().top-130},
@@ -1090,6 +1095,9 @@
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_mb').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_mb").offset().top-130},
@@ -1116,6 +1124,9 @@
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_ram').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_ram").offset().top-130},
@@ -1142,6 +1153,9 @@
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_gpu').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_gpu").offset().top-130},
@@ -1168,6 +1182,9 @@
 			$('.sale_gpu').removeClass('gpu_open')
 			$('.sale_power').removeClass('power_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_hdd').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_hdd").offset().top-130},
@@ -1194,6 +1211,9 @@
 			$('.sale_gpu').removeClass('gpu_open')
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_case').removeClass('case_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_power').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_power").offset().top-130},
@@ -1220,6 +1240,9 @@
 			$('.sale_gpu').removeClass('gpu_open')
 			$('.sale_hdd').removeClass('hdd_open')
 			$('.sale_power').removeClass('power_open')
+			//
+			$('.down_li').css('filter','opacity(.2)')
+			$('.down_case').css('filter','opacity(1)')
 			//移動的動畫
 			$('html,body').animate({
             scrollTop: $(".sale_case").offset().top-130},
@@ -1267,7 +1290,6 @@
 
 
 		$('.down_li').click(function(){
-			$(this).siblings().css('border-bottom','0px solid transparent')
 			$(this).siblings().css('filter','opacity(.2)')
 			$(this).css('filter','opacity(1)')
 		});
