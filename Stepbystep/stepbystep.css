@@ -20,207 +20,7 @@ a:hover{
 	text-decoration: none;
 }
 
-/* start of navbar*/
-.navbar{
-	/* background-color: rgba(132, 169, 205, 0.85);  這是有透明度的*/
-	background-color: rgba(132, 169, 205);
-	width: 100%;
-	height: 80px;
-	padding: 10px 0;
-	font-size: 18px;
-	position: fixed;
-	z-index: 2;
-	top:0;
-	transition: all 1s;
-}
-.navbar_appear{
-	top:0;
-}
 
-.nav-item .nav-link{
-	color: #fff;
-}
-.nav-item a{
-	font-size:16px;
-}
-button{
-	border: none;
-	background: transparent;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-.cart, .login{
-	padding: 0 10px;
-	transform: scale(0.85);
-}
-
-	/* 改變預設字體粗度 */
-.navbar-expand-lg .navbar-nav .nav-link{
-    font-weight: 300;
-}
-
-	/* navbar 字體 hover */
-.navbar-expand-lg .navbar-nav li.nav-item{
-    position: relative;
-}
-
-.navbar-expand-lg .navbar-nav a.nav-link:hover:after {
-    width: 69%;
-}
-
-a.element:not([href]):not([tabindex]):hover{
-	color: #fff;
-}
-
-
- /* 下拉選單 */
-.list-group{
-	min-width: 160px;
-	top: 43px; /* 位置要設近一點，滑鼠比較容易摸到 */
-	right: -10px;
-	height: auto;
-	color: rgba(0, 0, 0, 0.6);
-	position: absolute;
-	display: none;
-	z-index: 10;
-	transition: top 0.3s;
-	font-size: 14px;
-	line-height: 20px;
-	box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
-	border-radius: 0.25rem;
-}
-
-li.nav-item .list-group-item{
-	padding: 5px 5px 3px 10px;
-	border: transparent;
-	border-left: 5px solid transparent;
-	color: #666;
-}
-
-li.nav-item .list-group-item.active, li.nav-item .list-group-item-action:hover{
-	background-color: #e5e5e5;
-	border-left: 5px solid #fac375;
-}
-
-.list-group a{
-	font-size: 16px;
-	font-weight: 400;
-}
-
-
-li.nav-item{
-	position: relative;
-	color: #fff;
-}
-
-li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .list-group-item:hover{
-	display: block;
-	cursor: pointer;
-}
-
-.list-group span{
-	font-size: 10px;
-	color: #9b9b9b;
-}
-
- /* 下拉選單end */
-
-
-
-.navbar-expand-lg .navbar-nav a.nav-link:after {
-   	content: '';
-    position: absolute;
-    left: 7px;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    border-radius: 5px;
-    background: #eee;
-    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-
-
-
-
-	/* toggle switch start */
-.toggle-switch{
-    margin-top: auto;
-    transform: scale(0.85);
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 28px;
-}
-
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 3px;
-  right: 0;
-  bottom: 0;
-  background-color: #283E4E;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #84A9CD;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/* toggle switch end */
-
-
-/* here's the end of navbar*/
-
-
-
-
-/* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
-.fixed-top-space{
-	height: 90px;
-	background-color: #84A9CD;
-}
-
-.blue{
-	background-color: #84A9CD;
-}
 /* Step by Step 上方區塊*/
 .stepbystep_100vw{
 	width: 100%;
@@ -417,14 +217,14 @@ input:checked + .slider:before {
 	font-weight: 300;
 	color:#6c757d;
 	line-height: 24px;
-	margin-top:15px;
+	margin-top:27px;
 }
 .price_text{
 	font-size: 24px;
 	font-weight: 300;
 	color:#6c757d;
 	line-height: 24px;
-	margin-top:15px;
+	margin-top:26px;
 }
 .li_shop{
 	width: 150px;
@@ -755,9 +555,8 @@ input:checked + .slider:before {
 
 .cpu_text{
 	margin: 30px 30px  10px 30px;
-	width: 1100px;
 	max-width: 1100px;
-	background: #000;
+	width: 1100px;
 }
 .cpu_text h3{
 	font-size: 16px;
