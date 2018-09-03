@@ -374,9 +374,6 @@ input:checked + .slider:before {
 	align-items: center;
 	transition: all .3s;
 }
-.li_down_fixed{
-	bottom
-}
 .li_down_left{
 	width: 700px;
 	height: 60px;
@@ -415,8 +412,16 @@ input:checked + .slider:before {
 	margin-bottom:3px;
 }
 
-.li_down_right h1{
+.li_down_right p{
 	font-size: 24px;
+	font-weight: 300;
+	color:#6c757d;
+	line-height: 24px;
+	margin-top:15px;
+}
+.price_text{
+	font-size: 24px;
+	font-weight: 300;
 	color:#6c757d;
 	line-height: 24px;
 	margin-top:15px;

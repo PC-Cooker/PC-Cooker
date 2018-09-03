@@ -110,7 +110,10 @@
 					</ul>
 				</div>
 				<div class="li_down_right">
-					<div><h1>目前合計：</h1></div>
+					<div class="d-flex">
+						<p>目前合計：NT.</p>
+						<div class="price_text"></div>
+					</div>
 					<a href=""><div class="li_shop"><h5>查看挑選清單</h5></div></a>
 				</div>
 			</div>
@@ -368,7 +371,7 @@
 					<img src="img/small/15.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">4000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -377,7 +380,7 @@
 					<img src="img/small/16.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">4000</span></h2>
 			</div>
 			<div class="cpu_text">
 				<h3>查看更多其他中央處理器</h3>
@@ -390,7 +393,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">600</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -399,7 +402,7 @@
 					<img src="img/small/4.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">5300</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -408,7 +411,7 @@
 					<img src="img/small/5.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1200</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -417,7 +420,7 @@
 					<img src="img/small/17.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 				
 		</div>
@@ -436,7 +439,7 @@
 					<img src="img/small/10.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">3000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -445,7 +448,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">2000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -454,7 +457,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 			<div class="cpu_text">
 				<h3>查看更多其他中央處理器</h3>
@@ -467,7 +470,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -476,7 +479,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -485,7 +488,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 			<div class="cpu_sale">
 				<div class="cpu_sale_img">
@@ -494,7 +497,7 @@
 					<img src="img/small/1.jpg">
 				</div>
 				<h1>Intel KabyLake Core i3-7100 3.9GHz 51W</h1>
-				<h2>NT$4000</h2>
+				<h2>NT$<span class="price">1000</span></h2>
 			</div>
 		</div>
 	
@@ -1294,6 +1297,29 @@
 			$(this).css('filter','opacity(1)')
 		});
 		
+		// var price = $('.price').text()
+		// console.log(price);
+
+		var total_price = 0;
+		var cpu_sales = $('.cpu_sale');
+
+		cpu_sales.click(function(){
+			var price; // = $(this).find('.price').text();
+			//alert(price);
+			total_price = 0;
+			cpu_sales.each(function(){
+				if($(this).hasClass('cpu_border')){
+					price = parseInt($(this).find('.price').text());
+					total_price += price;
+					console.log(price, total_price);
+				}
+				$('.price_text').html(total_price);
+			});
+			
+			// alert(total_price);
+
+		});
+
 
 	</script>
 </body>
