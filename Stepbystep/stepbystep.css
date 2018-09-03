@@ -225,7 +225,7 @@ input:checked + .slider:before {
 .stepbystep_100vw{
 	width: 100%;
 	height: 430px;
-	background: url(images/bg-top-blue.svg)no-repeat center;
+	background: url(img/bg-top-blue.svg)no-repeat center;
 	/* margin-top:80px; */
 	background-size: cover;
 	margin-top:80px;
@@ -282,6 +282,7 @@ input:checked + .slider:before {
 	width: 120px;
 	font-weight: 300;
 	font-size: 16px;
+	cursor: pointer;
 }
 .stepbystep_items img{
 	padding:0 5px;
@@ -354,6 +355,19 @@ input:checked + .slider:before {
 }
 .point_case{
 	left:1142px;
+}
+.li_down{
+	width: 1200px;
+	max-width: 1200px;
+	height: 80px;
+	background: rgba(255, 255, 255, 0.95);
+	border:0.5px solid #6c757d;
+	border-radius: 15px 15px 0 0;
+	position: fixed;
+	bottom:0;
+	z-index: 5;
+	margin: 0 auto;
+	
 }
 
 /* 挑選軟體區塊 */
@@ -630,7 +644,7 @@ input:checked + .slider:before {
 	opacity: 1;
 	margin: 25px 0;
 }
-.next_page_btn{
+/* .next_page_btn{
 	width: 200px;
 	height: 100px;
 	background: rgba(204, 204, 204, 0.68);
@@ -645,7 +659,7 @@ input:checked + .slider:before {
 }
 .next_page_btn:hover{
 	right:-100px;
-}
+} */
 
 /*中央處理器*/
 .sale_container{
@@ -664,11 +678,14 @@ input:checked + .slider:before {
 
 .cpu_text{
 	margin: 30px 30px  10px 30px;
+	width: 1100px;
+	max-width: 1100px;
 }
 .cpu_text h3{
 	font-size: 16px;
 	font-weight: 300;
 	margin: 0;
+	line-height: 30px;
 }
 .ms_text{
 	color: #84a9cc;
@@ -690,6 +707,13 @@ input:checked + .slider:before {
 	border-radius: 5px;
 	margin: 10px 20px;
 	position: relative;
+	border: 1.5px solid transparent;
+}
+.cpu_border{
+	border: 1.5px solid #84A9CD;
+}
+.cpu_sale:hover{
+	box-shadow: 0 0 15px #ccc;
 }
 .cpu_sale_img{
 	text-align: center;
