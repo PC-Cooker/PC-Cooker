@@ -137,14 +137,14 @@
 			</div>
 			</div>
 			<ul	class="stepbystep_items_mobile">
-					<li><img src="img/li01.svg"></li>
-					<li><img src="img/li02.svg"></li>
-					<li><img src="img/li03.svg"></li>	
-					<li><img src="img/li04.svg"></li>
-					<li><img src="img/li05.svg"></li>
-					<li><img src="img/li06.svg"></li>
-					<li><img src="img/li07.svg"></li>
-					<li><img src="img/li08.svg"></li>
+					<li class="software_li"><img src="img/li01.svg"></li>
+					<li class="cpu_li"><img src="img/li02.svg"></li>
+					<li class="mb_li"><img src="img/li03.svg"></li>	
+					<li class="ram_li"><img src="img/li04.svg"></li>
+					<li class="gpu_li"><img src="img/li05.svg"></li>
+					<li class="hdd_li"><img src="img/li06.svg"></li>
+					<li class="power_li"><img src="img/li07.svg"></li>
+					<li class="case_li"><img src="img/li08.svg"></li>
 			</ul>
 		</div>
 	</div>
@@ -176,7 +176,7 @@
 			<div class="rem_text">
 				<h2>影音編輯推薦</h2>
 				<h3>如果平時你是使用Ae特效居多的工作者，推薦您的電腦效能為</h3>
-				<img class="rem_cancel" src="img/rem_cancel.svg">
+				<!-- <img class="rem_cancel" src="img/rem_cancel.svg"> -->
 			</div>
 			<div class="rem_music_flex">
 				<div class="rem_music_div">
@@ -965,10 +965,10 @@
 		 $(this).find('.select').toggleClass('select_light')
 	 });
 	 //挑選影音、設計、文書
-	 $('.three_software').click(function(){
-		 $(this).siblings().removeClass('three_software_active')
-		 $(this).toggleClass('three_software_active')
-	 });
+	//  $('.three_software').click(function(){
+	// 	 $(this).siblings().removeClass('three_software_active')
+	// 	 $(this).toggleClass('three_software_active')
+	//  });
 
 	 $('.three_software.music').click(function(){
 		 if($('.rem_book').hasClass('rem_book_open')||$('.rem_paint').hasClass('rem_paint_open')){

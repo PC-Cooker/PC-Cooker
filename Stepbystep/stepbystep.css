@@ -949,8 +949,43 @@ footer > p::after{
 		justify-content: center;
 		align-items: center;
 	}
+	.li_down{
+		width: 375px;
+		margin: 0 auto;
+	}
+	.li_down_left{
+		height: 35px;
+	}
+	.li_down_right{
+		height: 35px;
+	}
+	.down_ul li{
+		font-size:10px;
+	}
+	.li_down_right p{
+		font-size: 16px;
+		margin: 10px 0px 0px 10px;
+	}
+	.down_ul li img {
+		width: 15px;
+		height: 15px;
+	}
+	.li_shop{
+		margin-top:10px;
+		margin-right:10px;
+		width: 100px;
+		height: 25px;
+	}
+	.li_shop h5{
+		font-size:10px;
+		margin: 0;
+		padding: 6px 0;
+	}
 	.cpu_text{
 		width: 350px;
+	}
+	.price_text{
+		margin-top:8px;
 	}
 
 
