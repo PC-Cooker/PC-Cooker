@@ -429,17 +429,19 @@ input:checked + .slider:before {
 .li_shop{
 	width: 150px;
 	height: 40px;
-	background: #fac375;
+	background: #fc9f66;
 	border-radius: 5px;
 	text-align: center;
 }
+.li_shop:hover{
+	background: #F17529;
+}
 .li_shop h5{
-	font-size:16px;
+	font-size:14px;
 	color:#fff;
 	font-weight: 300;
 	padding:12px 0;
 }
-
 
 
 
