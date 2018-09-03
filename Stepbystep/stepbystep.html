@@ -95,7 +95,26 @@
 	<!-- stepbystep 上面區塊 -->
 	<div class="stepbystep_100vw">
 		<div class="stepbystep_top_container">
-			<div class="li_down"></div>
+			<!-- 下方浮出的選單 -->
+			<div class="li_down">
+				<div class="li_down_left">
+					<ul class="down_ul">
+						<li class="software_li down_li"><img src="img/li01-down.svg"><br>軟體</li>
+						<li class="mb_li down_li"><img src="img/li02-down.svg"><br>中央處理器</li>
+						<li class="cpu_li down_li"><img src="img/li03-down.svg"><br>主機板</li>
+						<li class="ram_li down_li"><img src="img/li04-down.svg"><br>記憶體</li>
+						<li class="gpu_li down_li"><img src="img/li05-down.svg"><br>顯示卡</li>
+						<li class="hdd_li down_li"><img src="img/li06-down.svg"><br>硬碟</li>
+						<li class="power_li down_li"><img src="img/li07-down.svg"><br>電源供應器</li>
+						<li class="case_li down_li"><img src="img/li08-down.svg"><br>機殼</li>
+					</ul>
+				</div>
+				<div class="li_down_right">
+					<div><h1>目前合計：</h1></div>
+					<a href=""><div class="li_shop"><h5>結帳去</h5></div></a>
+				</div>
+			</div>
+
 			<h1>我要組電腦</h1>
 			<h3>從主機板、顯示卡一步一步選購最符合你的需求<br>
 				最佳最嚴謹的篩選條件，讓您不會組裝失誤</h3>
@@ -1233,18 +1252,26 @@
 		// 	}
 		// });
 		// 
-		
+			
 		//捲動時的進度條
-		// var processTop = $('.process').offset().top-80;
-		// console.log(processTop)
-		// $(window).scroll(function(){
-		// 	var processFixed = $(this).scrollTop();
-		// 	if( processFixed > processTop){
-		// 		$('.process').addClass('stepbystep_items_fixed')
-		// 	}else{
-		// 		$('.process').removeClass('stepbystep_items_fixed')
-		// 	}
-		// });
+		var processTop = $('.process').offset().top-80;
+		console.log(processTop)
+		$(window).scroll(function(){
+			var processFixed = $(this).scrollTop();
+			if( processFixed > processTop){
+				$('.li_down').css('bottom','0px')
+			}else{
+				$('.li_down').css('bottom','-80px')
+			}
+		});
+
+
+		$('.down_li').click(function(){
+			$(this).siblings().css('border-bottom','0px solid transparent')
+			$(this).css('border-bottom','1px solid #6c757d')
+		});
+		
+		
 	</script>
 </body>
 </html>
