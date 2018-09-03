@@ -100,8 +100,8 @@
 				<div class="li_down_left">
 					<ul class="down_ul">
 						<li class="software_li down_li"><img src="img/li01-down.svg"><br>軟體</li>
-						<li class="mb_li down_li"><img src="img/li02-down.svg"><br>中央處理器</li>
-						<li class="cpu_li down_li"><img src="img/li03-down.svg"><br>主機板</li>
+						<li class="cpu_li down_li"><img src="img/li02-down.svg"><br>中央處理器</li>
+						<li class="mb_li down_li"><img src="img/li03-down.svg"><br>主機板</li>
 						<li class="ram_li down_li"><img src="img/li04-down.svg"><br>記憶體</li>
 						<li class="gpu_li down_li"><img src="img/li05-down.svg"><br>顯示卡</li>
 						<li class="hdd_li down_li"><img src="img/li06-down.svg"><br>硬碟</li>
@@ -1268,10 +1268,11 @@
 
 		$('.down_li').click(function(){
 			$(this).siblings().css('border-bottom','0px solid transparent')
-			$(this).css('border-bottom','1px solid #6c757d')
+			$(this).siblings().css('filter','opacity(.2)')
+			$(this).css('filter','opacity(1)')
 		});
 		
-		
+
 	</script>
 </body>
 </html>
