@@ -157,7 +157,6 @@ a:hover{
 	left:1142px;
 }
 .li_down{
-	width: 1200px;
 	max-width: 1200px;
 	height: 80px;
 	background: #fff;
@@ -182,7 +181,7 @@ a:hover{
 	width: 450px;
 	height: 60px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 .down_ul{
@@ -751,6 +750,8 @@ footer > p::after{
 	.li_down{
 		width: 375px;
 		margin: 0 auto;
+		left:50%;
+		transform: translateX(-50%);
 	}
 	.li_down_left{
 		height: 35px;
