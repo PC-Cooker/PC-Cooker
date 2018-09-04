@@ -28,6 +28,14 @@ a:hover{
         bottom:0;
     }
 }
+@keyframes move_in_three{
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 /* 首頁一進來所看到的內容 */
 .index_100vh{
     width: 100%;
@@ -158,6 +166,24 @@ a:hover{
     font-weight: 300;
     text-align: center;
     margin: 10px 0;
+}
+.threereason_div{
+    opacity: 0;
+}
+.threediv01{
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: move_in_three 1s linear 1s forwards,text_fadein 1s linear 1s forwards;
+}
+.threediv02{
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: move_in_three 1s linear 1.2s forwards,text_fadein 1s linear 1.2s forwards;
+}
+.threediv03{
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: move_in_three 1s linear 1.4s forwards,text_fadein 1s linear 1.4s forwards;
 }
 /*熱門上架商品*/
 .hot_container{

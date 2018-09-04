@@ -457,6 +457,21 @@
             scrollTop: $(".threereason_100vw").offset().top},
             'slow');
         });
+
+        var ThreereasonTop = $('.threereason_container').offset().top;
+        console.log(ThreereasonTop)
+        $(window).scroll(function(){
+            var move = $(this).scrollTop();
+            var wh = $(this).height();
+            var per = ThreereasonTop-wh+50;
+            // console.log(move);
+            // console.log(per);
+            if (move>=per){
+                $('.threereason_div').eq(0).addClass('threediv01');
+                $('.threereason_div').eq(1).addClass('threediv02');
+                $('.threereason_div').eq(2).addClass('threediv03');
+            }
+        });
     </script>
 </body>
 </html>
