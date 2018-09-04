@@ -11,7 +11,7 @@
 }
 /* footer */
 .black{
-	background: url(imgs/footer_bg.svg)no-repeat center center;
+	background: url(img/footer_bg.svg)no-repeat center center;
     background-size: cover;
 }
 
@@ -59,6 +59,10 @@ footer > p::after{
 	*{
 		overflow-x: hidden;
 	}
+	footer > p::before,
+	footer > p::after{
+		height: 0;
+	}
 	/* 響應式 footer 手風琴 */
 	.tab {
 	  position: relative;
@@ -76,7 +80,7 @@ footer > p::after{
 	  position: relative;
 	  display: block;
 	  padding: 0 0 0 1em;
-	  background: #708090;
+	  background: #6F7E8C;
 	  line-height: 3;
 	  cursor: pointer;
 	  border-bottom: 1px solid #fff;
@@ -84,7 +88,7 @@ footer > p::after{
 	.tab-content {
 	  max-height: 0;
 	  overflow: hidden;
-	  background: #708090;
+	  background: #6F7E8C;
 	  -webkit-transition: max-height .35s;
 	  -o-transition: max-height .35s;
 	  transition: max-height .35s;
@@ -133,10 +137,6 @@ footer > p::after{
 	}
     input.f-tab[type=radio]:checked + label.f-tab::after {
 	  transform: rotateX(180deg);
-	}
-	footer > p::before,
-	footer > p::after{
-		height: 0;
 	}
 	/* 響應式手風琴 end */
 }

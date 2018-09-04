@@ -102,7 +102,7 @@ if (!empty($_SESSION['cart'])) {
                             </button>
                             <div class="btns">
                                 <hr>
-                                <button class="btn btn-blue-outline">繼續購物</button>
+                                <button class="btn btn-blue-outline"><a href="component.php?cate=1">繼續購物</a></button>
                                 <button class="btn btn-confirm" id="next1">繼續結帳</button>
                             </div>
                         </div>
@@ -169,7 +169,7 @@ if (!empty($_SESSION['cart'])) {
                         <i class="plus"></i>
                     </div>
                     <div class="bgwhite" id="part3">
-                        <div class="deliver mb-5">
+                        <div class="deliver mb-6">
                             <div class="form-check atm">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
                                        value="option1" checked>
@@ -229,10 +229,9 @@ if (!empty($_SESSION['cart'])) {
                                 <input type="checkbox" class="form-check-input mt-2" id="exampleCheck1">
                                 <label class="form-check-label color-gray" for="exampleCheck1">我同意，以上購物須知</label>
                             </div>
-                            <!--                            <a href="cartend.html" class="btn btn-danger">確認結帳</a>-->
                             <?php if (isset($_SESSION['user'])): ?>
                                 <button onclick="location.href='cart_confirm.php'" type="button"
-                                        class="btn btn btn-danger">確認結帳
+                                        class="btn btn-danger">確認結帳
                                 </button>
                             <?php else: ?>
                                 <button onclick="location.href='login.php'" type="button" class="btn btn-danger">登入
@@ -248,15 +247,8 @@ if (!empty($_SESSION['cart'])) {
 </div>
 <!-- footer -->
 <?php include __DIR__ . '/__footer.php' ?>
-<!-- 選擇性的 JavaScript -->
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-        integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-        crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
 <script>
 
     //accordion

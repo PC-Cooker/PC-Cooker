@@ -1,85 +1,81 @@
 <?php
 require __DIR__ . '/__db_connect.php';
-$pageName = 'cart_confirm';
-
-if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
-    $data = [];
-
+$pageName = 'cart';
+$data = [];
+$total = 0;
+if (!empty($_SESSION['cart'])) {
     $keys = array_keys($_SESSION['cart']);
-    $sql = sprintf("SELECT * FROM products WHERE sid IN (%s)", implode(',', $keys));
+    $sql = sprintf("SELECT * FROM product_book WHERE sid IN (%s)", implode(',', $keys));
     $rs = $mysqli->query($sql);
     while ($r = $rs->fetch_assoc()) {
         $r['qty'] = $_SESSION['cart'][$r['sid']];
         $data[$r['sid']] = $r;
+        $total += $r['qty']*$r['Price'];
     }
-    $total_price = 0;
-    foreach ($data as $k => $v) {
-        $total_price += $v['price'] * $v['qty'];
-    }
-
-    $o_sql = "INSERT INTO `orders`(`member_sid`, `amount`, `order_date`) VALUES (?,?,NOW())";
-    $o_stmt = $mysqli->prepare($o_sql);
-    $o_stmt->bind_param('ii',
-        $_SESSION['user']['id'],
-        $total_price
-    );
-
-
-    $o_stmt->execute();
-
-    if ($o_stmt->affected_rows == 1) {
-        $order_sid = $mysqli->insert_id;
-        $od_sql = "INSERT INTO `order_details`(`order_sid`, `product_sid`, `price`,`quantity`) VALUES (?,?,?,?)";
-        $od_stmt = $mysqli->prepare($od_sql);
-
-        foreach ($keys as $k) {
-
-            $od_stmt->bind_param('iiii',
-                $order_sid,
-                $k,
-                $data[$k]['price'],
-                $data[$k]['qty']
-
-            );
-            $od_stmt->execute();
-        }
-        unset($_SESSION['cart']);
-    } else {
-        //錯誤處理
-    }
-
 }
 ?>
-<?php include __DIR__ . '\__html_head.php' ?>
-<div class="container">
-    <?php include __DIR__ . '\__navbar.php' ?>
+<?php include __DIR__. '/__html_head.php' ?>
+<link rel="stylesheet" type="text/css" href="cart.css">
+  </head>
+  <body>
+    <?php include __DIR__. '/__navbar.php' ?>
+    <!-- cart -->
     <div class="container">
-        <?php if(isset($order_sid)): ?>
-            <div class="alert alert-primary">
-                訂購成功
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadtitle d-flex justify-content-center">
+                    <a href="#" class="active">確認購物袋</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#">運送資訊</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#">付款方式</a><i class="fas fa-angle-double-right scaleicon"></i>
+                    <a href="#" class="focus">結帳</a>
+                </div>
+				<div class="d-flex justify-content-center check_cart">
+					<div class="btn_title">購物完成</div>
+				</div>
+				<div class="bgwhite mb-5" style="display:block; background: transparent">
+					<div class="col-md-12">
+						<div class="cart_end">
+							<div class="color-blue">訂單編號:<span class="color-dark">20180912034478</span></div>
+							<div class="color-blue">日期:<span class="color-dark">2018-09-12</span></div>
+							<div class="color-blue">總價:<span class="color-dark">NT$<span class="total-price"><?=$total?></span></span></div>
+							<div class="color-blue">訂單狀態:<span class="color-dark">待付款</span></div>
+						</div>
+					</div>
+					<button class="btn btn-ok">OK</button>
+				</div>
             </div>
-        <?php else: ?>
-            <div class="alert alert-danger">
-                訂購失敗
-            </div>
-        <?php endif ?>
+        </div>
     </div>
-</div>
+<script>
+    var dallorCommas = function (n) {
+        return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    };
+    var calTotal = function () {
+        var total = 0;
+        var items = $('.product_list');
+        if (items.length == 0) {
+            window.location.reload();
+            return;
+        }
+        items.each(function () {
+            total += $(this).find('.price').attr('data-price') * $(this).find('.qty').attr('data-qty');
+        });
 
+        $('.total-price').text(dallorCommas(total));
+        var price = $(this).find('.price').attr('data-price');
+        // $('.price').text(dallorCommas(price));
+    };
+    var p_items = $('.product_list');
+    if (p_items.length) {
+        calTotal();
+    }
 
-<div id="landlord">
-    <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-</div>
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = 'https://haremu.com/'
 </script>
-<script type="text/javascript" src="/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="/live2d/js/message.js"></script>
-<script type="text/javascript">
-    loadlive2d("live2d", "/live2d/model/tia/model.json");
+<script>
+    $(".btn-ok").click(function(){
+        location.href="index.php"
+    });
 </script>
-
-<?php include __DIR__ . '\__html_foot.php' ?>
+<!-- footer -->
+<?php include __DIR__ . '/__footer.php' ?> 			
+<?php include __DIR__ . '/__html_foot.php' ?>

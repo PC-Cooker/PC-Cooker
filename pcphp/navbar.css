@@ -14,11 +14,48 @@ button:focus{
 	outline: 0;
 }
 
+/*    scroll bar   */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background:#ddd; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #708090 ; 
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #708090 ; 
+}
+@media screen and (max-width: 576px)  {
+	::-webkit-scrollbar {
+		width: 0px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background:#ddd; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #708090 ; 
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #708090 ; 
+	}
+}
 /* start of navbar*/
 .navbar{
-	background: rgba(132, 169, 205, 0.85);
+	background: rgb(132, 169, 205);
 	width: 100%;
 	height: 80px;
 	padding: 10px 0;
@@ -128,8 +165,6 @@ button.login a{
 	font-weight: 400;
 }
 
-
-
 li.nav-item{
 	position: relative;
 	color: #fff;
@@ -197,9 +232,10 @@ li.nav-item:hover .list-group, a.element:hover .list-group, .list-group:hover, .
 	font-weight: 300;
 }
 .dropMenu a:hover{
-	background: #283f4e;
+	background: #708090;
 	text-decoration: none;
 	border-radius: 5px;
+	color: #fff;
 }
 
 .dropMenu .active2:hover{
@@ -256,8 +292,8 @@ ul.b_list{
 
  /* 手機清單的navbar fixed-top雷 */
 .fixed-top-space2{
-	height: 90px;
-	/*background-color: #84A9CD;*/
+	height: 70px;
+	background-color: #84A9CD;
 }
 /* here's the end of navbar*/
 
@@ -266,7 +302,7 @@ ul.b_list{
 
 /* bs4 的雷，Navbar 設 fixed-top 下面文字會被遮住，下面是解法 */
 .fixed-top-space{
-	height: 80px;
+	height: 90px;
 	/*background-color: #84A9CD;*/
 }
 
@@ -280,9 +316,5 @@ ul.b_list{
 	}
 	.navbar{
 		height: 70px;
-	}
-	.fixed-top-space{
-		height: 70px;
-	    background: transparent;
 	}
 }
