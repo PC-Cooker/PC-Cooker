@@ -401,6 +401,8 @@ a:hover{
 }
 .game p {
 	display: inline-block;
+	font-weight: 300;
+	font-size:14px;
 }
 .game_more{
 	width: 150px;
@@ -413,6 +415,10 @@ a:hover{
 	border:1px solid transparent;
 	border-radius: 5px;
 	cursor: pointer;
+}
+.game_more p{
+	font-weight: 300;
+	font-size:14px;
 }
 /*  影音推薦區 */
 .rem_music{
